@@ -1,0 +1,105 @@
+// geeks
+// https://www.geeksforgeeks.org/check-if-a-given-binary-tree-is-sumtree/
+
+// best dfs solution
+
+
+/*
+    Algorithm
+
+    root == NULL ==> return true
+    root == leaf ==> return true
+
+    sum = 0
+
+    if left != leaf ==> sum += ( 2 * left )
+    if left == leaf ==> sum += left
+
+    similarly
+
+    if right != leaf ==> sum += ( 2 * right)
+    if right == leaf ==> sum += right
+*/
+
+class solution {
+    public:
+    
+    bool isLeaf(Node *root) {
+        return (!root->left and !root->right) ? true : false ;
+    }
+    
+    bool isSumTree(Node* root)
+    {
+        if(!root) {
+            return true;
+        }
+        if(isLeaf(root)) {
+            return true;
+        }
+        
+        int sum = 0;
+        
+        if(root->left) {
+            
+            if(isLeaf(root->left)) {
+                
+                sum += (root->left->data);
+            }
+            
+            else {
+                
+                sum += (2 * (root->left->data));
+            }
+        }
+        
+        if(root->right) {
+            
+            if(isLeaf(root->right)) {
+                
+                sum += (root->right->data);
+            }
+            
+            else {
+                
+                sum += (2 * (root->right->data));
+            }
+        }
+        
+        return (root->data == sum) and isSumTree(root->left) and isSumTree(root->right);
+    }
+};
+
+
+// another staright forward approach
+
+class Solution
+{
+    public:
+    
+    int treeSum(Node *root, bool &flag) {
+        if(!root) {
+            return 0;
+        }
+        int lsum = treeSum(root->left, flag);
+        int rsum = treeSum(root->right, flag);
+        
+        if((root->left or root->right) and root->data != (lsum + rsum)) {
+            flag = false;
+        }
+        
+        return (root->data + lsum + rsum);
+    }
+    
+    bool isSumTree(Node* root)
+    {
+         // Your code here
+         if(!root) {
+             return true;
+         }
+         
+         bool flag = true;
+         treeSum(root, flag);
+         
+         return flag;
+    }
+};
