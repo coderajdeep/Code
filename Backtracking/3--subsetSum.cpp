@@ -1,3 +1,6 @@
+// https://practice.geeksforgeeks.org/problems/subset-sums2234/1
+// Basically we need to generate all the subsets/ subsequence
+
 class Solution {
 public:
 

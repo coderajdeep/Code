@@ -5,7 +5,7 @@
 // Combination sum II - leetcode 40
 
 // 3
-// Subset sums - prints all subset's sum in increasing order
+// Subset sums - prints all subset's sum in increasing order - geeks
 
 // 4
 // Subsets - leetcode 78 - generate all subsets (given array element is distinct) 
@@ -21,3 +21,12 @@
 
 // 8
 // N Queen II problem - leetcode 52
+
+// 9
+// Combinations -- leetcode 77
+
+// 10
+// CombinationSumIII -- leetcode 216
+
+// 11
+// Rat in a Maze Problem - 1 -- Geeksforgeeks
