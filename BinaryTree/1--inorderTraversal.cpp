@@ -35,6 +35,8 @@ public:
     vector<int> inorderTraversal(TreeNode* root) {
         if(!root) {
             return vector<int>{};
+            // return {}
+            // both are same
         }
         
         vector<int>ans;

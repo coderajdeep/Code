@@ -113,3 +113,29 @@ public:
         return ans;
     }
 };
+
+
+// Using unordered_map
+
+class Solution {
+public:
+    
+    int dfs(TreeNode *root, int level, unordered_map<int, vector<int>> &umap) {
+        if(!root) return 0;
+        umap[level].push_back(root->val);
+        int l = dfs(root->left, level+1, umap);
+        int r = dfs(root->right, level+1, umap);
+        return 1 + max(l, r);
+    }
+    
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        if(!root) return {};
+        unordered_map<int, vector<int>> umap;
+        int height = dfs(root, 1, umap);
+        vector<vector<int>>ans(height);
+        for(int i=1; i<=height; ++i) {
+            ans[i-1] = umap[i];
+        }
+        return ans;
+    }
+};
