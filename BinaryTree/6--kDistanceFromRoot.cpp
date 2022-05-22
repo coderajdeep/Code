@@ -31,6 +31,27 @@ vector<int> Kdistance(struct Node *root, int k)
     return ans;
 }
 
+// recursive approach
+// similar, just void return type
+
+void dfs(Node *root, int level, vector<int> &arr) {
+    if(!root) return;
+    if(level==0) {
+        arr.push_back(root->data);
+        return;
+    }
+    dfs(root->left, level-1, arr);
+    dfs(root->right, level-1, arr);
+}
+
+vector<int> Kdistance(struct Node *root, int k) {
+  // Your code here
+  if(!root) return {};
+  vector<int> arr;
+  dfs(root, k, arr);
+  return arr;
+}
+
 
 // Iterative solution
 

@@ -1,5 +1,7 @@
-// leetcode 111
+// leetcode 111 (Min depth)
+// leetcode 104 (Max depth)
 
+// https://www.geeksforgeeks.org/find-minimum-depth-of-a-binary-tree/
 // recursive solution
 // can be solved using levle order traversal - iterative method
 
@@ -27,6 +29,18 @@ public:
         return (1 + min(ld, rd));
     }
 };
+
+// [2,null,3,null,4,null,5,null,6]
+// this solution will not work
+// Just dry run this test case
+// class Solution {
+// public:
+//     int minDepth(TreeNode* root) {
+//         if(!root) return 0;
+//         if(!root->left && !root->right) return 1;
+//         return 1 + min(minDepth(root->left), minDepth(root->right));
+//     }
+// };
 
 
 // iterative solution

@@ -16,6 +16,8 @@ public:
         int lm = findMax(root->left);
         int rm = findMax(root->right);
         
+        // need to include 
+        // #include <initializer_list>
         return max({root->data, lm, rm});
     }
     int findMin(Node *root)
@@ -32,7 +34,7 @@ public:
     }
 };
 
-// iterative solution
+// iterative solution (Level order traversal)
 
 class Solution
 {

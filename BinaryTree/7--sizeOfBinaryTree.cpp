@@ -2,6 +2,8 @@
 // https://www.geeksforgeeks.org/write-a-c-program-to-calculate-size-of-a-tree/
 
 // iterative solution
+// Level order traversal will be efficient
+// Because there we need to traverse one node only one time
 
 int getSize(Node* node)
 {
