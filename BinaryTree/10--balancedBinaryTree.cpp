@@ -16,6 +16,7 @@ public:
         int r = height(root->right);
         if(r==-1)
             return -1;
+        // if((lh-rh>1) || (rh-lh>1)) return -1;
         if(abs(l-r)>1)
             return -1;
         return (max(l, r) + 1);

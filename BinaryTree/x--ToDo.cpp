@@ -8,3 +8,6 @@
 // K distance from root (geeks)
 // Max/Min in binary tree (geeks)
 // Right View of binary tree (leetcode 199)
+// Connect next right pointer (leetcode 116, 117) - recursive approach
+// Height balanced binary tree (leetcode 110)
+// Same Tree (leetcode 100) -- Iterative approach

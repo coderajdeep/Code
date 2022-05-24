@@ -1,5 +1,6 @@
 // leetcode 78
 // We need to generate all the subsequence/subset
+// Same with generate all subsequence
 
 class Solution {
 public:
