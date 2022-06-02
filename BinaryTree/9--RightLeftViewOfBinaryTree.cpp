@@ -1,5 +1,37 @@
 // leetcode 199
 
+class Solution {
+public:
+    
+    void dfs(TreeNode *root,int level,int &maxLevel, vector<int> &ans) {
+        if(!root) {
+            return;
+        }
+        
+        if(level==maxLevel) {
+            ans.push_back(root->val);
+            ++maxLevel;
+        }
+        
+        dfs(root->right, level+1, maxLevel, ans);
+        dfs(root->left, level+1, maxLevel, ans);
+    }
+    
+    vector<int> rightSideView(TreeNode* root) {
+        if(!root) {
+            return vector<int>{};
+        }
+        
+        int maxLevel = 1;
+        vector<int>ans;
+        
+        dfs(root, 1, maxLevel, ans);
+        
+        return ans;
+    }
+};
+
+
 // right view - recursive solution using hashing
 
 class Solution {
@@ -82,37 +114,6 @@ public:
 
 // right view
 // recursive solution
-
-class Solution {
-public:
-    
-    void dfs(TreeNode *root,int level,int &maxLevel, vector<int> &ans) {
-        if(!root) {
-            return;
-        }
-        
-        if(level==maxLevel) {
-            ans.push_back(root->val);
-            ++maxLevel;
-        }
-        
-        dfs(root->right, level+1, maxLevel, ans);
-        dfs(root->left, level+1, maxLevel, ans);
-    }
-    
-    vector<int> rightSideView(TreeNode* root) {
-        if(!root) {
-            return vector<int>{};
-        }
-        
-        int maxLevel = 1;
-        vector<int>ans;
-        
-        dfs(root, 1, maxLevel, ans);
-        
-        return ans;
-    }
-};
 
 
 
