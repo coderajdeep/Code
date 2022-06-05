@@ -2,6 +2,7 @@
 // https://www.geeksforgeeks.org/check-if-two-trees-are-mirror/
 
 
+
 bool areMirror(Node* a, Node* b)
 {
     /* Base case : Both empty */

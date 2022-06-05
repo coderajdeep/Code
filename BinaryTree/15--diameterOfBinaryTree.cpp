@@ -75,6 +75,7 @@ class Solution {
         int lh = height(root->left, ans);
         int rh = height(root->right, ans);
         
+        // here considering number of nodes in the path
         ans = max(ans, 1+lh+rh);
         
         return 1 + max(lh, rh);

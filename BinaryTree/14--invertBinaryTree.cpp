@@ -1,7 +1,48 @@
 // leetcode 226
 
-// iterative
+// recursive
+// preorder
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if(!root) return nullptr;
+        swap(root->left, root->right);
+        TreeNode *l = invertTree(root->left);
+        TreeNode *r = invertTree(root->right);
+        root->left = l;
+        root->right = r;
+        return root;
+    }
+};
 
+// recursive
+// postorder
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if(!root) return nullptr;
+        TreeNode *l = invertTree(root->left);
+        TreeNode *r = invertTree(root->right);
+        root->left = l;
+        root->right = r;
+        swap(root->left, root->right);
+        return root;
+    }
+};
+
+// leetcode discussion
+// recursive
+TreeNode* invertTree(TreeNode* root) {
+    if (root) {
+        invertTree(root->left);
+        invertTree(root->right);
+        std::swap(root->left, root->right);
+    }
+    return root;
+}
+
+// iterative
+// preorder
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
@@ -29,18 +70,6 @@ public:
         return root;
     }
 };
-
-
-// leetcode discussion
-// recursive
-TreeNode* invertTree(TreeNode* root) {
-    if (root) {
-        invertTree(root->left);
-        invertTree(root->right);
-        std::swap(root->left, root->right);
-    }
-    return root;
-}
 
 //leetcode discussion
 // iterative
