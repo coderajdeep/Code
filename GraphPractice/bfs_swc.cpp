@@ -83,11 +83,14 @@ int bfs(int r, int c) {
 	push({0, 0});
 	int ans = 0;
 
+	// cout<<"BFS Started : ";
+
 	while(!isEmpty()) {
 		int t = getSize();
 		++ans;
 		while(t--) {
 			point u = Front();
+			// cout<<"("<<u.x<<" "<<u.y<<") ";
 			pop();
 			for(int i=0; i<4; ++i) {
 				int a = u.x + dirs[i][0];
@@ -101,6 +104,7 @@ int bfs(int r, int c) {
 			}
 		}
 	}
+	// cout<<"BFS ended\n";
 	return INT_MIN;
 }
 
