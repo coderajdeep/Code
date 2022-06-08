@@ -115,6 +115,7 @@ int main() {
 	for(int t=1; t<=T; ++t) {
 		int r, c;
 		cin>>r>>c;
+		init(r, c);
 		for(int i=0; i<r; ++i) {
 			for(int j=0; j<c; ++j) {
 				cin>>tb[i][j];
