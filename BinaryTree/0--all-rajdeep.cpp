@@ -102,3 +102,12 @@
 
 // 35
 // Deepest Leaves Sum -- leetcode 1302
+
+// 36
+// Connect left to right pointer in level order - leetcode 116
+
+// 37
+// Connect left to right pointer in level order II - leetcode 117
+
+// 38
+// Even odd tree - leetcode 1609

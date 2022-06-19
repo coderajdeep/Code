@@ -14,4 +14,7 @@
 // Left/Right, top/bottom(todo) view of binary tree
 // Max possible width of binary tree(leetcode 662)
 // Invert binary tree
-// Mirror tree (in iterative method)
+// Mirror tree (TODO in iterative method)
+// Path Sum -- leetcode 112
+// Path sum II -- very very important problem -- leetcode 113
+// Path Sum III - must try

@@ -12,10 +12,11 @@ public:
         
         while(!q.empty()) {
             
-            int size = q.size();
+            int t = q.size();
+            int num = t;
             double sum = 0.0;
             
-            for(int i=0; i<size; ++i) {
+            for(int i=0; i<t; ++i) {
                 TreeNode *curr = q.front();
                 q.pop();
                 
@@ -28,7 +29,7 @@ public:
                     q.push(curr->right);
                 }
             }
-            double avg = sum/size;
+            double avg = sum/num;
             ans.push_back(avg);
         }
         return ans;

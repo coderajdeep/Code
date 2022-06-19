@@ -1,4 +1,6 @@
 // Leetcode 77
+// Practice again
+// Task - chnage base condition
 
 // Given n and k
 // Need to return all possible combinations of k sized subsequence out of the range [1, n]

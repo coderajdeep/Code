@@ -1,19 +1,19 @@
-// leetcode 1161
+// leetcode 637
 
 class Solution {
 public:
-    int maxLevelSum(TreeNode* root) {
+    vector<double> averageOfLevels(TreeNode* root) {
         if(!root) {
             return {};
         }
-
+        vector<double>ans;
         queue<TreeNode*>q;
         q.push(root);
-        int level = 1, maxLevel = 1, maxSum = INT_MIN;
         
         while(!q.empty()) {
+            
             int size = q.size();
-            int sum = 0;
+            double sum = 0.0;
             
             for(int i=0; i<size; ++i) {
                 TreeNode *curr = q.front();
@@ -28,15 +28,9 @@ public:
                     q.push(curr->right);
                 }
             }
-            
-            if(maxSum<sum) {
-                maxSum = sum;
-                maxLevel = level;
-            }
-            
-            ++level;
+            double avg = sum/size;
+            ans.push_back(avg);
         }
-        
-        return maxLevel;
+        return ans;
     }
 };
