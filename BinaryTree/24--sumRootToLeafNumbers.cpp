@@ -1,5 +1,36 @@
 // Leetcode 129
 
+// Best method
+
+class Solution {
+public:
+    
+    bool isLeaf(TreeNode *root) {
+        return (root && !root->left && !root->right) ? true : false;
+    }
+    
+    void solve(TreeNode *root, int num, int &sum) {
+        if(!root) return;
+        
+        num = num*10 + (root->val);
+        
+        if(isLeaf(root)) sum += num;
+        
+        solve(root->left, num, sum);
+        solve(root->right, num, sum);
+    }
+    
+    int sumNumbers(TreeNode* root) {
+        if(!root) return 0;
+        int num = 0, sum = 0;
+        
+        solve(root, num, sum);
+        
+        return sum;
+    }
+};
+
+
 // self explanatory method
 class Solution {
 public:
