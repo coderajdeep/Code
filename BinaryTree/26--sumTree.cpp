@@ -25,7 +25,7 @@ class solution {
     public:
     
     bool isLeaf(Node *root) {
-        return (!root->left and !root->right) ? true : false ;
+        return (root and !root->left and !root->right) ? true : false ;
     }
     
     bool isSumTree(Node* root)
@@ -68,6 +68,20 @@ class solution {
         return (root->data == sum) and isSumTree(root->left) and isSumTree(root->right);
     }
 };
+
+
+// same as above approach
+// https://www.codingninjas.com/codestudio/problems/check-if-binary-tree-is-sum-tree-or-not_1164404
+bool isSumTree(TreeNode<int> *root) {
+    if(!root) return true;
+    if(!root->left && !root->right) return true;
+    int sum = 0;
+    if(root->left && !root->left->left && !root->left->right) sum += root->left->val;
+    else if(root->left) sum += 2 * root->left->val;
+    if(root->right && !root->right->left && !root->right->right) sum += root->right->val;
+    else if(root->right) sum += 2 * root->right->val;
+    return (sum == root->val) && isSumTree(root->left) && isSumTree(root->right);
+}
 
 
 // another staright forward approach
