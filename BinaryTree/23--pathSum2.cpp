@@ -3,6 +3,40 @@
 // Tricky
 
 
+// The best solution
+
+class Solution {
+public:
+    
+    void solve(TreeNode *root, int &targetSum, vector<int> &ds, vector<vector<int>> &ans) {
+        if(!root) return;
+        
+        ds.push_back(root->val);
+        targetSum -= root->val;
+        
+        if(!root->left && !root->right && !targetSum) ans.push_back(ds);
+        
+        solve(root->left, targetSum, ds, ans);
+        solve(root->right, targetSum, ds, ans);
+        
+        ds.pop_back();
+        targetSum += root->val;
+    }
+    
+    vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
+        if(!root) return {};
+        
+        vector<vector<int>> ans;
+        vector<int> ds;
+        
+        solve(root, targetSum, ds, ans);
+        
+        return ans;
+        
+    }
+};
+
+
 // Best solution
 
 class Solution {
@@ -80,6 +114,37 @@ public:
         dfs(root, targetSum, temp, ans);
         
         return ans;
+    }
+};
+
+
+class Solution {
+public:
+    
+    void solve(TreeNode *root, int targetSum, vector<int> &ds, vector<vector<int>> &ans) {
+        if(!root) return;
+        
+        ds.push_back(root->val);
+        targetSum -= root->val;
+        
+        if(!root->left && !root->right && !targetSum) ans.push_back(ds);
+        
+        solve(root->left, targetSum, ds, ans);
+        solve(root->right, targetSum, ds, ans);
+        
+        ds.pop_back();
+    }
+    
+    vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
+        if(!root) return {};
+        
+        vector<vector<int>> ans;
+        vector<int> ds;
+        
+        solve(root, targetSum, ds, ans);
+        
+        return ans;
+        
     }
 };
 
