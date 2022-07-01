@@ -84,6 +84,30 @@ bool isSumTree(TreeNode<int> *root) {
 }
 
 
+// Calculating left and right subtree sum in one go
+// Time complexity O(n)
+
+bool isLeaf(TreeNode<int> *root) {
+    return (root && !root->left && !root->right) ? true : false;
+}
+
+int solve(TreeNode<int> *root, bool &ans) {
+    if(!root || !ans) return 0;
+    int l = solve(root->left, ans);
+    int r = solve(root->right, ans);
+    if(!isLeaf(root) && (root->val != l+r)) ans = false;
+    return root->val + l + r;
+} 
+
+bool isSumTree(TreeNode<int> *root)
+{
+    if(!root) return true;
+    bool ans = true;
+    solve(root, ans);
+    return ans;
+}
+
+
 // another staright forward approach
 
 class Solution
