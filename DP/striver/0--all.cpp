@@ -12,3 +12,6 @@
 
 // 5
 // Max sum of subsequence with non adjacent element - leetcode 198 - House robber
+
+// 6
+// House robber II - leetcode 213
