@@ -3,8 +3,8 @@
 
 // https://atcoder.jp/contests/dp/tasks/dp_b
 
-// Space optimized tabulation / Bottom up approach
-// Time O(n)
+// Top down approach - Memoization
+// Time O(n*k)
 // Space O(n) [function call stack O(n) + array O(n)]
 
 // submission link
@@ -38,4 +38,28 @@ int main() {
     for(int i=0; i<n; ++i) cin>>ht[i];
     vector<int> dp(n, -1);
     cout<<solve(n-1, k, ht, dp)<<endl;
+}
+
+
+
+// Tabulation / Bottom up approach
+// Time O(n*k)
+// Space O(n) [function call stack O(n) + array O(n)]
+
+
+int solve(int index, int k, vector<int> &ht, vector<int> &dp) {
+    dp[0] = 0;
+    for(int i=0; i<=index; ++i) {
+        int minValue = INT_MAX;
+        for(int j=1; j<=k; ++j) {
+            if(i+j<=index) {
+                minValue = min(minValue, dp[i] + abs(ht[i] - ht[i+j]));
+            }
+            else {
+                break;
+            }
+        }
+        dp[j] = minValue;
+    }
+    return dp[n-1];
 }
