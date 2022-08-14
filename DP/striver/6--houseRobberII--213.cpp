@@ -32,3 +32,30 @@ public:
         return max(excludeFirst, exculdeLast);
     }
 };
+
+
+// Code studio (house-robber_839733)
+// Space optimized Bottom up approach - tabulation
+// Time O(n)
+// Space O(1)
+// Edge case, n==1 and n==2
+long long solve(vector<int> &nums, int st, int end) {
+    long long prev2 = nums[st];
+    long long prev1 = max(nums[st], nums[st+1]);
+    long long curr = prev1;
+    for(int i=st+2; i<=end; ++i) {
+        long long pick = prev2 + nums[i];
+        long long notPick = prev1;
+        curr = max(pick, notPick);
+        prev2 = prev1;
+        prev1 = curr;
+    }
+    return curr;
+}
+
+long long int houseRobber(vector<int>& valueInHouse) {
+    int n = valueInHouse.size();
+    if(n==1) return valueInHouse[0];
+    if(n==2) return max(valueInHouse[0], valueInHouse[1]);
+    return max(solve(valueInHouse, 0, n-2), solve(valueInHouse, 1, n-1));
+}
