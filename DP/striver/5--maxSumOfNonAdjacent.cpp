@@ -1,6 +1,54 @@
 // leetcode 198
-// House robber
-// Max sum of non adjacent element
+// House robber - leetcode
+// Max sum of non adjacent element - coding ninja
+
+// leetcode solution
+// Space optimized Bottom up approach - tabulation
+// Time O(n)
+// Space O(1)
+// Edge case, n==1 and n==2
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        int n = nums.size();
+        if(n==1) return nums[0];
+        int prev2 = nums[0];
+        int prev1 = max(nums[0], nums[1]);
+        int curr = prev1;
+        
+        for(int i=2; i<n; ++i) {
+            int pick = nums[i] + prev2;
+            int notPick = prev1;
+            curr = max(pick, notPick);
+            prev2 = prev1;
+            prev1 = curr;
+        }
+        return curr;
+    }
+};
+
+// leetcode solution
+// Bottom up approach - tabulation
+// Time O(n)
+// Space O(n) [array O(n)]
+
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        int n = nums.size();
+        if(n==1) return nums[0];
+        int dp[n];
+        dp[0] = nums[0];
+        dp[1] = max(nums[0], nums[1]);
+        
+        for(int i=2; i<n; ++i) {
+            int pick = nums[i] + dp[i-2];
+            int notPick = dp[i-1];
+            dp[i] = max(pick, notPick);
+        }
+        return dp[n-1];
+    }
+};
 
 // leetcode solution
 // Top down approach - Memoization
