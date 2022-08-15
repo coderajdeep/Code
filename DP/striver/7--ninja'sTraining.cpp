@@ -1,6 +1,36 @@
 // Coding Ninja
 // https://www.codingninjas.com/codestudio/problems/ninja-s-training_3621003
 
+// Space optimized Tabulation - Bottom up solution
+// Space O(1)
+// Time O(n*12) ~ O(n)
+int ninjaTraining(int n, vector<vector<int>> &points) {
+    int dp[4];
+    int prev[4];
+    int value;
+    for(int last=0; last<4; ++last) {
+        value = 0;
+        for(int curr=0; curr<3; ++curr) {
+            if(last!=curr) value = max(value, points[0][curr]);
+        }
+        dp[last] = value;
+    }
+    
+    for(int day=1; day<n; ++day) {
+        for(int last=0; last<4; ++last) {
+            value = 0;
+            for(int curr=0; curr<3; ++curr) {
+                if(last!=curr) {
+                    value = max(value, points[day][curr] + dp[curr]);
+                }
+            }
+            prev[last] = value;
+        }
+        for(int i=0; i<4; ++i) dp[i] = prev[i];
+    }
+    return value;
+}
+
 
 // Tabulation - Bottom up approach
 // Time - O(n*12) - Overall O(n)
