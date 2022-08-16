@@ -24,3 +24,6 @@
 
 // 9
 // Unique Paths II - leetcode 63
+
+// 10
+// Minimum Path Sum - leetcode 64
