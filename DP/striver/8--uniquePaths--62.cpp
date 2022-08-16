@@ -44,7 +44,7 @@ public:
 
 // Memoization - Top down approach
 // Time O(m*n)
-// Space O(m*n) [O(m*n) -> Function call stack + O(m*n) -> array]
+// Space O(m*n) [O(path length) ~ O((m-1)+(n-1)) -> Function call stack + O(m*n) -> array]
 class Solution {
 public:
     int solve(int m, int n, vector<vector<int>> &dp) {
