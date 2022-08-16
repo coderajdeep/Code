@@ -2,6 +2,30 @@
 // Minimum Path Sum
 
 
+// Space optimized tabulation - Bottomup approach
+// Time O(n*m)
+// Space O(n*m)
+class Solution {
+public:
+    int minPathSum(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+        int prev[m];
+        int curr[m];
+        for(int i=0; i<n; ++i) {
+            for(int j=0; j<m; ++j) {
+                if(i==0 && j==0) curr[0] = grid[0][0];
+                else if(i==0) curr[j] = grid[0][j] + curr[j-1];
+                else if(j==0) curr[0] = grid[i][0] + prev[0];
+                else curr[j] = grid[i][j] + min(curr[j-1], prev[j]);
+            }
+            for(int k=0; k<m; ++k) prev[k] = curr[k];
+        }
+        return curr[m-1];
+    }
+};
+
+
 // Tabulation - Bottom up approach
 // Time O(n*m)
 // Space O(n*m)
