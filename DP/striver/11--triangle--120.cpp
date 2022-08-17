@@ -1,6 +1,31 @@
 // Triangle
 // leetcode 120
 
+// Space optimized Tabulation - Bottom up approach
+// Time O(n2)
+// Space O(n)
+class Solution {
+public:
+    int minimumTotal(vector<vector<int>>& triangle) {
+        int n = triangle.size();
+        int curr[n];
+        int prev[n];
+        for(int i=0; i<n; ++i) {
+            curr[i] = triangle[n-1][i];
+            prev[i] = triangle[n-1][i];
+        }
+        for(int i=n-2; i>=0; --i) {
+            for(int j=0; j<=i; ++j) {
+                int down = triangle[i][j] + prev[j];
+                int diagonal = triangle[i][j] + prev[j+1];
+                curr[j] = min(down, diagonal);
+            }
+            for(int k=0; k<=i; ++k) prev[k] = curr[k];
+        }
+        return curr[0];
+    }
+};
+
 // Tabulation - Bottom up approach
 // Time O(n2)
 // Space O(n2)
