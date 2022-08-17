@@ -1,10 +1,30 @@
 // Triangle
 // leetcode 120
 
+// Tabulation - Bottom up approach
+// Time O(n2)
+// Space O(n2)
+class Solution {
+public:
+    int minimumTotal(vector<vector<int>>& triangle) {
+        int n = triangle.size();
+        vector<vector<int>> dp = triangle;
+        for(int i=0; i<n; ++i) dp[n-1][i] = triangle[n-1][i];
+        for(int i=n-2; i>=0 ; --i) {
+            for(int j=0; j<=i; ++j) {
+                int down = triangle[i][j] + dp[i+1][j];
+                int diagonal = triangle[i][j] + dp[i+1][j+1];
+                dp[i][j] = min(down, diagonal);
+            }
+        }
+        return dp[0][0];
+    }
+};
 
-// Memoization - Bottom up approach
-// Time O(n^2)
-// Space O(n^2) [Function call stack O(2n) + array O(n^2)]
+
+// Memoization - Top down approach
+// Time O(n2)
+// Space O(n2) [Function call stack O(n) + array O(n2)]
 class Solution {
 public:
     int solve(int i, int j, int n, vector<vector<int>> &arr, vector<vector<int>> &dp) {
