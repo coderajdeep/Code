@@ -30,3 +30,6 @@
 
 // 11
 // Triangle - leetcode 120
+
+// 12
+// Minimum falling path sujm
