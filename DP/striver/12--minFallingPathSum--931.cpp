@@ -2,7 +2,36 @@
 // Minimum falling path sum
 
 
-// tabulation - bottom up approach
+// Space optimized tabulation - bottom up approach
+// Time O(n*m)
+// Space O(m)
+class Solution {
+public:
+    int minFallingPathSum(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        int m = matrix[0].size();
+        int curr[m];
+        int prev[m];
+        for(int i=0; i<n; ++i) {
+            for(int j=0; j<m; ++j) {
+                if(i==0) curr[j] = matrix[i][j];
+                else {
+                    int up = matrix[i][j] + prev[j];
+                    int l = j>0 ? (matrix[i][j] + prev[j-1]) : INT_MAX;
+                    int r = j<n-1 ? (matrix[i][j] + prev[j+1]) : INT_MAX;
+                    curr[j] = min({up, l, r});
+                }
+            }
+            for(int j=0; j<m; ++j) prev[j] = curr[j];
+        }
+        int ans = INT_MAX;
+        for(int i=0; i<m; ++i) ans = min(ans, curr[i]);
+        return ans;
+    }
+};
+
+
+// Tabulation - bottom up approach
 // Time O(n*m)
 // Space O(n*m)
 class Solution {
