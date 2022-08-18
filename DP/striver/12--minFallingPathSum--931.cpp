@@ -1,6 +1,33 @@
 // Leetcode 931
 // Minimum falling path sum
 
+
+// tabulation - bottom up approach
+// Time O(n*m)
+// Space O(n*m)
+class Solution {
+public:
+    int minFallingPathSum(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        int m = matrix[0].size();
+        int dp[n][m];
+        for(int i=0; i<n; ++i) {
+            for(int j=0; j<m; ++j) {
+                if(i==0) dp[i][j] = matrix[i][j];
+                else {
+                    int up = matrix[i][j] + dp[i-1][j];
+                    int l = j>0 ? (matrix[i][j] + dp[i-1][j-1]) : INT_MAX;
+                    int r = j<n-1 ? (matrix[i][j] + dp[i-1][j+1]) : INT_MAX;
+                    dp[i][j] = min({up, l, r});
+                }
+            }
+        }
+        int ans = INT_MAX;
+        for(int i=0; i<m; ++i) ans = min(ans, dp[n-1][i]);
+        return ans;
+    }
+};
+
 // Memoization
 // Time O(n*m*m)
 // Space O(n*m)
