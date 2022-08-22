@@ -39,3 +39,6 @@
 
 // 14
 // Subsets sum equals to K - Coding ninja
+
+// 15
+// Partition equals subset sum
