@@ -36,3 +36,6 @@
 
 // 13
 // Cherry Pickup II - leetcode 1463
+
+// 14
+// Subsets sum equals to K - Coding ninja
