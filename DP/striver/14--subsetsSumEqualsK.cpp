@@ -16,3 +16,20 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
     int ans = solve(n-1, k, arr, dp);
     return ans==1;
 }
+
+
+// Tabulation - Bottom up approach
+bool subsetSumToK(int n, int k, vector<int> &arr) {
+    bool dp[n][k+1];
+    for(int i=0; i<n; ++i) dp[i][0] = true;
+    for(int i=1; i<=k; ++i) dp[0][i] = (arr[0]==i);
+    for(int i=1; i<n; ++i) {
+        for(int j=1; j<=k; ++j) {
+            bool notPick = dp[i-1][j];
+            bool pick = false;
+            if(j>=arr[i]) pick = dp[i-1][j-arr[i]];
+            dp[i][j] = pick || notPick;
+        }
+    }
+    return dp[n-1][k];
+}
