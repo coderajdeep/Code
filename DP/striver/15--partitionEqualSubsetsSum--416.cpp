@@ -2,6 +2,35 @@
 // Partition equals subset sum
 
 
+// Space optimized tabulation
+class Solution {
+public:
+    bool canPartition(vector<int>& nums) {
+        int n = nums.size();
+        if(n==1) return false;
+        int sum = 0;
+        for(int i=0; i<n; ++i) sum += nums[i];
+        if(sum%2==1) return false;
+        sum/=2;
+        bool prev[sum+1];
+        bool curr[sum+1];
+        prev[0] = true;
+        curr[0] = true;
+        for(int i=1; i<=sum; ++i) prev[i] = (nums[0]==i);
+        for(int i=1; i<n; ++i) {
+            for(int j=1; j<=sum; ++j) {
+                bool pick = false;
+                if(j>=nums[i]) pick = prev[j-nums[i]];
+                bool notPick = prev[j];
+                curr[j] = pick || notPick;
+            }
+            for(int j=1; j<=sum; ++j) prev[j] = curr[j];
+        }
+        return curr[sum];
+    }
+};
+
+
 // Tabulation
 class Solution {
 public:
