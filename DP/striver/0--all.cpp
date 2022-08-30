@@ -45,3 +45,6 @@
 
 // 16
 // Partition a set into two subsets with minimum absolute sum difference
+
+// 17
+// Count subsets having sum K - all array elements are positive
