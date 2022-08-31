@@ -18,3 +18,22 @@ int findWays(vector<int> &num, int tar) {
     int ans = solve(n-1, tar, num, dp);
     return ans;
 }
+
+
+// Tabulation
+int findWays(vector<int> &num, int tar) {
+    int n = num.size();
+    int dp[n][tar+1];
+    dp[0][0] = 1;
+    for(int i=1; i<=tar; ++i) dp[0][i] = (num[0]==i)?1:0;
+    for(int i=1; i<n; ++i) {
+        dp[i][0] = 1;
+        for(int j=1; j<=tar; ++j) {
+            int take = 0;
+            if(num[i]<=j) take = dp[i-1][j-num[i]];
+            int notTake = dp[i-1][j];
+            dp[i][j] = take + notTake;
+        }
+    }
+    return dp[n-1][tar];
+}
