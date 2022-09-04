@@ -3,6 +3,33 @@
 // Partitions With Given Difference
 
 
+// Space optimized tabulationpublic:
+class Solution {
+public:
+    int findTargetSumWays(vector<int>& nums, int target) {
+        int n = nums.size(), sum = 0;
+        for(int i=0; i<n; ++i) sum += nums[i];
+        int tar = target + sum;
+        if(tar<0 || tar%2==1) return 0;
+        tar /= 2;
+        int prev[tar+1];
+        int curr[tar+1];
+        prev[0] = (nums[0]==0)?2:1;
+        for(int i=1; i<=tar; ++i) prev[i] = (nums[0]==i)?1:0;
+        for(int i=1; i<n; ++i) {
+            for(int j=0; j<=tar; ++j) {
+                int take = 0;
+                if(nums[i]<=j) take = prev[j-nums[i]];
+                int notTake = prev[j];
+                curr[j] = take + notTake;
+            }
+            for(int i=0; i<=tar; ++i) prev[i] = curr[i];
+        }
+        return prev[tar];
+    }
+};
+
+
 // Tabulation - Bottom up approach
 class Solution {
 public:
