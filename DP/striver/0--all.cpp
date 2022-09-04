@@ -48,3 +48,6 @@
 
 // 17
 // Count subsets having sum K - all array elements are positive
+
+// 18
+// Target Sum - leetcode 494 - Partitions With Given Difference
