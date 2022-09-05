@@ -1,6 +1,6 @@
 // leetcode 494
 // Target Sum
-// Partitions With Given Difference
+// Partitions With Given Difference - Coding Ninja
 
 
 // Space optimized tabulationpublic:

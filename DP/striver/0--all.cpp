@@ -51,3 +51,6 @@
 
 // 18
 // Target Sum - leetcode 494 - Partitions With Given Difference
+
+// 19
+// 0 1 Knapsack - Geeks - Coding Ninga
