@@ -2,6 +2,24 @@
 // Coding Ninja
 
 
+// Space optimized tabulation
+int knapSack(int W, int wt[], int val[], int n) { 
+        int prev[W+1];
+        int curr[W+1];
+        for(int i=0; i<=W; ++i) prev[i] = (wt[0]<=i)?val[0]:0;
+        for(int i=1;i<n; ++i) {
+            for(int j=0; j<=W; ++j) {
+                int take = 0;
+                if(wt[i]<=j) take = val[i] + prev[j-wt[i]];
+                int notTake = prev[j];
+                curr[j] = max(take, notTake);
+            }
+            for(int i=0; i<=W; ++i) prev[i] = curr[i];
+        }
+        return prev[W];
+    }
+
+
 // Bottom up approach - tabulation
 int knapSack(int W, int wt[], int val[], int n) 
 { 
