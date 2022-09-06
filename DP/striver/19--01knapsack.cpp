@@ -2,27 +2,42 @@
 // Coding Ninja
 
 
+// Space optimized - Used only one 1D array - Tabulation - Bottom up
+int knapSack(int W, int wt[], int val[], int n) { 
+    int dp[W+1];
+    for(int i=0; i<=W; ++i) dp[i] = (wt[0]<=i)?val[0]:0;
+    for(int i=1; i<n; ++i) {
+        for(int j=W; j>=0; --j) {
+            int take = 0;
+            if(wt[i]<=j) take = val[i] + dp[j-wt[i]];
+            int notTake = dp[j];
+            dp[j] = max(take, notTake);
+        }
+    }
+    return dp[W];
+}
+
+
 // Space optimized tabulation
 int knapSack(int W, int wt[], int val[], int n) { 
-        int prev[W+1];
-        int curr[W+1];
-        for(int i=0; i<=W; ++i) prev[i] = (wt[0]<=i)?val[0]:0;
-        for(int i=1;i<n; ++i) {
-            for(int j=0; j<=W; ++j) {
-                int take = 0;
-                if(wt[i]<=j) take = val[i] + prev[j-wt[i]];
-                int notTake = prev[j];
-                curr[j] = max(take, notTake);
-            }
-            for(int i=0; i<=W; ++i) prev[i] = curr[i];
+    int prev[W+1];
+    int curr[W+1];
+    for(int i=0; i<=W; ++i) prev[i] = (wt[0]<=i)?val[0]:0;
+    for(int i=1;i<n; ++i) {
+        for(int j=0; j<=W; ++j) {
+            int take = 0;
+            if(wt[i]<=j) take = val[i] + prev[j-wt[i]];
+            int notTake = prev[j];
+            curr[j] = max(take, notTake);
         }
-        return prev[W];
+        for(int i=0; i<=W; ++i) prev[i] = curr[i];
     }
+    return prev[W];
+}
 
 
 // Bottom up approach - tabulation
-int knapSack(int W, int wt[], int val[], int n) 
-{ 
+int knapSack(int W, int wt[], int val[], int n) { 
     int dp[n][W+1];
     for(int i=0; i<=W; ++i) dp[0][i] = (wt[0]<=i)?val[0]:0;
     for(int i=1; i<n; ++i) {
