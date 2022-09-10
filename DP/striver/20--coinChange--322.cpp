@@ -1,6 +1,23 @@
 // leetcode 322
 // Coin change
 
+
+// Bottom up approach - Tabulation
+int coinChange(vector<int>& coins, int amount) {
+    int n = coins.size();
+    int dp[n][amount+1];
+    for(int i=0; i<=amount; ++i) dp[0][i] = (i%coins[0]==0)?(i/coins[0]):1e9;
+    for(int i=1; i<n; ++i) {
+        for(int j=0; j<=amount; ++j) {
+            int take = 1e9;
+            if(coins[i]<=j) take = 1 + dp[i][j-coins[i]];
+            int notTake = dp[i-1][j];
+            dp[i][j] = min(take, notTake);
+        }
+    }
+    return dp[n-1][amount]!=1e9?dp[n-1][amount]:-1;
+}
+
 // Top down approach - Memoization
 int solve(int index, int tar, vector<int> &coins, vector<vector<int>> &dp) {
     if(index==0) return (tar%coins[0]==0)?(tar/coins[0]):1e9;
