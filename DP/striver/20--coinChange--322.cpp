@@ -2,6 +2,28 @@
 // Coin change
 
 
+// Space optimized - Bottom up approach - Tabulation
+int coinChange(vector<int>& coins, int amount) {
+    int n = coins.size();
+    int curr[amount+1];
+    int prev[amount+1];
+    curr[0] = 1e9;
+    
+    for(int i=0; i<=amount; ++i) prev[i] = (i%coins[0]==0)?(i/coins[0]):1e9;
+    
+    for(int i=1; i<n; ++i) {
+        for(int j=0; j<=amount; ++j) {
+            int take = 1e9;
+            if(coins[i]<=j) take = 1 + curr[j-coins[i]];
+            int notTake = prev[j];
+            curr[j] = min(take, notTake);
+        }
+        for(int i=0; i<=amount; ++i) prev[i] = curr[i];
+    }
+    return (prev[amount]!=1e9)?prev[amount]:-1;
+}
+
+
 // Bottom up approach - Tabulation
 int coinChange(vector<int>& coins, int amount) {
     int n = coins.size();
