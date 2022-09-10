@@ -1,6 +1,10 @@
 // leetcode 322
 // Coin change
 
+// Important point
+// We can not decide anything when target = 0
+// test case : [1, 2] , target = 2
+
 
 // Space optimized - Bottom up approach - Tabulation
 int coinChange(vector<int>& coins, int amount) {
