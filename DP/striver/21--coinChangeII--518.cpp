@@ -2,6 +2,27 @@
 // Leetcode 518
 
 
+// Space optimized bottom up approach
+// Tabulation
+int change(int amount, vector<int>& coins) {
+        int n = coins.size();
+        int prev[amount+1];
+        int curr[amount+1];
+        curr[0] = 1;
+        for(int i=0; i<=amount; ++i) prev[i] = (i%coins[0]==0)?1:0;
+        for(int i=1; i<n; ++i) {
+            for(int j=1; j<=amount; ++j) {
+                int take = 0;
+                if(coins[i]<=j) take = curr[j-coins[i]];
+                int notTake = prev[j];
+                curr[j] = take + notTake;
+            }
+            for(int i=1; i<=amount; ++i) prev[i] = curr[i];
+        }
+        return prev[amount];
+    }
+
+
 // Bottom up approach
 // Tabulation
 int change(int amount, vector<int>& coins) {
