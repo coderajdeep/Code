@@ -1,5 +1,22 @@
 // Unbounded knapsack
 
+
+// Bottom up approach
+// Tabulation
+int knapSack(int n, int W, int val[], int wt[]) {
+    int dp[n][W+1];
+    for(int i=0; i<=W; ++i) dp[0][i] = (wt[0]<=i)?((i/wt[0])*val[0]):0;
+    for(int i=1; i<n; ++i) {
+        for(int j=0; j<=W; ++j) {
+            int take = 0;
+            if(wt[i]<=j) take = val[i] + dp[i][j-wt[i]];
+            int notTake = dp[i-1][j];
+            dp[i][j] = max(take, notTake);
+        }
+    }
+    return dp[n-1][W];
+}
+
 // Top down approach
 // Memoization
 
