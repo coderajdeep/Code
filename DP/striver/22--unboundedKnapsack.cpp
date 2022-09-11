@@ -1,4 +1,26 @@
 // Unbounded knapsack
+// Geeks
+
+
+// Space optimized
+// Bottom up approach
+// Tabulation
+int knapSack(int N, int W, int val[], int wt[]) {
+        int prev[W+1];
+        int curr[W+1];
+        prev[0] = curr[0] = 0;
+        for(int i=1; i<=W; ++i) prev[i] = (wt[0]<=i)?((i/wt[0])*val[0]):0;
+        for(int i=1; i<N; ++i) {
+            for(int j=1; j<=W; ++j) {
+                int take = 0;
+                if(wt[i]<=j) take = val[i] + curr[j-wt[i]];
+                int notTake = prev[j];
+                curr[j] = max(take, notTake);
+            }
+            for(int i=0; i<=W; ++i) prev[i] = curr[i];
+        }
+        return prev[W];
+    }
 
 
 // Bottom up approach
