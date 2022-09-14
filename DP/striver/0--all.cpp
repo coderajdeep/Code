@@ -63,3 +63,6 @@
 
 // 22
 // Unbounded knapshak - geeks
+
+// 23
+// Rod cutting - Coding ninja - similar to unbounded knapsack
