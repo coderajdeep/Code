@@ -1,6 +1,25 @@
 // Rod cutting
 // Similar to unbounded knapasck
 
+
+// Bottom up approach
+// Tabulation
+int cutRod(vector<int> &price, int n) {
+	int dp[n][n+1];
+    for(int i=0; i<=n; ++i) dp[0][i] = price[0]*i;
+    for(int i=1; i<n; ++i) {
+        dp[i][0] = 0;
+        for(int j=1; j<=n; ++j) {
+            int take = 0;
+            if((i+1)<=j) take = price[i] + dp[i][j-i-1];
+            int notTake = dp[i-1][j];
+            dp[i][j] = max(take, notTake);
+        }
+    }
+    return dp[n-1][n];
+}
+
+
 // Top down approach
 // Memoization
 int solve(int index, int len, vector<int> &price, vector<vector<int>> &dp) {
