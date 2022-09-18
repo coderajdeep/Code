@@ -2,6 +2,22 @@
 // Geeks
 
 
+// Sapce optimized
+// Using only one 1D array
+int knapSack(int N, int W, int val[], int wt[]) {
+    int dp[W+1];
+    for(int i=0; i<=W; ++i) dp[i] = (wt[0]<=i)?((i/wt[0])*val[0]):0;
+    for(int i=1; i<N; ++i) {
+        for(int j=1; j<=W; ++j) {
+            int take = INT_MIN;
+            if(wt[i]<=j) take = val[i] + dp[j-wt[i]];
+            int notTake = dp[j];
+            dp[j] = max(take, notTake);
+        }
+    }
+    return dp[W];
+}
+
 // Space optimized
 // Bottom up approach
 // Tabulation
