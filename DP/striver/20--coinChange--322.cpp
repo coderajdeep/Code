@@ -6,6 +6,29 @@
 // test case : [1, 2] , target = 2
 
 
+// Space optimized 
+// 1D array
+// Assuming when amount = 0 ans will be 0
+class Solution {
+public:
+    int coinChange(vector<int>& coins, int amount) {
+        int dp[amount+1];
+        int n = coins.size();
+        dp[0] = 0;
+        for(int i=1; i<=amount; ++i) dp[i] = (i%coins[0]==0)?(i/coins[0]):1e9;
+        for(int i=1; i<n; ++i) {
+            for(int j=1; j<=amount; ++j) {
+                int take = 1e9;
+                if(coins[i]<=j) take = 1 + dp[j-coins[i]];
+                int notTake = dp[j];
+                dp[j] = min(take, notTake);
+            }
+        }
+        return dp[amount]!=1e9?dp[amount]:-1;
+    }
+};
+
+
 // Space optimized
 // 1D array
 class Solution {
