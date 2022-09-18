@@ -66,3 +66,6 @@
 
 // 23
 // Rod cutting - Coding ninja - similar to unbounded knapsack
+
+// 24
+// Longest common subsequence - leetcode 1143
