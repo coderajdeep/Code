@@ -2,6 +2,28 @@
 // Leetcode 518
 
 
+// Sapce optimized
+// Uisng 1D array
+class Solution {
+public:
+    int change(int amount, vector<int>& coins) {
+        int n = coins.size();
+        int dp[amount+1];
+        dp[0] = 1;
+        for(int i=1; i<=amount; ++i) dp[i] = (i%coins[0]==0)?1:0;
+        for(int i=1; i<n; ++i) {
+            for(int j=1; j<=amount; ++j) {
+                int take = 0;
+                if(coins[i]<=j) take = dp[j-coins[i]];
+                int notTake = dp[j];
+                dp[j] = take + notTake;
+            }
+        }
+        return dp[amount];
+    }
+};
+
+
 // Space optimized bottom up approach
 // Tabulation
 int change(int amount, vector<int>& coins) {
