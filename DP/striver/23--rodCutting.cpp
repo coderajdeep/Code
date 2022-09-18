@@ -1,6 +1,24 @@
 // Rod cutting
 // Similar to unbounded knapasck
 
+
+// Space optimized
+// 1D array
+int cutRod(vector<int> &price, int n) {
+	int dp[n+1];
+    dp[0] = 0;
+    for(int i=1; i<=n; ++i) dp[i] = price[0]*i;
+    for(int i=1; i<n; ++i) {
+        for(int j=1; j<=n; ++j) {
+            int take = 0;
+            if((i+1)<=j) take = price[i] + dp[j-i-1];
+            int notTake = dp[j];
+            dp[j] = max(take, notTake);
+        }
+    }
+    return dp[n];
+}
+
 // Space optimized tabulation
 int cutRod(vector<int> &price, int n) {
 	int prev[n+1];
