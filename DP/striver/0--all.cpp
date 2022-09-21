@@ -75,3 +75,6 @@
 
 // 26
 // Longest common substring - Geeks
+
+// 27
+// Longest palindromic subsequence - leetcode 516
