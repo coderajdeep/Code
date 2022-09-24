@@ -84,3 +84,6 @@
 
 // 29
 // Minimum Insertion/Deletion to convert string A to B - Geeks
+
+// 30
+// Shortest Common Supersequence - leetcode 1092
