@@ -1,6 +1,30 @@
 // leetcode 72
 // Edit distance
 
+
+// Space optimized 
+// Bottom up approach
+// tabulation
+class Solution {
+public:
+    int minDistance(string word1, string word2) {
+        int n = word1.size();
+        int m = word2.size();
+        int dp[2][m+1];
+        for(int i=0; i<=m; ++i) dp[0][i] = i;
+        for(int i=1; i<=n; ++i) {
+            dp[1][0] = i;
+            for(int j=1; j<=m; ++j) {
+                if(word1[i-1]==word2[j-1]) dp[1][j] = dp[0][j-1];
+                else dp[1][j] = 1 + min({dp[0][j-1], dp[1][j-1], dp[0][j]});
+                // replace : dp[0][j-1]; insert : dp[1][j-1]; delete : dp[0][j]
+            }
+            for(int i=0; i<=m; ++i) dp[0][i] = dp[1][i];
+        }
+        return dp[0][m];
+    }
+};
+
 // Bottom up approach
 // Tabulation
 class Solution {
