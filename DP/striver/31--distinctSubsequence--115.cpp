@@ -2,6 +2,30 @@
 // Distinct Subsequences
 
 
+// Space optimized 
+// tabulation
+// using two 1D array
+class Solution {
+public:
+    int numDistinct(string s, string t) {
+        int n = s.size();
+        int m = t.size();
+        unsigned int dp[2][m+1];
+        for(int i=1; i<=m; ++i) dp[0][i] = 0;
+        dp[0][0] = 1;
+        for(int i=1; i<=n; ++i) {
+            dp[1][0] = 1;
+            for(int j=1; j<=m; ++j) {
+                if(s[i-1]==t[j-1]) dp[1][j] = dp[0][j-1] + dp[0][j];
+                else dp[1][j] = dp[0][j];
+            }
+            for(int i=1; i<=m; ++i) dp[0][i] = dp[1][i];
+        }
+        return dp[0][m];
+    }
+};
+
+
 // Bottom up approach
 // Tabulation
 /*
