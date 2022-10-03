@@ -17,3 +17,6 @@
 
 // 6
 // Surrounded Regions -- Leetcode 130
+
+// 7
+// Distinct instaln - geeks - eight directional moves
