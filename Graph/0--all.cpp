@@ -26,3 +26,6 @@
 
 // 9
 // DFS of graph - geeks
+
+// 10
+// Number of Provinces - leetcode 547
