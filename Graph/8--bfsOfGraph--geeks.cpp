@@ -1,6 +1,6 @@
 // BFS of graph
 // geeks
-https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
+// https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
 
 vector<int> bfsOfGraph(int V, vector<int> adj[]) {
     int visited[V] = {0};

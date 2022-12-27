@@ -1,23 +1,19 @@
 // DFS of graph
-// https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
+// https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1
 
-vector<int> bfsOfGraph(int V, vector<int> adj[]) {
-    int visited[V] = {0};
-    queue<int>q;
-    q.push(0);
-    visited[0] = 1;
-    vector<int> ans;
-    
-    while(!q.empty()) {
-        int u = q.front();
-        q.pop();
-        ans.push_back(u);
-        for(int v:adj[u]) {
-            if(!visited[v]) {
-                visited[v] = 1;
-                q.push(v);
-            }
+void dfs(int source, vector<int> *adj, vector<bool> &visited, vector<int> &ans) {
+    visited[source] = true;
+    ans.push_back(source);
+    for(int v:adj[source]) {
+        if(!visited[v]) {
+            dfs(v, adj, visited, ans);
         }
     }
+}
+
+vector<int> dfsOfGraph(int V, vector<int> adj[]) {
+    vector<int> ans;
+    vector<bool> visited(V, false);
+    dfs(0, adj, visited, ans);
     return ans;
 }
