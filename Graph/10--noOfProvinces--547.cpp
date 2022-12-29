@@ -89,6 +89,7 @@ class Solution {
         for(int i=0; i<V; ++i) {
             if(!visited[i]) {
                 ++count;
+                // dfs or bfs both will work
                 dfs(i, V, adj, visited);
             }
         }
