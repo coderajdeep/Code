@@ -45,3 +45,46 @@ public:
         return image;
     }
 };
+
+
+// without using new matrix
+// geeks
+// bfs and dfs
+class Solution{
+public:
+    int dirs[4][2] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+    bool isValid(int r, int c, int row, int col) {
+        if(r<0 || r>=row || c<0 || c>=col) return false;
+        return true;
+    }
+    void dfs(int r, int c, int row, int col, int color, int newColor, vector<vector<int>> &image) {
+        if(!isValid(r, c, row, col) || image[r][c]!=color) return;
+        image[r][c] = newColor;
+        for(int i=0; i<4; ++i) dfs(r+dirs[i][0], c+dirs[i][1], row, col, color, newColor, image);
+    }
+    void bfs(int r, int c, int row, int col, int color, int newColor, vector<vector<int>> &image) {
+        queue<pair<int, int>> q;
+        q.push({r, c});
+        image[r][c] = newColor;
+        
+        while(!q.empty()) {
+            pair<int, int> p = q.front();
+            q.pop();
+            for(int i=0; i<4; ++i) {
+                int a = p.first + dirs[i][0];
+                int b = p.second + dirs[i][1];
+                if(isValid(a, b, row, col) && image[a][b]==color) {
+                    q.push({a, b});
+                    image[a][b] = newColor;
+                }
+            }
+        }
+    }
+    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
+        int row = image.size();
+        int col = image[0].size();
+        int color = image[sr][sc];
+        if(color!=newColor) bfs(sr, sc, row, col, color, newColor, image);
+        return image;
+    }
+};
