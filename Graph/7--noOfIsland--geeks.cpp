@@ -1,6 +1,67 @@
 // No of island
 // Eight directional
 class Solution {
+    public:
+  
+    bool isValid(int r, int c, int row, int col) {
+        if(r<0 || r>=row || c<0 || c>=col) return false;
+        return true;
+    }
+    
+    void dfs(int r, int c, int row, int col, vector<vector<bool>> &visited, vector<vector<char>> &grid) {
+        if(!isValid(r, c, row, col) || grid[r][c]=='0' || visited[r][c]) return;
+        visited[r][c] = true;
+        for(int i=-1; i<=1; ++i) {
+            for(int j=-1; j<=1; ++j) {
+                int nrow = r+i;
+                int ncol = c+j;
+                dfs(nrow, ncol, row, col, visited, grid);
+            }
+        }
+    }
+    
+    void bfs(int r, int c, int row, int col, vector<vector<bool>> &visited, vector<vector<char>> &grid) {
+        queue<pair<int, int>> q;
+        q.push({r, c});
+        visited[r][c] = true;
+        
+        while(!q.empty()) {
+            pair<int, int> p = q.front();
+            q.pop();
+            for(int i=-1; i<=1; ++i) {
+                for(int j=-1; j<=1; ++j) {
+                    int nrow = p.first + i;
+                    int ncol = p.second + j;
+                    if(isValid(nrow, ncol, row, col) && grid[nrow][ncol]=='1' && !visited[nrow][ncol]) {
+                        q.push({nrow, ncol});
+                        visited[nrow][ncol] = true;
+                    }
+                }
+            }
+        }
+    }
+    
+    int numIslands(vector<vector<char>>& grid) {
+        int row = grid.size();
+        int col = grid[0].size();
+        vector<vector<bool>> visited(row, vector<bool>(col, false));
+        int count = 0;
+        for(int i=0; i<row; ++i) {
+            for(int j=0; j<col; ++j) {
+                if(grid[i][j]=='1' && !visited[i][j]) {
+                    ++count;
+                    dfs(i, j, row, col, visited, grid);
+                }
+            }
+        }
+        return count;
+    }
+};
+
+
+// No of island
+// Eight directional
+class Solution {
 public:
     int dirs[8][2] = {{-1, 0}, {-1, 1}, {0, 1}, {1, 1}, {1, 0}, {1, -1}, {0, -1}, {-1, -1}};
     
