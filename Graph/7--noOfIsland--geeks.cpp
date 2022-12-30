@@ -1,5 +1,61 @@
 // No of island
-// Eight directional 
+// Eight directional
+class Solution {
+public:
+    int dirs[8][2] = {{-1, 0}, {-1, 1}, {0, 1}, {1, 1}, {1, 0}, {1, -1}, {0, -1}, {-1, -1}};
+    
+    bool isValid(int r, int c, int row, int col) {
+        if(r<0 || r>=row || c<0 || c>=col) return false;
+        return true;
+    }
+    
+    void dfs(int r, int c, int row, int col, vector<vector<bool>> &visited, vector<vector<char>> &grid) {
+        if(!isValid(r, c, row, col) || grid[r][c]=='0' || visited[r][c]) return;
+        visited[r][c] = true;
+        for(int i=0; i<8; ++i) {
+            dfs(r+dirs[i][0], c+dirs[i][1], row, col, visited, grid);   
+        }
+    }
+    
+    void bfs(int r, int c, int row, int col, vector<vector<bool>> &visited, vector<vector<char>> &grid) {
+        queue<pair<int, int>> q;
+        q.push({r, c});
+        visited[r][c] = true;
+        
+        while(!q.empty()) {
+            pair<int, int> p = q.front();
+            q.pop();
+            for(int i=0; i<8; ++i) {
+                int a = p.first + dirs[i][0];
+                int b = p.second + dirs[i][1];
+                if(isValid(a, b, row, col) && grid[a][b]=='1' && !visited[a][b]) {
+                    q.push({a, b});
+                    visited[a][b] = true;
+                }
+            }
+        }
+    }
+    
+    int numIslands(vector<vector<char>>& grid) {
+        int row = grid.size();
+        int col = grid[0].size();
+        vector<vector<bool>> visited(row, vector<bool>(col, false));
+        int count = 0;
+        for(int i=0; i<row; ++i) {
+            for(int j=0; j<col; ++j) {
+                if(grid[i][j]=='1' && !visited[i][j]) {
+                    ++count;
+                    bfs(i, j, row, col, visited, grid);
+                }
+            }
+        }
+        return count;
+    }
+};
+
+
+// No of island
+// Eight directional
 
 void dfs(int i, int j, int n, int m, vector<vector<char>>& grid, vector<vector<bool>>& visited, vector<vector<int>> &dirs) {
     if(i>=n || i<0 || j>=m || j<0 || visited[i][j] || grid[i][j]=='0') return;
