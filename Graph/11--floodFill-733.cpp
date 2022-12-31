@@ -4,6 +4,42 @@
 
 class Solution {
 public:
+
+    int dirs[4][2] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+
+    bool isValid(int r, int c, int row, int col) {
+        if(r<0 || r>=row || c<0 || c>=col) return false;
+        return true;
+    }
+
+    void dfs(int r, int c, int row, int col, int color, int initColor, vector<vector<int>> &ans) {
+        ans[r][c] = color;
+        for(int i=0; i<4; ++i) {
+            int x = r + dirs[i][0];
+            int y = c + dirs[i][1];
+            if(isValid(x, y, row, col) && ans[x][y]==initColor) {
+                dfs(x, y, row, col, color, initColor, ans);
+            }
+        }
+    }
+
+    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
+        int row = image.size();
+        int col = image[0].size();
+        int initColor = image[sr][sc];
+        vector<vector<int>> ans(image.begin(), image.end());
+        if(initColor!=color) dfs(sr, sc, row, col, color, initColor, ans);
+        return ans;
+    }
+};
+
+
+// Flood fill 
+// leetcode 733
+// BFS and DFS approach
+
+class Solution {
+public:
     
     int dirs[4][2] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
     
