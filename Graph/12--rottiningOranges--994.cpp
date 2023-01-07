@@ -1,6 +1,64 @@
 // Rottining Oranges
 // leetcode 994
 
+// Updated solution
+class Solution {
+public:
+
+    bool isValid(int r, int c, int row, int col) {
+        if(r<0 || r>=row || c<0 || c>=col) return false;
+        return true;
+    }
+
+    int dirs[4][2] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+
+    int orangesRotting(vector<vector<int>>& grid) {
+        int row = grid.size();
+        int col = grid[0].size();
+
+        // 2D vector for storing time to reach in each cell
+        vector<vector<int>> time(row, vector<int>(col));
+        // storing all the cells having rotten oranges in queue for bfs
+        queue<pair<int, int>> q;
+
+        for(int i=0; i<row; ++i) {
+            for(int j=0; j<col; ++j) {
+                if(grid[i][j]==0) time[i][j] = -1;
+                else if(grid[i][j]==1) time[i][j] = 1e9;
+                else {
+                    time[i][j] = 0;
+                    q.push({i, j});
+                }
+            }
+        }
+
+        while(!q.empty()) {
+            pair<int, int> p = q.front();
+            int a = p.first;
+            int b = p.second;
+            q.pop();
+            for(int i=0; i<4; ++i) {
+                int x = a + dirs[i][0];
+                int y = b + dirs[i][1];
+                if(isValid(x, y, row, col) && grid[x][y]==1 && (time[a][b]+1<time[x][y])) {
+                    time[x][y] = time[a][b] + 1;
+                    q.push({x, y});
+                    grid[x][y] = 2;
+                }
+            }
+        }
+
+        int ans = 0;
+        for(int i=0; i<row; ++i) {
+            for(int j=0; j<col; ++j) {
+                if(time[i][j]==1e9) return -1;
+                else ans = max(ans, time[i][j]);
+            }
+        }
+        return ans;
+    }
+};
+
 // Using multipoint bfs
 class Solution {
 public:
