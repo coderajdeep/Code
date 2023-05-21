@@ -4,6 +4,8 @@
 
 // In BFS, whenever you insert element in queue we need to mark that visited
 // We need to take visited array because otherwise it will fall into an infinite loop
+// Time complexity is O(V+2E)
+// Space complexity is O(3V)
 
 vector<int> bfsOfGraph(int V, vector<int> adj[]) {
     int visited[V] = {0};
