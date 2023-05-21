@@ -2,6 +2,9 @@
 // geeks
 // https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
 
+// In BFS, whenever you insert element in queue we need to mark that visited
+// We need to take visited array because otherwise it will fall into an infinite loop
+
 vector<int> bfsOfGraph(int V, vector<int> adj[]) {
     int visited[V] = {0};
     vector<int>ans;
