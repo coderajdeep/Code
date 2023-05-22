@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/codestudio/problems/implement-trie_631356
+// https://takeuforward.org/data-structure/implement-trie-1/
 
 /*
     Your Trie object will be instantiated and called as such:
