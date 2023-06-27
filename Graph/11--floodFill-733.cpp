@@ -1,3 +1,27 @@
+// Geeks
+// Using two 1D array for 4 directional travel
+// Update given array
+class Solution {
+public:
+    int dx[4] = {-1, 0, 0, 1};
+    int dy[4] = {0, -1, 1, 0};
+    void dfs(int r, int c, int n, int m, vector<vector<int>> &image, int color, int oldColor) {
+        if(r<0 || r>=n || c<0 || c>=m || image[r][c]!=oldColor) return;
+        image[r][c] = color;
+        for(int i=0; i<4; ++i) {
+            dfs(r+dx[i], c+dy[i], n, m, image, color, oldColor);
+        }
+    }
+    vector<vector<int>> floodFill(vector<vector<int>> &image, int sr, int sc, int newColor) {
+        int oldColor = image[sr][sc];
+        if(oldColor==newColor) return image;
+        int n = image.size();
+        int m = image[0].size();
+        dfs(sr, sc, n, m, image, newColor, oldColor);
+        return image;
+    }
+};
+
 // Flood fill 
 // leetcode 733
 // BFS and DFS approach
