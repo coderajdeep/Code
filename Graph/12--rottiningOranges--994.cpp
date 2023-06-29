@@ -1,6 +1,61 @@
 // Rottining Oranges
 // leetcode 994
 
+class Solution {
+public:
+
+    int dfs(int& n, int& m, vector<vector<int>>& grid) {
+        queue<pair<int, int>> q;
+        int level = 0, s;
+        bool flag;
+        pair<int, int> p;
+        for(int i=0; i<n; ++i) {
+            for(int j=0; j<m; ++j) {
+                if(grid[i][j]==2) {
+                    q.push({i, j});
+                }
+            } 
+        }
+        int dx[4] = {-1, 0, 0, 1};
+        int dy[4] = {0, -1, 1, 0};
+
+        while(!q.empty()) {
+            s = q.size();
+            flag = true;
+            for(int i=0; i<s; ++i) {
+                p = q.front();
+                q.pop();
+                for(int j=0; j<4; ++j) {
+                    int x = p.first + dx[j];
+                    int y = p.second + dy[j];
+                    if(x>=0 && x<n && y>=0 && y<m && grid[x][y]==1) {
+                        q.push({x, y});
+                        grid[x][y] = 2;
+                        flag = false;
+                    }
+                }
+            }
+            if(flag) break;
+            ++level;
+        }
+        return level;
+    }
+
+    int orangesRotting(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+        int ans = dfs(n, m, grid);
+        for(int i=0; i<n; ++i) {
+            for(int j=0; j<m; ++j) {
+                // this will check if all of the cells are reachable or not
+                // if not reachable then return -1
+                if(grid[i][j]==1) return -1;
+            }
+        }
+        return ans;
+    }
+};
+
 // Updated solution
 class Solution {
 public:
