@@ -1,26 +1,27 @@
 // Geeks
 // https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1
 
-bool bfs(int source, int V, bool *visited, vector<int> adj[]) {
+    bool bfs(int source, bool *visited, vector<int> *adj) {
         queue<pair<int, int>> q; // node, parent
         visited[source] = true;
         q.push({source, -1});
         
         while(!q.empty()) {
             pair<int, int> p = q.front();
+            int parent = p.second;
+            int u = p.first;
             q.pop();
-            for(int x:adj[p.first]) {
-                if(!visited[x]) {
-                    visited[x] = true;
-                    q.push({x, p.first});
+            for(int v:adj[u]) {
+                if(!visited[v]) {
+                    visited[v] = true;
+                    q.push({v, u});
                 }
-                else if(visited[x] && x!=p.second) return true;
+                else if(visited[v] && v!=p.second) return true;
                 
             }
         }
         return false;
     }
-    
     
     bool dfs(int source, int parent, int V, bool *visited, vector<int> adj[]) {
         visited[source] = true;
