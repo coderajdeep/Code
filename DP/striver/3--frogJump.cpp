@@ -22,6 +22,25 @@ int frogJump(int n, vector<int> &heights) {
     return curr;
 }
 
+// Assuming n as a size
+// Space optimized tabulation / Bottom up approach
+// Time O(n)
+// Space O(1)
+int frogJump(int n, vector<int> &heights)
+{
+    if(n==1) return 0;
+    int prev2 = 0;
+    int prev1 = abs(heights[1] - heights[0]);
+    for(int i=3; i<=n; ++i) {
+        int l = prev1 + abs(heights[i-1] - heights[i-2]);
+        int r = prev2 + abs(heights[i-1] - heights[i-3]);
+        int curr = min(l, r);
+        prev2 = prev1;
+        prev1 = curr;
+    }
+    return prev1;
+}
+
 // tabulation / Bottom up approach
 // Time O(n)
 // Space O(n)
