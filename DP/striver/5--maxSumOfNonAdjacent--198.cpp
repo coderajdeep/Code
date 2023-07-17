@@ -27,6 +27,28 @@ public:
     }
 };
 
+
+// Time O(n)
+// Space O(1)
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        int n = nums.size();
+        int prev2 = nums[0];
+        if(n==1) return prev2;
+        int prev = max(nums[0], nums[1]);
+        if(n==2) return prev;
+        for(int index=2; index<n; ++index) {
+            int pick = nums[index] + prev2;
+            int notPick = prev;
+            int curr = max(pick, notPick);
+            prev2 = prev;
+            prev = curr;
+        }
+        return prev;
+    }
+};
+
 // leetcode solution
 // Bottom up approach - tabulation
 // Time O(n)
