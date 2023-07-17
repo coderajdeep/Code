@@ -44,7 +44,7 @@ int main() {
 
 // Tabulation / Bottom up approach
 // Time O(n*k)
-// Space O(n) [function call stack O(n) + array O(n)]
+// Space O(n)
 
 
 int solve(int index, int k, vector<int> &ht, vector<int> &dp) {
