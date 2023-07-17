@@ -44,6 +44,7 @@ int frogJump(int n, vector<int> &heights)
 // tabulation / Bottom up approach
 // Time O(n)
 // Space O(n)
+// Given n as a size, but assuming n as an index
 int frogJump(int n, vector<int> &heights) {
     vector<int> dp(n);
     dp[0] = 0;
@@ -90,4 +91,26 @@ int solve(int n, vector<int> &ht, vector<int> &dp) {
 int frogJump(int n, vector<int> &heights) {
     vector<int> dp(n+1, -1);
     return solve(n, heights, dp);
+}
+
+
+// Memoization / Top down approach
+// Time O(n)
+// Space O(n) [function call stack O(n) + array O(n)]
+// Asuming index
+int solve(int index, vector<int> &ht, vector<int> &dp) {
+    if(index<0) return INT_MAX;
+    if(index==0) return 0;
+    if(dp[index]!=-1) return dp[index];
+    if(index==1) return abs(ht[1] - ht[0]);
+    long left = solve(index-2, ht, dp) + abs(ht[index] - ht[index-2]);
+    long right = solve(index-1, ht, dp) + abs(ht[index] - ht[index-1]);
+    dp[index] = min(left, right);
+    return dp[index];
+}
+
+int frogJump(int n, vector<int> &heights)
+{
+    vector<int> dp(n, -1);
+    return solve(n-1, heights, dp);
 }
