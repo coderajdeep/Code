@@ -59,3 +59,27 @@ long long int houseRobber(vector<int>& valueInHouse) {
     if(n==2) return max(valueInHouse[0], valueInHouse[1]);
     return max(solve(valueInHouse, 0, n-2), solve(valueInHouse, 1, n-1));
 }
+
+
+// Top down approach
+// Memoization
+// Time complexity O(n)
+// Space complexity O(n)
+int solve(int startIndex, int endIndex, vector<int>& nums, vector<int>& dp) {
+    if(startIndex>endIndex) return 0;
+    if(startIndex==endIndex) return nums[startIndex];
+    if(dp[endIndex]!=-1) return dp[endIndex];
+    int pick = solve(startIndex, endIndex-2, nums, dp) + nums[endIndex];
+    int notPick = solve(startIndex, endIndex-1, nums, dp);
+    dp[endIndex] = max(pick, notPick);
+    return dp[endIndex];
+}
+int rob(vector<int>& nums) {
+    int n = nums.size();
+    if(n==1) return nums[0];
+    vector<int> dp1(n, -1), dp2(n, -1);
+    int excludeLast = solve(0, n-2, nums, dp1);
+    int excludeFirst = solve(1, n-1, nums, dp2);
+    int ans = max(excludeLast, excludeFirst);
+    return ans;
+}
