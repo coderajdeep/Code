@@ -52,14 +52,33 @@ int climbStairs(int n) {
 // Time complexity --> O(n)
 // Space complexity --> O(1)
 int climbStairs(int n) {
-    if(n<=2) return n;
     int prev2 = 1;
-    int prev1 = 2;
-    int curr;
+    if(n==1) return prev2;
+    int prev = 2;
+    if(n==2) return prev;
     for(int i=3; i<=n; ++i) {
-        curr = prev1 + prev2;
-        prev2 = prev1;
-        prev1 = curr;
+        int curr = prev + prev2;
+        prev2 = prev;
+        prev = curr;
     }
-    return curr;
+    return prev;
+}
+
+
+// https://www.codingninjas.com/studio/problems/count-ways-to-reach-the-n-th-stairs_798650
+// Time complexity O(n)
+// Space complexity O(1)
+
+int countDistinctWays(int nStairs) {
+    int mod = 1e9+7;
+    int prev2 = 1;
+    if(nStairs==0) return prev2;
+    int prev = 1;
+    if(nStairs==1) return prev;
+    for(int i=2; i<=nStairs; ++i) {
+        int curr = (prev + prev2)%mod;
+        prev2 = prev;
+        prev = curr;
+    }
+    return prev;
 }
