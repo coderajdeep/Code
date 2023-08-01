@@ -8,7 +8,7 @@
 // Frog Jump - Coding Ninjas (frog-jump_3621012)
 
 // 4
-// Frog Jump 2 - atcoder
+// Frog Jump 2 - atcoder - Coding Ninjas (https://www.codingninjas.com/studio/problems/minimal-cost_8180930)
 
 // 5
 // Max sum of subsequence with non adjacent element - leetcode 198 - House robber
