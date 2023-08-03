@@ -83,3 +83,30 @@ int rob(vector<int>& nums) {
     int ans = max(excludeLast, excludeFirst);
     return ans;
 }
+
+// Memoization where two base case handle seperately
+int solve(int index, int startIndex, int* dp, vector<int>& nums) {
+        if(index==startIndex) return nums[index];
+        if(index==(startIndex+1)) return max(nums[index], nums[startIndex]);
+        if(dp[index]!=-1) return dp[index];
+        int pick = nums[index] + solve(index-2, startIndex, dp, nums);
+        int notPick = solve(index-1, startIndex, dp, nums);
+        return dp[index] = max(pick, notPick);
+    }
+    void resetDP(int *dp, int n) {
+        for(int i=0; i<n; ++i) {
+            dp[i] = -1;
+        }
+    }
+    int rob(vector<int>& nums) {
+        int n = nums.size();
+        if(n==1) return nums[0];
+        if(n==2) return max(nums[0], nums[1]);
+        int dp[n];
+        resetDP(dp, n);
+        int includeFirstExcludeLast = solve(n-2, 0, dp, nums);
+        resetDP(dp, n);
+        int includeLastExcludeFirst = solve(n-1, 1, dp, nums);
+        int ans = max(includeFirstExcludeLast, includeLastExcludeFirst);
+        return ans;
+    }
