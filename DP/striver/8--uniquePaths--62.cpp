@@ -2,6 +2,23 @@
 // leetcode 62
 // https://www.codingninjas.com/codestudio/problems/total-unique-paths_1081470
 
+// leetcode 62
+// Time O(m*n)
+// Space O(2*n) ~ 2 * size of column
+int uniquePaths(int m, int n) {
+    if(m==1 || n==1) return 1;
+    int prev[n], curr[n];
+    for(int i=0; i<n; ++i) prev[i] = 1;
+    for(int i=1; i<m; ++i) {
+        curr[0] = 1;
+        for(int j=1; j<n; ++j) {
+            curr[j] = curr[j-1] + prev[j];
+        }
+        for(int k=1; k<n; ++k) prev[k] = curr[k];
+    }
+    return curr[n-1];
+}
+
 // Striver
 // Space optimized tabulation - Bottom up approach
 // Space O(n) -- O(size of column)
