@@ -28,6 +28,35 @@ public:
     }
 };
 
+// Same approach as above
+int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+        int n = obstacleGrid.size();
+        int m = obstacleGrid[0].size();
+        int prev[m], curr[m];
+        for(int i=0; i<m; ++i) {
+            if(obstacleGrid[0][i]==1) {
+                prev[i] = 0;
+            }
+            else if(i==0) {
+                prev[i] = 1;
+            }
+            else {
+                prev[i] = prev[i-1];
+            }
+        }
+        if(n==1) return prev[m-1];
+        for(int i=1; i<n; ++i) {
+            if(obstacleGrid[i][0]==1) curr[0] = 0;
+            else curr[0] = prev[0];
+            for(int j=1; j<m; ++j) {
+                if(obstacleGrid[i][j]==1) curr[j] = 0;
+                else curr[j] = curr[j-1] + prev[j];
+            }
+            for(int k=0; k<m; ++k) prev[k] = curr[k];
+        }
+        return curr[m-1];
+    }
+
 // Tabulation - Bottom up approach
 // Time O(n*m)
 // Space O(n*m)
