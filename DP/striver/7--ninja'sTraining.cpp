@@ -4,6 +4,7 @@
 // Space optimized Tabulation - Bottom up solution
 // Space O(1)
 // Time O(n*12) ~ O(n)
+// Best Approach
 int ninjaTraining(int n, vector<vector<int>> &points) {
     int dp[4];
     int prev[4];
@@ -110,4 +111,31 @@ int solve(int index, int last, vector<vector<int>> &pt, vector<vector<int>> &dp)
 int ninjaTraining(int n, vector<vector<int>> &points) {
     vector<vector<int>> dp(n, vector<int>(4, -1));
     return solve(n-1, 3, points, dp);
+}
+
+// Memoization
+const int int_min = (1<<31);
+int solve(int indexN, int indexM, int n, int m, vector<vector<int>> &pt, vector<vector<int>> &dp) {
+    if(indexN<0) {
+        return 0;
+    }
+    if(dp[indexN][indexM]!=-1) return dp[indexN][indexM];
+    int value = int_min;
+    for(int i=0; i<m; ++i) {
+        if(i!=indexM) {
+            value = max(value, solve(indexN-1, i, n, m, pt, dp));
+        }
+    }
+    return dp[indexN][indexM] = (value + pt[indexN][indexM]);
+}
+
+int ninjaTraining(int n, vector<vector<int>> &points)
+{
+    int m = points[0].size();
+    int ans = int_min;
+    for(int i=0; i<m; ++i) {
+        vector<vector<int>> dp(n, vector<int> (m, -1));
+        ans = max(ans, solve(n-1, i, n, m, points, dp));
+    }
+    return ans;
 }
