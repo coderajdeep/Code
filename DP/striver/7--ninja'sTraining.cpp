@@ -32,6 +32,38 @@ int ninjaTraining(int n, vector<vector<int>> &points) {
     return value;
 }
 
+// Similar as previous
+// Here Variable Name is better
+int ninjaTraining(int n, vector<vector<int>> &points)
+{
+    int prev[4];
+    int dp[4];
+    int intMin = (1<<31);
+    for(int nxt=0; nxt<=3; ++nxt) {
+        prev[nxt] = intMin;
+        for(int curr=0; curr<3; ++curr) {
+            if(nxt!=curr) {
+                prev[nxt] = max(prev[nxt], points[0][curr]);
+            }
+        }
+    }
+    if(n==1) return prev[3];
+    for(int day=1; day<n; ++day) {
+        for(int nxt=0; nxt<=3; ++nxt) {
+            dp[nxt] = intMin;
+            for(int curr=0; curr<3; ++curr) {
+                if(nxt!=curr) {
+                    dp[nxt] = max(dp[nxt], points[day][curr] + prev[curr]);
+                }
+            }
+        }
+        for(int i=0; i<=3; ++i) {
+            prev[i] = dp[i];
+        }
+    }
+    return dp[3];
+}
+
 
 // Tabulation - Bottom up approach
 // Time - O(n*12) - Overall O(n)
