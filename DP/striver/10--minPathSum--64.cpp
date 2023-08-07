@@ -25,6 +25,29 @@ public:
     }
 };
 
+// Similar approach (1st solution)
+int minPathSum(vector<vector<int>>& grid) {
+    int n = grid.size();
+    int m = grid[0].size();
+    int prev[m], curr[m];
+    int up, left;
+    for(int i=0; i<n; ++i) {
+        for(int j=0; j<m; ++j) {
+            up = left = INT_MAX;
+            if(j>0) left = curr[j-1];
+            if(i>0) up = prev[j];
+            if(i==0 && j==0) {
+                curr[j] = grid[i][j];
+            }
+            else {
+                curr[j] = min(up, left) + grid[i][j];
+            }
+        }
+        for(int k=0; k<m; ++k) prev[k] = curr[k];
+    }
+    return curr[m-1];
+}
+
 
 // Tabulation - Bottom up approach
 // Time O(n*m)
