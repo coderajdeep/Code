@@ -72,3 +72,28 @@ public:
         return ans;
     }
 };
+
+
+// Not a good approach
+// Here we are travelling from top to bottom (to a particular index)
+// And the call this function for every point in bottom cell
+int solve(int index, int col, vector<vector<int>>& tri,  vector<vector<int>>& dp) {
+    if(col<0 || (col>index)) return INT_MAX;
+    if(index==0 && col==0) return tri[0][0];
+    if(dp[index][col]!=-1) return dp[index][col];
+    int left = solve(index - 1, col - 1, tri, dp);
+    int right = solve(index - 1, col, tri, dp);
+    return dp[index][col] = min(left, right) + tri[index][col];
+}
+int minimumTotal(vector<vector<int>>& triangle) {
+    int n = triangle.size();
+    int ans = INT_MAX;
+    for(int i=0; i<n; ++i) {
+        vector<vector<int>> dp(n);
+        for(int i=0; i<n; ++i) {
+            dp[i] = vector<int> (i+1, -1);
+        }
+        ans = min(ans, solve(n-1, i, triangle, dp));
+    }
+    return ans;
+}
