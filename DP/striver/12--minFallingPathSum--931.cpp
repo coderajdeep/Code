@@ -84,7 +84,8 @@ public:
         vector<vector<int>> dp = matrix;
         int ans = INT_MAX;
         for(int i=0; i<m; ++i) {
-            init(n, m, dp);
+            // This is not required
+            // init(n, m, dp);
             ans = min(ans, solve(n-1, i, m, matrix, dp));
         }
         return ans;
