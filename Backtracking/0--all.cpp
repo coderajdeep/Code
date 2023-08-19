@@ -1,3 +1,8 @@
+// 0
+// Basic recusrion
+// Reverse an array, check if a string is palindrom or not
+// Print all subsequence, all subsequence with given sum, one subsequence with given sum
+
 // 1
 // Combination sum - leetcode 39 - generate all distinct array having sum equals to target
 
@@ -30,3 +35,6 @@
 
 // 11
 // Rat in a Maze Problem - 1 -- Geeksforgeeks
+
+// 12
+// Sudoku solver -- leetcode 37
