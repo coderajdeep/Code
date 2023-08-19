@@ -1,5 +1,6 @@
 // 1
 // reverse an array
+// https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?leftPanelTab=0
 #include <bits/stdc++.h> 
 void swap(int &a, int &b) {
 	int temp = a;
@@ -20,6 +21,7 @@ void reverseArray(vector<int> &arr , int m)
 
 // 2
 // check if a string is palindrom or not
+// https://www.codingninjas.com/studio/problems/check-if-the-string-is-a-palindrome_1062633?leftPanelTab=0
 #include <bits/stdc++.h>
 char lowerCase(char ch) {
     if(ch>='A' && ch<='Z') return (ch+32);
@@ -47,6 +49,7 @@ bool checkPalindrome(string s)
 
 // 3
 // print  all subsequence 
+// https://www.codingninjas.com/studio/problems/print-subsequences_624391?leftPanelTab=0
 void solve(int index, char *arr, string& str) {
     if(arr[index]=='\0') {
         cout<<(str.empty()?"":str)<<endl;
