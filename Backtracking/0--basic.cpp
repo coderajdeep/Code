@@ -96,6 +96,9 @@ int main() {
 
 // 5
 // print one subsequence with a given sum
+// This is a DP problem
+// https://www.techiedelight.com/subset-sum-problem/
+// Will solve later
 #include <iostream>
 #include <vector>
 using namespace std;
