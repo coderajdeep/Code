@@ -40,6 +40,27 @@ int findWays(vector<int> &num, int tar) {
 }
 
 // Memoization
+// Better code than pervious memoization
+const int mod = 1e9+7;
+int solve(int index, int sum, const vector<int>& arr, vector<vector<int>>& dp) {
+    if(sum==0) return 1;
+    if(index<0) return 0;
+    if(dp[index][sum]!=-1) return dp[index][sum];
+    int pick = sum>=arr[index]?solve(index-1, sum-arr[index], arr, dp) : 0;
+    int notPick = solve(index-1, sum, arr, dp);
+    return dp[index][sum] = (pick + notPick)%mod;
+}
+
+int findWays(vector<int>& arr, int k)
+{
+    int n = arr.size();
+    vector<vector<int>> dp(n, vector<int>(k+1, -1));
+	int ans = solve(n-1, k, arr, dp);
+    return ans;
+}
+
+
+// Memoization
 int solve(int index, int tar, vector<int> &nums, vector<vector<int>> &dp) {
     if(tar==0) return 1;
     if(index==0) return (nums[0]==tar)?1:0;
