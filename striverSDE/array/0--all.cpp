@@ -12,3 +12,6 @@
 
 // 5
 // Sort 0 1 2 - sort colors - leetcode 75
+
+// 6
+// Best time to buy and sell stocks - leetcode 121
