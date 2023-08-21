@@ -18,3 +18,6 @@
 
 // 7
 // Rotate a matrix - leetcode 48
+
+// 8
+// Merge intervals - leetcode 56
