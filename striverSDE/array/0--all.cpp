@@ -6,3 +6,6 @@
 
 // 3
 // Next permutation - leetcode 31
+
+// 4
+// Maximum subarray - Kadane's Algo - leetcode 53
