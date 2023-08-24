@@ -24,3 +24,6 @@
 
 // 9
 // Merge Two sorted array - leetcode 88
+
+// 10
+// Find the duplicate number - leetcode 287
