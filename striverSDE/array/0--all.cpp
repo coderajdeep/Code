@@ -27,3 +27,6 @@
 
 // 10
 // Find the duplicate number - leetcode 287
+
+// 11
+// Missing and Repeating number - coding ninjas
