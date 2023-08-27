@@ -30,3 +30,6 @@
 
 // 11
 // Missing and Repeating number - coding ninjas
+
+// 12
+// Count inversion in an array - coding ninjas

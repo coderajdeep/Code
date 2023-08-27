@@ -31,3 +31,5 @@ pair<int,int> missingAndRepeating(vector<int> &arr, int n) {
 	int repeatedNum = missingNum + sumDiff;
 	return {missingNum, repeatedNum};
 }
+
+// Will do Bit manipulation way
