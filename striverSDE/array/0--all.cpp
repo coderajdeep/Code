@@ -39,3 +39,6 @@
 
 // 14
 // Implement Pow(x, n) - leetcode 50
+
+// 15
+// Majority element (n/2) - leetcode 169
