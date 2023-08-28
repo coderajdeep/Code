@@ -36,3 +36,6 @@
 
 // 13
 // Search in a 2D matrix - leetcode 74
+
+// 14
+// Implement Pow(x, n) - leetcode 50
