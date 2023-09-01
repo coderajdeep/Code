@@ -42,3 +42,6 @@
 
 // 15
 // Majority element (n/2) - leetcode 169
+
+// 16
+// Majority element (n/3) - leetcode 229
