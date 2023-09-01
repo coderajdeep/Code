@@ -54,5 +54,5 @@ int uniquePaths(int m, int n) {
             prev[k] = curr[k];
         }
     }
-    return dp[m-1][n-1];
+    return curr[n-1];
 }
