@@ -51,3 +51,6 @@
 
 // 18
 // Reverse Pairs - leetcode 493
+
+// 19
+// 2Sum -- leetcode 1
