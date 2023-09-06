@@ -60,3 +60,6 @@
 
 // 21
 // 4Sum -- leetcode 18
+
+// 22
+// Longest consecutive sequence -- leetcode 128
