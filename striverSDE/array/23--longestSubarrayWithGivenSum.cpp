@@ -1,6 +1,5 @@
 // Longest subarray with given sum
 // https://practice.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
-// https://www.codingninjas.com/studio/problems/920321
 
 // Brute force approach
 // Time complexity O(n^2)
@@ -54,6 +53,28 @@ int lenOfLongSubarr(int A[],  int N, int K) {
         auto it = prefixSum.find(sum - K);
         if(it!=prefixSum.end()) {
             maxLen = max(maxLen, (i - it->second));
+        }
+    }
+    return maxLen;
+}
+
+// https://www.codingninjas.com/studio/problems/920321
+// Max length sumarray with zero sum
+// Time complexity O(n)
+// Space complexity O(n)
+int LongestSubsetWithZeroSum(vector<int> arr) {
+    int n = arr.size();
+    int sum = 0, maxLen = 0;
+    unordered_map<int, int> prefixSum;
+    prefixSum[0] = -1;
+    for(int i=0; i<n; ++i) {
+        sum += arr[i];
+        auto it = prefixSum.find(sum);
+        if(it!=prefixSum.end()) {
+            maxLen = max(maxLen, (i - it->second));
+        }
+        else {
+            prefixSum[sum] = i;
         }
     }
     return maxLen;
