@@ -65,4 +65,4 @@
 // Longest consecutive sequence -- leetcode 128
 
 // 23
-// Longest subarray with given sum (0) -- coding ninja
+// Longest subarray with given sum  -- Geeks
