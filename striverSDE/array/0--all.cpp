@@ -75,3 +75,6 @@
 
 // 26
 // Check if and array is sorted or not - coding ninjas 
+
+// 27
+// Rotate Array (Clockwise or right rotation) -- leetcode 189
