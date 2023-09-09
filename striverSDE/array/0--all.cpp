@@ -66,3 +66,6 @@
 
 // 23
 // Longest subarray with given sum  -- Geeks
+
+// 24
+// Remove duplicate from sorted array -- leetcode 26
