@@ -84,3 +84,6 @@
 
 // 29
 // Move zero to the enc -- leetcode 283
+
+// 30
+// Missing number in an array - leetcode 268
