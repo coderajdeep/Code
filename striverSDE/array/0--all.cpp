@@ -87,3 +87,6 @@
 
 // 30
 // Missing number in an array - leetcode 268
+
+// 31
+// Find the single element - leetcode 136
