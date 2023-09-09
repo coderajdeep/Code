@@ -78,3 +78,6 @@
 
 // 27
 // Rotate Array (Clockwise or right rotation) -- leetcode 189
+
+// 28
+// Left Rotate by once -- Coding Ninjas
