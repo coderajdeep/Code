@@ -72,3 +72,6 @@
 
 // 25
 // Second largest and second smallest element - coding ninjas
+
+// 26
+// Check if and array is sorted or not - coding ninjas 

@@ -1,5 +1,8 @@
 // https://www.codingninjas.com/studio/problems/ninja-and-the-second-order-elements_6581960
 // Second largest and second smallest element
+
+// Time complexity O(n)
+// Space complexity O(1)
 vector<int> getSecondOrderElements(int n, vector<int>& arr) {
     int largest = INT_MIN, secondLargest = INT_MIN;
     int smallest = INT_MAX, secondSmallest = INT_MAX;
