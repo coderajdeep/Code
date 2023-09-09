@@ -81,3 +81,6 @@
 
 // 28
 // Left Rotate by once -- Coding Ninjas
+
+// 29
+// Move zero to the enc -- leetcode 283
