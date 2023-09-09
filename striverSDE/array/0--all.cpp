@@ -69,3 +69,6 @@
 
 // 24
 // Remove duplicate from sorted array -- leetcode 26
+
+// 25
+// Second largest and second smallest element - coding ninjas
