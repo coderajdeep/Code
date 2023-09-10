@@ -90,3 +90,6 @@
 
 // 31
 // Find the single element - leetcode 136
+
+// 32
+// Max Consecutive Ones -- leetcode 485
