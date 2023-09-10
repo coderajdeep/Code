@@ -96,3 +96,6 @@
 
 // 33
 // Union of two sorted array -- coding ninjas
+
+// 34
+// Longest Subarray with given sum (Array elements and given sum is non negative) - Coding Ninjas
