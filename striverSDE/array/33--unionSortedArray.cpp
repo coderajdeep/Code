@@ -2,7 +2,7 @@
 // Union of two sorted array -- coding ninjas
 // https://www.codingninjas.com/studio/problems/sorted-array_6613259
 
-// Time complexity O(nlogn + mlogm)
+// Time complexity O(nlogn + mlogm + (n1 + n2))
 // Space complexity O(2 * size of union array) [considering ans array as space complexity]
 vector<int> sortedArray(vector<int>& a, vector<int>& b) {
     set<int> st;
