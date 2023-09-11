@@ -3,6 +3,41 @@
 
 // Time complexity O(n)
 // Space complexity O(n)
+// Without using stack
+void reverseString(int low, int high, string& s) {
+    while(low<=high) {
+        swap(s[low++], s[high--]);
+    }
+}
+string reverseWords(string s) {
+    int len = s.size();
+    reverseString(0, len-1, s);
+    string str, ans;
+    for(int i=0; i<len; ++i) {
+        if(s[i]!=' ') {
+            str.push_back(s[i]);
+        }
+        else if(str.size()) {
+            reverseString(0, str.size()-1, str);
+            ans.append(str);
+            ans.push_back(' ');
+            str.clear();
+        }
+    }
+    if(str.size()) {
+        reverseString(0, str.size()-1, str);
+        ans.append(str);
+        ans.push_back(' ');
+        str.clear();
+    }
+    if(ans.size()) {
+        ans.pop_back();
+    }
+    return ans;
+}
+
+// Time complexity O(n)
+// Space complexity O(n)
 string reverseWords(string& s) {
     stack<string>words;
     string word;
