@@ -105,3 +105,6 @@
 
 // 36
 // Reverse number - leetcode 7
+
+// 37
+// Check if an number is palindrom or not
