@@ -102,3 +102,6 @@
 
 // 35
 // Superior Elements - Coding Ninjas - Leaders in an array - geeks
+
+// 36
+// Reverse number - leetcode 7
