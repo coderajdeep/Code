@@ -4,7 +4,7 @@
 // Time complexity O(logn)
 // Space complexity O(1)
 int lowerBound(vector<int> arr, int n, int x) {
-	int low = 0, high = n-1, mid;
+	int low = 0, high = n, mid;
 	if(x<arr[0]) {
 		low = 0;
 	}
