@@ -3,3 +3,6 @@
 
 // 2
 // Implement lower bound for non decreasing array - coding ninja
+
+// 3
+// Implement upper bound for non decreasing array - coding ninja
