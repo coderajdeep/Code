@@ -6,3 +6,6 @@
 
 // 3
 // Implement upper bound for non decreasing array - coding ninja
+
+// 4
+// Search insert position - leetcode 35
