@@ -5,41 +5,41 @@
 int lowerBound(int low, int high, int target, vector<int>& nums) {
     int mid;
     if(target<=nums[0]) {
-    low = 0;
+        low = 0;
     }
     else if(target>nums[high-1]) {
-    low = high;
+        low = high;
     }
     else {
-    while(low<high) {
-        mid = low + (high-low)/2;
-        if(target<=nums[mid]) {
-        high = mid;
+        while(low<high) {
+            mid = low + (high-low)/2;
+            if(target<=nums[mid]) {
+                high = mid;
+            }
+            else {
+                low = mid+1;
+            }
         }
-        else {
-        low = mid+1;
-        }
-    }
     }
     return low;
 }
 int upperBound(int low, int high, int target, vector<int>& nums) {
     int mid;
     if(target<nums[0]) {
-    low = 0;
+        low = 0;
     }
     else if(target>=nums[high-1]) {
-    low = high;
+        low = high;
     }
     else {
-    while(low<high) {
-        mid = low + (high-low)/2;
-        if(target>=nums[mid]) {
-        low = mid+1;
-        }
-        else {
-        high = mid;
-        }
+        while(low<high) {
+            mid = low + (high-low)/2;
+            if(target>=nums[mid]) {
+                low = mid+1;
+            }
+            else {
+                high = mid;
+            }
     }
     }
     return low;

@@ -18,3 +18,6 @@
 
 // 7
 // First and last occurance of an element in sorted array
+
+// 8
+// Element count in sorted array
