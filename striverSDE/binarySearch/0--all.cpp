@@ -15,3 +15,6 @@
 
 // 6
 // CeilAndFloor - coding ninjas
+
+// 7
+// First and last occurance of an element in sorted array
