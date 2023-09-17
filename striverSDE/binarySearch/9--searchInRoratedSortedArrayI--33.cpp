@@ -1,5 +1,5 @@
 // leetcode 33
-// Search in sorted and rotated array
+// Search in sorted and rotated array (unique elements)
 
 /*** test case
 arr = [4,5,6,7,0,1,2], target = 0
@@ -7,6 +7,8 @@ arr = [1], target = 0
 arr = [5,1,3], target = 5
 arr = [3,1], target = 1
 ***/
+
+// Time complexity O(logn)
 int search(vector<int>& nums, int target) {
     int n = nums.size();
     int low = 0, high = n-1, mid;

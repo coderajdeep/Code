@@ -23,4 +23,7 @@
 // Element count in sorted array
 
 // 9
-// Search in sorted and rotated array
+// Search in sorted and rotated array (distinct element) -- leetcode 33
+
+// 10
+// Search in sorted and rotated array II (duplicate elements) -- leetcode 81
