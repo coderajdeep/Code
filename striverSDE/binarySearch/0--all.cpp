@@ -21,3 +21,6 @@
 
 // 8
 // Element count in sorted array
+
+// 9
+// Search in sorted and rotated array
