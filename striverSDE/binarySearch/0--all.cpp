@@ -29,4 +29,7 @@
 // Search in sorted and rotated array II (duplicate elements) -- leetcode 81
 
 // 11
-// Min element in rotated sorted array - leetcode 153
+// Min element in rotated sorted array - leetcode 153 (distinct elements)
+
+// 12
+// Min element in rotated sorted array - leetcode 154 (duplicated elements allowed) 
