@@ -33,3 +33,6 @@
 
 // 12
 // Min element in rotated sorted array - leetcode 154 (duplicated elements allowed) 
+
+// 13
+// Rotation count in rotated sorted array - coding ninjas (distinct elements)
