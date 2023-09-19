@@ -39,3 +39,6 @@
 
 // 14
 // Single element in sorted array - leetcode 540
+
+// 15
+// Find Peak Element - leetcode 162
