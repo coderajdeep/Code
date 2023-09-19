@@ -12,3 +12,15 @@
 
 // 5
 // Search a element in singly linkedlist -- coding ninjas
+
+// 6
+// Create a doubly linkedlist -- coding ninjas
+
+// 7
+// Insert at end of doubly linked list -- coding ninjas
+
+// 8
+// Delete last from last element in doubly linked list -- coding ninjas
+
+// 9
+// Reverse doubly linkedlist -- coding ninjas
