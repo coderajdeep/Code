@@ -2,7 +2,7 @@
 // leetcode 275
 
 int firstBadVersion(int n) {
-    int low = 0, high = n, mid;
+    int low = 1, high = n, mid;
     while(low<high) {
         mid = low + (high - low) / 2;
         if(isBadVersion(mid)) {
