@@ -36,3 +36,6 @@
 
 // 13
 // Rotation count in rotated sorted array - coding ninjas (distinct elements)
+
+// 14
+// Single element in sorted array - leetcode 540
