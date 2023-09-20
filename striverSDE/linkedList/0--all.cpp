@@ -24,3 +24,6 @@
 
 // 9
 // Reverse doubly linkedlist -- coding ninjas
+
+// 10
+// Mid of linkedlist -- leetcode 876
