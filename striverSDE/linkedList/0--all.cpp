@@ -30,3 +30,6 @@
 
 // 11
 // Delete middle of linkedlist -- leetcode 2095
+
+// 12
+// Reverse a linkedlist -- leetcode 206
