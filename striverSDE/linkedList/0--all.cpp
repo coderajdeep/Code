@@ -26,4 +26,7 @@
 // Reverse doubly linkedlist -- coding ninjas
 
 // 10
-// Mid of linkedlist -- leetcode 876
+// Middle of linkedlist -- leetcode 876
+
+// 11
+// Delete middle of linkedlist -- leetcode 2095

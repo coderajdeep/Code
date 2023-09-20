@@ -13,5 +13,7 @@ ListNode* middleNode(ListNode* head) {
     // else odd
     // if length is even then there are two middle
     // we need to return the 2nd mid
+    // If the size is N
+    // then we need to return N/2 element (0 based index)
     return slow; 
 }
