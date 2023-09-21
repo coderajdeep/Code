@@ -42,3 +42,6 @@
 
 // 15
 // Length of cycle in linkedlist -- coding ninjas
+
+// 16
+// Check if a linkedlist is palindrom or not -- leetcode 234
