@@ -30,6 +30,32 @@ int lengthOfLoop(Node *head) {
     return len;
 }
 
+// Slow and fast pointer approach
+int getLoopLength(Node *root) {
+    Node *curr = root->next;
+    int len = 1;
+    while(curr!=root) {
+        curr = curr->next;
+        ++len;
+    }
+    return len;
+}
+
+int lengthOfLoop(Node *head) {
+    if(!head || !head->next) {
+        return 0;
+    }
+    Node *slow = head, *fast = head;
+    while(fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow==fast) {
+            return getLoopLength(slow);
+        }
+    }
+    return 0;
+}
+
 
 // Using constant space
 // Time complexity O(n)
