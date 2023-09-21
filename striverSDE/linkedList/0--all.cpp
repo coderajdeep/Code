@@ -36,3 +36,6 @@
 
 // 13
 // Detect cycle in linkedlist -- leetcode 141
+
+// 14
+// Find where the loop begin in linkedlist -- leetcode 142
