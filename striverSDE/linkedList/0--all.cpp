@@ -39,3 +39,6 @@
 
 // 14
 // Find where the loop begin in linkedlist -- leetcode 142
+
+// 15
+// Length of cycle in linkedlist -- coding ninjas
