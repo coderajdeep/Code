@@ -57,3 +57,6 @@
 
 // 20
 // Sort array having element 0, 1, 2 -- coding ninjas
+
+// 21
+// Intersection of two linkedlist -- leetcode 160

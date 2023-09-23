@@ -1,5 +1,8 @@
 // Sort array having element 0, 1, 2 -- coding ninjas
 
+// Time complexity O(n)
+// Space complexity O(1)
+// 2 times traversal
 Node* sortList(Node *head){
     if(!head || !head->next) {
         return head;

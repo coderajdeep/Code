@@ -1,5 +1,7 @@
 // Sort singly linkedlist -- leetcode 148
 
+// Time complexity O(nlogn)
+// Space complexity O(1)
 ListNode* getMidNode(ListNode* root) {
     if(!root || !root->next) {
         return root;
