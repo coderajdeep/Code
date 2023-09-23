@@ -60,3 +60,6 @@
 
 // 21
 // Intersection of two linkedlist -- leetcode 160
+
+// 22
+// Add one to a number -- coding ninjas
