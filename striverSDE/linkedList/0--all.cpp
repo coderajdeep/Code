@@ -48,3 +48,6 @@
 
 // 17
 // Segrregate odd and even indexed node in singly linked list -- leetcode 328
+
+// 18
+// Remove N-th node from end of the linkedlist -- leetcode 19
