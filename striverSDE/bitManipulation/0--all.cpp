@@ -3,3 +3,6 @@
 
 // 2
 // Check i-th bit set or not
+
+// 3
+// Check if a number is odd or even using bitwise operator
