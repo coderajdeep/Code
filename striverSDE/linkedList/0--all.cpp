@@ -54,3 +54,6 @@
 
 // 19
 // Sort singly linkedlist -- leetcode 148
+
+// 20
+// Sort array having element 0, 1, 2 -- coding ninjas
