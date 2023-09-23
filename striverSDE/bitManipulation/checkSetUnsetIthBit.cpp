@@ -1,4 +1,5 @@
 // Check i-th bit, set i-th bit and unset i-th bit of a number
+// https://www.codingninjas.com/studio/problems/bit-manipulation_8142533
 
 vector<int> bitManipulation(int num, int i){
     // i-th bit of num
