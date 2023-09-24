@@ -6,3 +6,6 @@
 
 // 3
 // Check if a number is odd or even using bitwise operator
+
+// 4
+// Check if a number is power of 2 or not -- leetcode 231
