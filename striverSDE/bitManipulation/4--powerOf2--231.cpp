@@ -2,6 +2,12 @@
 
 // Best solution
 // Using Brain Karningam's Algo
+// Without using any loop
+bool isPowerOfTwo(int n) {
+    return (n > 0) && (!(n & (n-1)));
+}
+
+
 bool isPowerOfTwo(int n) {
     if(n<0) return false;
     int count = 0;
