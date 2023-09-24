@@ -9,3 +9,6 @@
 
 // 4
 // Check if a number is power of 2 or not -- leetcode 231
+
+// 5
+// Count total set bits from first N natural number -- Coding ninjas (IMP)
