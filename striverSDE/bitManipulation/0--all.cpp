@@ -15,3 +15,6 @@
 
 // 6
 // Set the right most unset bit - coding ninjas
+
+// 7
+// Swap two numbers using bit manipulation
