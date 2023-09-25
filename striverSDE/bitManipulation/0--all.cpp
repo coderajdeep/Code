@@ -24,3 +24,6 @@
 
 // 9
 // Min bit flips is required to convert from start to goal -- leetcode 2220
+
+// 10
+// Single number -- leetcode 136
