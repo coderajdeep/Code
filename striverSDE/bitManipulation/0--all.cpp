@@ -18,3 +18,6 @@
 
 // 7
 // Swap two numbers using bit manipulation
+
+// 8
+// Most Significant bit -- Coding Ninjas
