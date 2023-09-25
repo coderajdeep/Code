@@ -33,3 +33,6 @@
 
 // 12
 // XOR of [L,R]  -- coding ninjas
+
+// 13
+// Find two numbers occuring odd number of times -- coding ninjas
