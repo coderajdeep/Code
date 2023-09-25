@@ -30,3 +30,6 @@
 
 // 11
 // Power set -- leetcode 78
+
+// 12
+// XOR of [L,R]  -- coding ninjas
