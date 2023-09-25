@@ -1,4 +1,6 @@
 // XOR of [L,R]  -- coding ninjas
+// https://www.geeksforgeeks.org/calculate-xor-1-n/
+// How optimized approach works
 
 // Time complexity O(R-L)
 // Space complexity O(1)
