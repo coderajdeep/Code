@@ -12,3 +12,6 @@
 
 // 5
 // Count total set bits from first N natural number -- Coding ninjas (IMP)
+
+// 6
+// Set the right most unset bit - coding ninjas
