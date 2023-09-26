@@ -18,3 +18,6 @@
 
 // 6
 // Implement queue using stack -- leetcode 232
+
+// 7
+// Checked for balanced paranthesis -- leetcode 20
