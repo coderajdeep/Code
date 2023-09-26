@@ -15,3 +15,6 @@
 
 // 5
 // Implement stack using queue -- leetcode 225
+
+// 6
+// Implement queue using stack -- leetcode 232
