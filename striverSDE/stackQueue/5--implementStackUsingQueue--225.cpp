@@ -39,3 +39,48 @@ public:
         return q1.empty();
     }
 };
+
+// Implement stack using single queue
+class MyStack {
+private:
+    queue<int>q;
+    int element, size;
+    void clearQueue() {
+        while(!q.empty()) {
+            q.pop();
+        }
+    }
+public:
+    MyStack() {
+        this->clearQueue();
+    }
+    
+    void push(int x) {
+        this->q.push(x);
+        this->size = this->q.size();
+        for(int i=0; i<(this->size-1); ++i) {
+            this->q.push(this->q.front());
+            this->q.pop();
+        }
+    }
+    
+    int pop() {
+        if(this->q.empty()) {
+            return -1;
+        }
+        this->element = this->q.front();
+        this->q.pop();
+        return this->element;
+    }
+    
+    int top() {
+        if(this->q.empty()) {
+            return -1;
+        }
+        return this->q.front();
+    }
+    
+    bool empty() {
+        return this->q.empty();
+    }
+};
