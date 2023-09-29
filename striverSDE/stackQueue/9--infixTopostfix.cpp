@@ -1,26 +1,23 @@
 // Infix to Postfix Expression
 
 int prec(char& ch) {
-	if(ch == '+' || ch == '-') {
-		return 0;
-	}
-	else if(ch == '*' || ch == '/') {
+	if(ch=='+' || ch=='-') {
 		return 1;
 	}
-	else if(ch == '*' || ch == '/') {
+	else if(ch=='*' || ch=='/') {
 		return 2;
 	}
-	else if(ch == '^') {
+	else if(ch=='^') {
 		return 3;
 	}
 	else {
-		return -1;
+		return 0;
 	}
 }
 string infixToPostfix(string& exp){
-	string postfix = "";
-	stack<char>stk;
-	for(char ch : exp) {
+	stack<char> stk;
+	string postfix;
+	for(char& ch : exp) {
 		if((ch>='0' && ch<='9') || (ch>='a' && ch<='z')) {
 			postfix.push_back(ch);
 		}
@@ -34,14 +31,11 @@ string infixToPostfix(string& exp){
 			}
 			stk.pop();
 		}
-		else if(stk.empty()) {
-			stk.push(ch);
-		}
-		else if(prec(stk.top())<prec(ch)) {
+		else if(stk.empty() || (prec(stk.top())<prec(ch))) {
 			stk.push(ch);
 		}
 		else {
-			while(!stk.empty() && prec(stk.top())>=prec(ch)) {
+			while(!stk.empty() && (prec(ch)<=prec(stk.top()))) {
 				postfix.push_back(stk.top());
 				stk.pop();
 			}
