@@ -24,3 +24,6 @@
 
 // 8
 // Implement Minimum stack -- leetcode 155
+
+// 9
+// Infix to postfix expression  -- coding ninjas
