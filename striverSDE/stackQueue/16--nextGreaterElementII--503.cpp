@@ -1,8 +1,9 @@
 // Next greater element -- leetcode 503
+// https://leetcode.com/problems/next-greater-element-ii/solutions/3390699/optimized-solution-easy-c-stack-implementation-st/
 
 vector<int> nextGreaterElements(vector<int>& nums) {
     int n = nums.size();
-    vector<int> ans(n);
+    vector<int> ans(n, -1);
     stack<int> stk;
     for(int i=n-2; i>=0; --i) {
         stk.push(nums[i]);
@@ -11,10 +12,7 @@ vector<int> nextGreaterElements(vector<int>& nums) {
         while(!stk.empty() && stk.top()<=nums[i]) {
             stk.pop();
         }
-        if(stk.empty()) {
-            ans[i] = -1;
-        }
-        else {
+        if(!stk.empty()) {
             ans[i] = stk.top();
         }
         stk.push(nums[i]);

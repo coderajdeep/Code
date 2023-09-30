@@ -49,4 +49,8 @@
 // Next greater element -- leetcode 496
 
 // 16
+// Have better method
 // Next greater element -- leetcode 503
+
+// 17
+// Next smalletr element  -- InterviewBit
