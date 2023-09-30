@@ -44,3 +44,6 @@
 
 // 14
 // Infix to Prefix -- coding ninjas
+
+// 15
+// Next greater element -- leetcode 496
