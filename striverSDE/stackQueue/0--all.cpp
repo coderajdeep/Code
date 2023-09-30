@@ -27,3 +27,6 @@
 
 // 9
 // Infix to postfix expression  -- coding ninjas
+
+// 10
+// Prefix to infix expression -- coding ninjas
