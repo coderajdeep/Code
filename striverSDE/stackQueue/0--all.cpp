@@ -47,3 +47,6 @@
 
 // 15
 // Next greater element -- leetcode 496
+
+// 16
+// Next greater element -- leetcode 503
