@@ -33,3 +33,6 @@
 
 // 11
 // Prefix to postfix -- coding ninjas
+
+// 12
+// Postfix to prefix -- coding ninjas
