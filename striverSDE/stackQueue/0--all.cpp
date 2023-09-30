@@ -1,6 +1,8 @@
 // TODO
 // Need to implement circular queue
 
+// Validate a prefix, infix or postfix expression
+
 // 1
 // Implement stack class -- coding ninjas
 
@@ -39,3 +41,6 @@
 
 // 13
 // Postfix to Infix -- coding ninjas
+
+// 14
+// Infix to Prefix -- coding ninjas

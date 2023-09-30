@@ -17,7 +17,7 @@ int prec(char& ch) {
 string infixToPostfix(string& exp){
 	stack<char> stk;
 	string postfix;
-	for(char& ch : exp) {
+	for(char ch : exp) {
 		if((ch>='0' && ch<='9') || (ch>='a' && ch<='z')) {
 			postfix.push_back(ch);
 		}
@@ -30,9 +30,6 @@ string infixToPostfix(string& exp){
 				stk.pop();
 			}
 			stk.pop();
-		}
-		else if(stk.empty() || (prec(stk.top())<prec(ch))) {
-			stk.push(ch);
 		}
 		else {
 			while(!stk.empty() && (prec(ch)<=prec(stk.top()))) {
