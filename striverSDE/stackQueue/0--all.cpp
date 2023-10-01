@@ -54,3 +54,6 @@
 
 // 17
 // Next smalletr element  -- InterviewBit
+
+// 18
+// Tapping Rainwater -- leetcode 42
