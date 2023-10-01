@@ -66,3 +66,6 @@
 
 // 23
 // Add Two Numbers -- leetcode 2
+
+// 24
+// Delete all the nodes equal to K -- coding ninja
