@@ -69,3 +69,6 @@
 
 // 24
 // Delete all the nodes equal to K -- coding ninja
+
+// 25
+// Remove duplicate nodes from sorted doubly linkedlist -- coding ninjas
