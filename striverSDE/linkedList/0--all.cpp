@@ -72,3 +72,6 @@
 
 // 25
 // Remove duplicate nodes from sorted doubly linkedlist -- coding ninjas
+
+// 26
+// Find Pair in doubly linkedlist for a given sum -- coding ninjas
