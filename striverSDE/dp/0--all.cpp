@@ -6,3 +6,6 @@
 
 // 3
 // Frog Jump -- Coding Ninjas
+
+// 4
+// Frog Jump with k distance -- Coding Ninjas
