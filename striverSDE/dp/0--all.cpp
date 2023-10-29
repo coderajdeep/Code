@@ -12,3 +12,6 @@
 
 // 5
 // House Robber -- leetcode 198
+
+// 6
+// House Robber II -- leetcode 213
