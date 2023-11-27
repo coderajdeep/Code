@@ -1,4 +1,5 @@
 // Construct tree from a array [Array length is seven and elements are in level order]
+// If the array length is variable then the question will be hard ***
 
 Node* createTree(vector<int>&arr){
     Node *root = new Node(arr[0]);

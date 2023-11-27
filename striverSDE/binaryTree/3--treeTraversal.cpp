@@ -19,9 +19,11 @@ void postOrder(TreeNode* root, vector<int>& postorder) {
     postorder.push_back(root->data);
 }
 vector<vector<int>> getTreeTraversal(TreeNode *root){
-    vector<int> preorder, inorder, postorder;
+    if(!root) vector<vector<int>> {};
+    vector<vector<int>> ans;
+    vector<int> inorder, preorder, postorder;
     inOrder(root, inorder);
     preOrder(root, preorder);
     postOrder(root, postorder);
-    return vector<vector<int>> {inorder, preorder, postorder};
+    return {inorder, preorder, postorder};
 }
