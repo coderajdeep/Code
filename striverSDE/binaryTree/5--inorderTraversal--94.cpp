@@ -1,4 +1,6 @@
 // leetcode Iterative Inorder Traversal
+// Time complexity O(n)
+// Space complexity O(n)
 vector<int> inorderTraversal(TreeNode* root) {
     if(!root) return vector<int> {};
 
