@@ -9,4 +9,13 @@
 // Binary Tree traversal
 
 // 4
-// Preorder Traversal - recursive and iterative
+// Preorder Traversal - recursive and iterative - leetcode 144
+
+// 5
+// Inorder Traversal - leetcode 94
+
+// 6
+// Postorder Traversal - leetcode 145
+
+// 7
+// Level order traversal - leetcode 102
