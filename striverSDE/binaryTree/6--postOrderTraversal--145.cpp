@@ -38,3 +38,42 @@ vector<int> postorderTraversal(TreeNode* root) {
 
     return postorder;
 }
+
+// Postorder traversal using one stack
+// Time complexity O(2*n)
+// Space complexity O(n)
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        if(!root) return vector<int> {};
+
+        stack<TreeNode*> stk;
+        vector<int> postorder;
+        TreeNode* curr = root;
+
+        while(!stk.empty() || curr) {
+            if(curr) {
+                stk.push(curr);
+                curr = curr->left;
+            }
+            else {
+                TreeNode* temp = stk.top()->right;
+                if(temp) {
+                    curr = temp;
+                }
+                else {
+                    temp = stk.top();
+                    stk.pop();
+                    postorder.push_back(temp->val);
+                    while(!stk.empty() && (temp == stk.top()->right)) {
+                        temp = stk.top();
+                        stk.pop();
+                        postorder.push_back(temp->val);
+                    }
+                }
+            }
+        }
+
+        return postorder;
+    }
+};
