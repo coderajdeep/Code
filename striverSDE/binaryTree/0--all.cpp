@@ -22,3 +22,9 @@
 
 // 8
 // Height of binary tree - leetcode 104
+
+// 9
+// height Balanced binary tree - leetcode 110
+
+// 10
+// Diameter of Binary Tree - leetcode 543
