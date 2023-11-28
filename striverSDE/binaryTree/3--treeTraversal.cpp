@@ -19,11 +19,48 @@ void postOrder(TreeNode* root, vector<int>& postorder) {
     postorder.push_back(root->data);
 }
 vector<vector<int>> getTreeTraversal(TreeNode *root){
-    if(!root) vector<vector<int>> {};
+    if(!root) vector<vector<int>> {{}, {}. {}};
     vector<vector<int>> ans;
     vector<int> inorder, preorder, postorder;
     inOrder(root, inorder);
     preOrder(root, preorder);
     postOrder(root, postorder);
     return {inorder, preorder, postorder};
+}
+
+// Three traversal in a single go
+vector<vector<int>> getTreeTraversal(TreeNode *root){
+    if(!root) return vector<vector<int>> {{}, {}, {}};
+    vector<int> preOrder, inOrder, postOrder;
+    stack<pair<TreeNode*, int>> stk;
+    pair<TreeNode*, int> p;
+    int num;
+    TreeNode* curr = nullptr;
+    stk.push(make_pair(root, 1));
+
+    while(!stk.empty()) {
+        p = stk.top();
+        stk.pop();
+        curr = p.first;
+        num = p.second;
+
+        if(num==1) {
+            preOrder.push_back(curr->data);
+            stk.push(make_pair(curr, 2));
+            if(curr->left) {
+                stk.push(make_pair(curr->left, 1));
+            }
+        }
+        else if(num==2) {
+            inOrder.push_back(curr->data);
+            stk.push(make_pair(curr, 3));
+            if(curr->right) {
+                stk.push(make_pair(curr->right, 1));
+            }
+        }
+        else if(num==3) {
+            postOrder.push_back(curr->data);
+        }
+    }
+    return vector<vector<int>> {inOrder, preOrder, postOrder};
 }

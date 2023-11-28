@@ -19,3 +19,6 @@
 
 // 7
 // Level order traversal - leetcode 102
+
+// 8
+// Height of binary tree - leetcode 104
