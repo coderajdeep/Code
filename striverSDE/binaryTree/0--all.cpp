@@ -43,3 +43,9 @@
 
 // 15
 // Vertical Order Traversal of a binary Tree -- Coding Ninjas
+
+// 16
+// Top View of binary Tree -- Coding Ninjas
+
+// 17
+// Bottom View of binary Tree -- Geeks
