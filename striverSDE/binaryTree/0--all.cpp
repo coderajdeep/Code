@@ -52,3 +52,6 @@
 
 // 18
 // Right View of binary tree -- leetcode 199
+
+// 19
+// Is Symmetric Tree or Mirror Tree -- leetcode 101
