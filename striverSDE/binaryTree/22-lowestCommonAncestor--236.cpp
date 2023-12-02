@@ -3,14 +3,23 @@
 // Best approach
 // https://youtu.be/_-QHfMDde90?si=WTxWEKm6m5Qp4iV6
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-    if(!root) return nullptr;
-    if(root==p) return p;
-    if(root==q) return q;
+    if(!root || root==p || root==q) return root;
     TreeNode* lnode = lowestCommonAncestor(root->left, p, q);
     TreeNode* rnode = lowestCommonAncestor(root->right, p, q);
     if(!lnode) return rnode;
     if(!rnode) return lnode;
     else return root;
+}
+
+// Coding Ninjas
+int lowestCommonAncestor(TreeNode<int> *root, int x, int y) {
+	if(!root) return -1;
+    if(root->data==x || root->data==y) return root->data;
+    int ldata = lowestCommonAncestor(root->left, x, y);
+    int rdata = lowestCommonAncestor(root->right, x, y);
+    if(ldata==-1) return rdata;
+    if(rdata==-1) return ldata;
+    else return root->data;
 }
 
 // Time Complexity O(2*n)
