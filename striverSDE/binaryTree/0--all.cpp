@@ -67,3 +67,6 @@
 
 // 23
 // Max Width of binary tree -- leetcode 662
+
+// 24
+// Children Sum Property -- Coding Ninjas
