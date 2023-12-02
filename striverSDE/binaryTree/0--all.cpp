@@ -55,3 +55,9 @@
 
 // 19
 // Is Symmetric Tree or Mirror Tree -- leetcode 101
+
+// 20
+// Root to Leaf all paths  -- leetcode 257
+
+// 21
+// Path to given Node -- InterviewBit
