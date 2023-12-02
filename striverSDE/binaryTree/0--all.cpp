@@ -61,3 +61,6 @@
 
 // 21
 // Path to given Node -- InterviewBit
+
+// 22
+// LCA of a binary tree -- leetcode 236
