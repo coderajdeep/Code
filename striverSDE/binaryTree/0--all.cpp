@@ -76,3 +76,6 @@
 
 // 26
 // Time to completely burn a binary tree -- coding ninjas
+
+// 27
+// Count Total nodes in complete binary tree -- leetcode 222
