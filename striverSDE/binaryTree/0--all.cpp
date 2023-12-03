@@ -79,3 +79,9 @@
 
 // 27
 // Count Total nodes in complete binary tree -- leetcode 222
+
+// 28
+// Construct Binary Tree from inorder and preorder traversal
+
+// 29
+// Construct Binary Tree from inorder and postorder traversal
