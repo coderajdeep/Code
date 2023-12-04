@@ -12,3 +12,6 @@
 
 // 5
 // Finding floor in binary tree -- coding ninjas
+
+// 6
+// Insert into BST -- leetcode 701
