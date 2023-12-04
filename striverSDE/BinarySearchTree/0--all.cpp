@@ -6,3 +6,6 @@
 
 // 3
 // Minimum element in BST -- coding ninjas
+
+// 4
+// Finding ceil in binary tree -- coding ninjas
