@@ -9,3 +9,6 @@
 
 // 4
 // Finding ceil in binary tree -- coding ninjas
+
+// 5
+// Finding floor in binary tree -- coding ninjas
