@@ -45,7 +45,7 @@ TreeNode* insertIntoBST(TreeNode* root, int val) {
 TreeNode* insertIntoBST(TreeNode* root, int val) {
     if(!root) return new TreeNode(val);
     TreeNode* curr = root;
-    while(true) {
+    while(curr) {
         if(curr->val > val) {
             if(curr->left) {
                 curr = curr->left;
