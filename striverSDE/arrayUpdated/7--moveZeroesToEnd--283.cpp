@@ -34,3 +34,18 @@ void moveZeroes(vector<int>& nums) {
     }
     
 }
+
+// Best Approach
+// Time complexity O(n)
+// Space complexity O(1)
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int n = nums.size();
+        int index = 0;
+        for(int i=0; i<n; ++i) {
+            if(nums[i] != 0)
+                swap(nums[i], nums[index++]);
+        }
+    }
+};
