@@ -24,3 +24,6 @@
 
 // 9
 // Union of array -- Coding Ninjas
+
+// 10
+// Missing Number in ana array -- leetcode 268
