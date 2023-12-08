@@ -15,3 +15,6 @@
 
 // 6 
 // Right Rotation or Clockwise Rotation by K -- leetcode 189
+
+// 7
+// Move All Zeroes to the end of the array -- leetcode 283
