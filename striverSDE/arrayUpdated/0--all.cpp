@@ -9,3 +9,9 @@
 
 // 4
 // Remove duplicate from sorted array -- leetcode 26
+
+// 5
+// Left Rotation or Anti clockwise rotation of an array by one -- Coding Ninjas
+
+// 6 
+// Right Rotation or Clockwise Rotation by K -- leetcode 189
