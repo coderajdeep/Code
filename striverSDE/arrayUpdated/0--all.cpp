@@ -18,3 +18,9 @@
 
 // 7
 // Move All Zeroes to the end of the array -- leetcode 283
+
+// 8
+// Linear Search -- Coding Ninjas
+
+// 9
+// Union of array -- Coding Ninjas
