@@ -26,4 +26,7 @@
 // Union of array -- Coding Ninjas
 
 // 10
-// Missing Number in ana array -- leetcode 268
+// Missing Number in an array -- leetcode 268
+
+// 11
+// Maximum Consecutive one  -- leetcode 485
