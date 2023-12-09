@@ -13,6 +13,9 @@ int lenOfLongSubarr(int A[],  int N, int K) {
             if(sum==K) {
                 maxLen = max(maxLen, (j-i+1));
             }
+            else if(sum>K) {
+                break;
+            }
         }
     }
     return maxLen;
