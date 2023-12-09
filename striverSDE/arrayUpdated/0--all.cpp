@@ -30,3 +30,6 @@
 
 // 11
 // Maximum Consecutive one  -- leetcode 485
+
+// 12
+// Find only single element in array  -- leetcode 
