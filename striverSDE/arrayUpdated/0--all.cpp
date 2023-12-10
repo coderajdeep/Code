@@ -35,4 +35,7 @@
 // Find only single element in array  -- leetcode 136
 
 // 13
-// Find the largest subarray with given sum -- coding ninjas
+// ***Find the largest subarray with given sum when array elements are non negative -- coding ninjas
+
+// 14
+// ***Find the largest subarray with given sum when array elements can be negative
