@@ -8,7 +8,7 @@
 // Check if and array is sorted or not - coding ninjas (We can't check if an array is sorted or not in logN complexity)
 
 // 4
-// Remove duplicate from sorted array -- leetcode 26
+// ***Remove duplicate from sorted array -- leetcode 26
 
 // 5
 // Left Rotation or Anti clockwise rotation of an array by one -- Coding Ninjas
@@ -17,19 +17,19 @@
 // Right Rotation or Clockwise Rotation by K -- leetcode 189
 
 // 7
-// Move All Zeroes to the end of the array -- leetcode 283
+// ***Move All Zeroes to the end of the array -- leetcode 283
 
 // 8
 // Linear Search -- Coding Ninjas
 
 // 9
-// Union of array -- Coding Ninjas
+// ***Union of array -- Coding Ninjas
 
 // 10
 // Missing Number in an array -- leetcode 268
 
 // 11
-// Maximum Consecutive one  -- leetcode 485
+// ***Maximum Consecutive one  -- leetcode 485
 
 // 12
 // Find only single element in array  -- leetcode 136
@@ -44,7 +44,10 @@
 // 2sum Problem -- leetcode 1
 
 // 16
-// Sort 0 1 2 - sort colors -- leetcode 75
+// ***Sort 0 1 2 - sort colors -- leetcode 75
 
 // 17
-// Majority Element -- leetcode 169
+// ***Majority Element -- leetcode 169
+
+// 18
+// Maximum subarray sum - Kadane's Algorithm -- leetcode 53
