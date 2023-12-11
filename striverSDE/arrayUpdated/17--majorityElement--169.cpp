@@ -3,7 +3,7 @@
 
 // If any element's frequency is greater than (n/2) then its a majorith element
 
-// moore's voting algorithm
+// Moore's voting algorithm
 // If it's not guaranteed that majority element will exist
 // Then we need to check this  
 int isMajorityElement(int element, int n, int* arr) {
