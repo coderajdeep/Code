@@ -5,10 +5,10 @@
 int maxSubArray(vector<int>& nums) {
     int n = nums.size();
     // This is for tracking ovarall maximum value
-    int maxValue = nums[0];
+    int maxValue = INT_MIN;
     // This is for tracking current maximum value
-    int currMax = nums[0];
-    for(int i=1; i<n; ++i) {
+    int currMax = 0;
+    for(int i=0; i<n; ++i) {
         // If the current number is greater than 
         // the value of current number + currentActive subarray
         // Then I will update the current maximum
@@ -23,4 +23,33 @@ int maxSubArray(vector<int>& nums) {
         }
     }
     return maxValue;
+}
+
+// If the question is about getting the subarray itself then the solution will be
+pair<int, int> maxSubArray(vector<int>& nums) {
+    int n = nums.size();
+    // This is for tracking ovarall maximum value
+    int maxValue = INT_MIN;
+    // This is for tracking current maximum value
+    int currMax = 0;
+    int lo = 0, hi = 0, low, high;
+    for(int i=0; i<n; ++i) {
+        // If the current number is greater than 
+        // the value of current number + currentActive subarray
+        // Then I will update the current maximum
+        if(nums[i]<(nums[i]+currMax)) {
+            currMax += nums[i];
+            hi = i;
+        }
+        else {
+            currMax = nums[i];
+            lo = hi = i;
+        }
+        if(maxValue<currMax) {
+            low = lo;
+            high = hi;
+            maxValue = currMax;
+        }
+    }
+    return pair<int, int> {low, high};
 }
