@@ -3,3 +3,6 @@
 
 // 2
 // Valid Anagram -- leetcode 242
+
+// Q1
+// Remove vowel from a string -- geeks
