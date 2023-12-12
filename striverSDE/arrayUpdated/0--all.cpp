@@ -51,3 +51,6 @@
 
 // 18
 // Maximum subarray sum - Kadane's Algorithm -- leetcode 53
+
+// 19
+// Best Time to buy and sell stock -- leetcode 121
