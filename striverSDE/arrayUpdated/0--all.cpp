@@ -54,3 +54,6 @@
 
 // 19
 // Best Time to buy and sell stock -- leetcode 121
+
+// 20
+// Rearrange array in alternative way -- leetcode 2149
