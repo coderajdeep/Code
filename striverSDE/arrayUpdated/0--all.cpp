@@ -60,3 +60,6 @@
 
 // 21
 // Next Permutation -- leetcode 31
+
+// 22
+// Leaders in an array -- Coding Ninjas
