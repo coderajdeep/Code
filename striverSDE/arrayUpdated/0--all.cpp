@@ -57,3 +57,6 @@
 
 // 20
 // Rearrange array in alternative way -- leetcode 2149
+
+// 21
+// Next Permutation -- leetcode 31
