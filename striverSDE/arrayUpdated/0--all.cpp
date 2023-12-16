@@ -63,3 +63,6 @@
 
 // 22
 // Leaders in an array -- Coding Ninjas
+
+// 23
+// Longest Consecutive Sequence -- leetcode 128
