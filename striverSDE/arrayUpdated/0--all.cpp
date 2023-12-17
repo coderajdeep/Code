@@ -72,3 +72,6 @@
 
 // 25
 // Rotate a matrix by clockwise 90 degree -- leetcode 48
+
+// Q1
+// Determine Whether Matrix Can Be Obtained By Rotation -- 1886
