@@ -69,3 +69,6 @@
 
 // 24
 // Set Matrix Zero -- leetcode 73
+
+// 25
+// Rotate a matrix by clockwise 90 degree -- leetcode 48
