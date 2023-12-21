@@ -76,6 +76,9 @@
 //26
 // Print matrix in spiral order  -- leetcode 54
 
+// 27
+// Count Subarray with given sum -- leetcode 
+
 // Q1
 // Determine Whether Matrix Can Be Obtained By Rotation -- 1886
 
