@@ -21,6 +21,16 @@ void rotate(vector<int>& nums, int k) {
     reverseArray(0, n - 1, nums);
 }
 
+// Clockwise or right rotation using STL
+// Time complexity O(2*n)
+void rotate(vector<int>& nums, int k) {
+    int n = nums.size();
+    if(k>=n) k = k % n;
+    reverse(nums.begin(), nums.end()-k);
+    reverse(nums.begin()+n-k, nums.end());
+    reverse(nums.begin(), nums.end());
+}
+
 
 // Left Rotation or anti clockwise rotation of an array by K -- coding ninjas
 // Time complexity O(2*n)

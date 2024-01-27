@@ -1,5 +1,27 @@
 // Longest subarray with given sum
-// https://practice.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
+// https://www.codingninjas.com/studio/problems/longest-subarray-with-sum-k_6682399
+// When Array elements are non-negative
+// Time complexity O(n)
+// Space complexity O(1)
+
+// [1 1 1 1 .. upto 10^6 100000000] and k = 100000000
+// For this test case, time complexity will be O(n^2)
+int longestSubarrayWithSumK(vector<int> a, long long k) {
+    long long sum = 0;
+    int index = 0, leftIndex = 0, n = a.size(), maxLength = 0;
+    while(index<n) {
+        sum += a[index];
+        while(leftIndex<=index && sum>k) {
+            sum -= a[leftIndex];
+            ++leftIndex;
+        }
+        if(sum==k) {
+            maxLength = max(maxLength, index - leftIndex + 1);
+        }
+        ++index;
+    }
+    return maxLength;
+}
 
 // Brute force approach
 // Time complexity O(n^2)
