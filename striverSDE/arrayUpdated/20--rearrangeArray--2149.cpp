@@ -41,7 +41,6 @@ vector<int> rearrangeArray(vector<int>& nums) {
         ans[2 * i + 1] = odd[i];
     }
     vector<int>& remainingNumbers = evenSize > oddSize ? even : odd;
-    int ansIndexStart = minSize * 2;
     int remainingNumbersStartIndex = minSize;
     for (int i = minSize * 2; i < n; ++i) {
         ans[i] = remainingNumbers[remainingNumbersStartIndex++];

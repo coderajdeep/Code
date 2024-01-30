@@ -1,6 +1,6 @@
 // Longest Consecutive Sequence -- leetcode 128
 
-// Array cabn be empty and array can have duplicate numbers
+// Array can be empty and array can have duplicate numbers
 // Time complexity O(nlogn)
 // Space complexity O(1)
 int longestConsecutive(vector<int>& nums) {
@@ -22,30 +22,24 @@ int longestConsecutive(vector<int>& nums) {
 
 // Time complexity O(n)
 // Space complexity O(n)
+// Clean solution
 int longestConsecutive(vector<int>& nums) {
-    int n = nums.size();
-    if(n<=1) return n;
-    unordered_set<int> us;
-    for(int i=0; i<n; ++i) {
-        us.insert(nums[i]);
+    unordered_set<int>us;
+    for(int num:nums) {
+        us.insert(num);
     }
-    int count, maxCount = 1;
-    for(auto it=us.begin(); it!=us.end(); ++it) {
-        int curr = *it;
-        int prev = curr - 1;
-        if(us.find(prev)==us.end()) {
-            count = 1;
-            int next = curr + 1;
-            while(true) {
-                if(us.find(next)==us.end()) {
-                    maxCount = max(maxCount, count);
-                    break;
-                }
-                else {
-                    ++next;
-                    ++count;
-                }
+    int maxCount = 0;
+    for(int num:us) {
+        int number = num - 1;
+        auto itr = us.find(number);
+        if(itr == us.end()) {
+            int count = 1;
+            int next = num + 1;
+            while(us.find(next) != us.end()) {
+                ++count;
+                ++next;
             }
+            maxCount = max(maxCount, count);
         }
     }
     return maxCount;

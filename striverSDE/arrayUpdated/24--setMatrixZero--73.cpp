@@ -24,6 +24,8 @@ void setZeroes(vector<vector<int>>& matrix) {
     // We are traversing from right to left
     // Because if we traverse from left to write then we can overwrite matrix[0][j] and matrix[i][0]
     // when matrix[0][0] is zero and firstColumn = 0 respectively
+    // if we want to traverse left to write then we need to avoid first row and column while 
+    // filling the matrix with zero and later we can fill first row and column
     for(int i=n-1; i>=0; --i) {
         for(int j=m-1; j>=0; --j) {
             if(j==0) {
@@ -38,7 +40,7 @@ void setZeroes(vector<vector<int>>& matrix) {
     }
 }
 
-// Time O(2*n^2) ~ O(n^2)
+// Time O(2*n*m) ~ O(n*m)
 // Space O(n+m)
 void setZeroes(vector<vector<int>>& matrix) {
     int n = matrix.size();

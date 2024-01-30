@@ -25,6 +25,8 @@ int maxSubArray(vector<int>& nums) {
     return maxValue;
 }
 
+// Question can be length of the max or min subarray
+// Below solution is for max length
 // If the question is about getting the subarray itself then the solution will be
 pair<int, int> maxSubArray(vector<int>& nums) {
     int n = nums.size();
