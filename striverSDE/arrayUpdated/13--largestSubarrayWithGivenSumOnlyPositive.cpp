@@ -90,12 +90,14 @@ int lenOfLongSubarr(int A[],  int N, int K) {
     int sum = 0, maxLen = 0;
     for(int i=0; i<N; ++i) {
         sum += A[i];
-        if(prefixSum.find(sum)==prefixSum.end()) {
-            prefixSum[sum] = i;
-        }
         auto it = prefixSum.find(sum - K);
         if(it!=prefixSum.end()) {
             maxLen = max(maxLen, (i - it->second));
+        }
+        // This is ensuring that the prefix having the earliest index 
+        // So we can get the max length subarray
+        if(prefixSum.find(sum)==prefixSum.end()) {
+            prefixSum[sum] = i;
         }
     }
     return maxLen;
