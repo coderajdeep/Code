@@ -79,8 +79,14 @@
 // 27
 // Count Subarray with given sum -- leetcode 560
 
+// 28
+// Pascal Triangle 1 -- leetcode 118
+
 // Q1
 // Determine Whether Matrix Can Be Obtained By Rotation -- 1886
 
 // Q2
 // Spiral Matrix II -- leetcode 59
+
+// Q3
+// Pascal Triangle II -- leetcode 119
