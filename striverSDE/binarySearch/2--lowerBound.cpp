@@ -3,6 +3,7 @@
 
 // Time complexity O(logn)
 // Space complexity O(1)
+// ***In lower bound, if we assume high = n-1 then there will be no problem
 int lowerBound(vector<int> arr, int n, int x) {
 	int low = 0, high = n, mid;
 	if(x<arr[0]) {
@@ -15,6 +16,30 @@ int lowerBound(vector<int> arr, int n, int x) {
 		while(low<high) {
 			mid = low + (high - low) / 2;
 			if(x <= arr[mid]) {
+				high = mid;
+			}
+			else {
+				low = mid + 1;
+			}
+		}
+	}
+	return low;
+}
+
+
+// Same solution
+int lowerBound(vector<int> arr, int n, int x) {
+	int low = 0, high = n , mid;
+	if (x < arr.front()) {
+		return 0;
+	}
+	else if (x > arr.back()) {
+		return n;
+	}
+	else {
+		while (low < high) {
+			mid = low + (high - low) / 2;
+			if (x <= arr[mid]) {
 				high = mid;
 			}
 			else {

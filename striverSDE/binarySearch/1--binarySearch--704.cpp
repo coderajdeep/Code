@@ -24,7 +24,7 @@ int search(vector<int>& nums, int target) {
 
 
 // Time complexity O(logn)
-// Space complexity O(logn)
+// Space complexity O(logn) (Using function call stack)
 // Recursive solution
 int binarySearch(int low, int high, int target, vector<int>& nums) {
     if(low>high) {
