@@ -9,3 +9,15 @@
 
 // 4
 // Search insert position - leetcode 35
+
+// 5
+// Ceil and floor in sorted array - coding ninjas
+
+// 6
+// First and last occurance in array - leetcode 34
+
+// 7
+// Number of occurance in sorted array
+
+// 8
+// Search in rotated sorted array - leetcode 33
