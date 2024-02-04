@@ -21,3 +21,12 @@
 
 // 8
 // Search in rotated sorted array - leetcode 33
+
+// 9
+// Search in rotated sorted array - leetcode 81
+
+// 10
+// Find minimum in rotated sorted array - leetcode 153
+
+// 11
+// Find rotation count in rotated sorted array - Coding ninjas
