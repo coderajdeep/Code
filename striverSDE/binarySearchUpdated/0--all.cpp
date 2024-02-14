@@ -30,3 +30,9 @@
 
 // 11
 // Find rotation count in rotated sorted array - Coding ninjas
+
+// 12
+// Find square root of an integer (floor value) - Coding Ninjas
+
+// 13
+// Find N'th root of M - Coding Ninja
