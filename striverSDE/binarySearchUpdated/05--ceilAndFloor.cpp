@@ -1,4 +1,20 @@
+// Using STL
 // Best solution
+// Time complexity O(logn)
+// Space complexity O(1)
+pair<int, int> getFloorAndCeil(vector<int> &a, int n, int x) {
+	int lowerBoundIndex = (lower_bound(a.begin(), a.end(), x) - a.begin());
+	// Greater than last element
+	if(lowerBoundIndex == n) return pair<int, int> {a.back(), -1};
+	// target is present
+	if(a[lowerBoundIndex] == x) return pair<int, int> {x, x};
+	// Less than first element
+	if(lowerBoundIndex == 0) return pair<int, int> {-1, a.front()};
+	// In between two elements
+	return pair<int, int> {a[lowerBoundIndex-1], a[lowerBoundIndex]};
+}
+
+
 // Time complexity O(logn)
 // Space complexity O(1)
 int lowerBound(vector<int> &arr, int n, int target) {
