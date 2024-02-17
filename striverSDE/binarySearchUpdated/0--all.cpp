@@ -32,7 +32,7 @@
 // Find rotation count in rotated sorted array - Coding ninjas
 
 // 12
-// Find square root of an integer (floor value) - Coding Ninjas
+// Find single element in sorted array -- leetcode 540
 
 // 13
-// Find N'th root of M - Coding Ninja
+// Find Peak element in array -- leetcode 162
