@@ -29,4 +29,6 @@ int NthRoot(int n, int m) {
 		else low = mid + 1;
 	}
 	return -1;
+	// If the n-th root is not integer, then flows reach here
+	// the exact root will lies between (high, low)
 }
