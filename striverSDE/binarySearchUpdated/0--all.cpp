@@ -42,3 +42,6 @@
 
 // 15
 // N-th rooth of M -- coding ninjas ***
+
+// 16
+// Koko eating bananas -- leetcode 875
