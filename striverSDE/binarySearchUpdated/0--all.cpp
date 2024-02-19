@@ -45,3 +45,9 @@
 
 // 16
 // Koko eating bananas -- leetcode 875
+
+// 17
+// Minimum number of days to make m bouquets -- leetcode 1482
+
+// 18
+// Find the smallest divisor -- leetcode 1283
