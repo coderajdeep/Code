@@ -1,6 +1,6 @@
 // Koko eating bananas -- leetcode 875
 
-// Time complexity O(log(max num in array) + (max num in array))
+// Time complexity O(log(max num in array) * (size of array)) + O(max in the array)
 // Space complexity O(1)
 int getMaxValue(vector<int>& piles) {
     int maxElement = INT_MIN;
