@@ -51,3 +51,6 @@
 
 // 18
 // Find the smallest divisor -- leetcode 1283
+
+// 19
+// Capacity to ship packages within D days -- leetcode 1011
