@@ -1,4 +1,6 @@
 // Implement queue class -- coding ninjas
+// Initially we have reserved sufficiant space based on our max query performed
+// So we don't need to consider if the queue is full or not
 
 class Queue {
 
