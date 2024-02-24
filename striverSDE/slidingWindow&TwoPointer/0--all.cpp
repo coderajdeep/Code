@@ -9,3 +9,6 @@
 
 // 5
 // Binary subarray with given sum -- leetcode 930
+
+// 6
+// Count number of nice subarray -- leetcode 1248
