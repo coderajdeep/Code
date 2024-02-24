@@ -6,3 +6,6 @@
 
 // 4
 // Longest Repeating character replacement -- leetcode 424
+
+// 5
+// Binary subarray with given sum -- leetcode 930
