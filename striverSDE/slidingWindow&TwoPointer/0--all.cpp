@@ -12,3 +12,6 @@
 
 // 6
 // Count number of nice subarray -- leetcode 1248
+
+// 7
+// Number of substring containing all three characters
