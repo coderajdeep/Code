@@ -14,4 +14,7 @@
 // Count number of nice subarray -- leetcode 1248
 
 // 7
-// Number of substring containing all three characters
+// Number of substring containing all three characters -- leetcode 1358
+
+// 8
+// Max point you can obtain from cards -- leetcode 1423

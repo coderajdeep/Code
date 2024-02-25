@@ -1,3 +1,6 @@
+// Number of substring containing all three characters -- leetcode 1358
+// Time complexity O(n)
+// Time complexity O(1)
 int numberOfSubstrings(string s) {
     int n = s.size(), low = 0, high = 0, count = 0;
     unordered_map<char, int> umap;
