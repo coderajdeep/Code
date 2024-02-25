@@ -18,3 +18,9 @@
 
 // 8
 // Max point you can obtain from cards -- leetcode 1423
+
+// 9
+// Longest substring with at most K distinct character -- leetcode 340
+
+// 10
+// Total Subarray with K different Integers -- leetcode 992
