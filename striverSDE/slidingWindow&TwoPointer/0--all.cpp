@@ -27,3 +27,6 @@
 
 // 11
 // Minimum window substring -- leetcode 76
+
+// 12
+// Minimum window subsequence -- leetcode 727
