@@ -36,4 +36,8 @@ public:
 	bool isEmpty() {
 		return (this->front == this->rear);
 	}
+
+	int size() {
+		return (this->rear - this->front);
+	}
 };
