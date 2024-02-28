@@ -9,6 +9,7 @@ public:
     Stack()
     {
         this->size = 0;
+        this->top = nullptr;
     }
 
     int getSize()
