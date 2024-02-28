@@ -43,6 +43,7 @@ bool isValid(string s) {
 // Time complexity O(n)
 // Space complexity O(1)
 // Given string will be modified
+// https://youtu.be/aoYm3bmOPHw (Time O(n^2) space O(1))
 bool isValid(string s) {
     int n = s.size(), index = -1;
     for(int i=0; i<n; ++i) {
@@ -58,6 +59,7 @@ bool isValid(string s) {
             }
         }
         else {
+            // index == -1
             return false;
         }
     }
