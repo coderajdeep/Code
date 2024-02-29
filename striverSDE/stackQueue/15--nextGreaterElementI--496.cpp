@@ -1,5 +1,35 @@
 // Next greater element -- leetcode 496
 
+// Better solution
+// Time complexity O(n)
+// Space complexity O(n)
+void nextGreaterHash(vector<int>& nums, unordered_map<int, int>& umap) {
+    stack<int> stk;
+    int n = nums.size();
+    for(int i=n-1; i>=0; --i) {
+        while(!stk.empty() && stk.top()<=nums[i]) {
+            stk.pop();
+        }
+        if(!stk.empty()) {
+            umap[nums[i]] = stk.top();
+        }
+        stk.push(nums[i]);
+    }
+}
+vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
+    int n = nums1.size();
+    unordered_map<int, int> umap;
+    vector<int> ans(n, -1);
+    nextGreaterHash(nums2, umap);
+    for(int i=0; i<n; ++i) {
+        auto it = umap.find(nums1[i]);
+        if(it != umap.end()) {
+            ans[i] = it->second;
+        }
+    }
+    return ans;
+}
+
 // Time complexity O(n)
 // Space complexity O(n)
 vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
