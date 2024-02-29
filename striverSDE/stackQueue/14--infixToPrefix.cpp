@@ -65,8 +65,13 @@ string infixToPrefix(string& exp) {
         swap(exp[start++], exp[end--]);
     }
 
-    if(exp[start+(end-start)/2]=='(') exp[start+(end-start)/2] = ')';
-    else if(exp[start+(end-start)/2]==')') exp[start+(end-start)/2] = '(';
+	// when size of the exp is odd then only we need to do this
+	// if we don't want to do this then we need to reverse the expression first then need to interchange 'C' and ')'
+	// https://takeuforward.org/data-structure/infix-to-prefix/
+	if(n & 1) {
+		if(exp[start+(end-start)/2]=='(') exp[start+(end-start)/2] = ')';
+    	else if(exp[start+(end-start)/2]==')') exp[start+(end-start)/2] = '(';
+	}
 
     string prefix = infixToPostfix(exp);
 
