@@ -1,6 +1,10 @@
 // Next greater element -- leetcode 503
 // https://leetcode.com/problems/next-greater-element-ii/solutions/3390699/optimized-solution-easy-c-stack-implementation-st/
 
+// [1, 2, 3, 4, 6, 5]
+// Corner case
+// Time complexity O(2*n)
+// Time complexity O(2*n)
 vector<int> nextGreaterElements(vector<int>& nums) {
     int n = nums.size();
     vector<int> ans(n, -1);
