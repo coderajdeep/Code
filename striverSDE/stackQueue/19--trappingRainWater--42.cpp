@@ -11,6 +11,8 @@ int trap(vector<int>& height) {
                 leftMax = height[left];
             }
             else {
+                // https://youtu.be/m18Hntz4go8?t=1033
+                // How we are make sure there is rightMax exist which is greater equal than leftMax
                 totalWater += (leftMax - height[left]);
             }
             ++left;
