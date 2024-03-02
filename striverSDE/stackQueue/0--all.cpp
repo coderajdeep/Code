@@ -56,6 +56,9 @@
 // Next smalletr element  -- InterviewBit
 
 // 18
+// Number of NGE -- Coding Ninjas
+
+// 18
 // Tapping Rainwater -- leetcode 42
 
 // 19
