@@ -64,6 +64,9 @@
 // 19
 // Sum of subarray minimum -- leetcode 907
 
+// 20
+// Asteroid Collision -- leetcode 735
+
 // 19
 // Need to do this in one pass
 // Largest Rectangle in histogram -- leetcode 84
