@@ -58,19 +58,19 @@
 // 18
 // Number of NGE -- Coding Ninjas
 
-// 18
+// 19
 // Tapping Rainwater -- leetcode 42
 
-// 19
+// 20
 // Sum of subarray minimum -- leetcode 907
 
-// 20
+// 21
 // Asteroid Collision -- leetcode 735
 
-// 21
+// 22
 // Sum of subarray ranges -- leetcode 2104
 
-// 22
+// 23
 // Remove K digits -- leetcode 402
 
 // 19

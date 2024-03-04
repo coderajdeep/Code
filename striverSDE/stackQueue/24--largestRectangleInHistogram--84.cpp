@@ -54,3 +54,43 @@ int largestRectangleArea(vector<int>& heights) {
     }
     return ans;
 }
+
+// Modular code
+// Time complexity O(n)
+// Space complexity O(n)
+void getPrevNextSmaller(vector<int>& heights, vector<int>& prev, vector<int>& next) {
+    stack<int> stkPrev, stkNext;
+    int n = heights.size();
+    for(int i=0; i<n; ++i) {
+        while(!stkPrev.empty() && heights[stkPrev.top()] >= heights[i]) {
+            stkPrev.pop();
+        }
+        if(stkPrev.empty()) {
+            prev[i] = 0;
+        }
+        else {
+            prev[i] = stkPrev.top() + 1;
+        }
+        while(!stkNext.empty() && heights[stkNext.top()] >= heights[n-1-i]) {
+            stkNext.pop();
+        }
+        if(stkNext.empty()) {
+            next[n-1-i] = n - 1;
+        }
+        else {
+            next[n-1-i] = stkNext.top() - 1;
+        }
+        stkPrev.push(i);
+        stkNext.push(n-1-i);
+    }
+}
+int largestRectangleArea(vector<int>& heights) {
+    int n = heights.size();
+    vector<int> prev(n, 0), next(n, 0);
+    getPrevNextSmaller(heights, prev, next);
+    int ans = 0;
+    for(int i=0; i<n; ++i) {
+        ans = max(ans, (next[i] - prev[i] + 1) * heights[i]);
+    }
+    return ans;
+}
