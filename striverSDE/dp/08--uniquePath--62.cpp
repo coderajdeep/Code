@@ -37,7 +37,7 @@ int uniquePaths(int m, int n) {
 // Space optimized
 // Best solution
 // Time complexity O(n*m)
-// Space complexity O(1)
+// Space complexity O(n)
 int uniquePaths(int m, int n) {
     vector<int> prev(n, 1), curr(n, 1);
     for(int i=1; i<m; ++i) {
