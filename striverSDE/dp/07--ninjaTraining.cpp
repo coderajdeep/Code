@@ -1,5 +1,6 @@
 // Ninja's training ***
 
+// Space optimized
 // Best solution
 // Time complexity O(n * 12) ~ O(n)
 // Space complexity O(8) ~ constant

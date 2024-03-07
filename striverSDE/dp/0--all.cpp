@@ -18,3 +18,6 @@
 
 // 7
 // Ninja's training ***
+
+// 8
+// Unique path - leetcode 62
