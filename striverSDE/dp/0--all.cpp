@@ -15,3 +15,6 @@
 
 // 6
 // House Robber II -- leetcode 213
+
+// 7
+// Ninja's training ***
