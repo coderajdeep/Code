@@ -30,3 +30,6 @@
 
 // 11
 // Minimum path sum in triangle -- leetcode 120
+
+// 12
+// Minimum falling path in rectangle -- leetcode 931 (Variable starting and ending point)
