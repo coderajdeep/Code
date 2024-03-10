@@ -39,3 +39,6 @@
 
 // 14
 // Subset sum equal to K -- coding ninjas
+
+// 15
+// Partition equal subset sum -- leetcode 416
