@@ -8,9 +8,9 @@ bool canPartition(vector<int>& nums) {
     // if total sum is odd then we can't equally divide into two subset 
     if(sum & 1) return false;
     sum /= 2;
-    vector<bool> prev(sum+1), curr(sum+1);
+    vector<bool> prev(sum+1, false), curr(sum+1);
     prev[0] = curr[0] = true;
-    for(int i=1; i<=sum; ++i) prev[i] = (nums[0] == i);
+    if(nums[0]<=sum) prev[nums[0]] = true;
     for(int i=1; i<n; ++i) {
         for(int j=1; j<=sum; ++j) {
             bool pick = (nums[i] <= j) ? prev[j - nums[i]] : false;

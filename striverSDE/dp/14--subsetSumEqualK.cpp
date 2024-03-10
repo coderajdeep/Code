@@ -49,11 +49,9 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
 // Time complexity O(n*k)
 // Space complexity O(k)
 bool subsetSumToK(int n, int k, vector<int> &arr) {
-    vector<bool> prev(k+1), curr(k+1);
+    vector<bool> prev(k+1, false), curr(k+1);
     prev[0] = curr[0] = true;
-    for(int j=1; j<=k; ++j) {
-        prev[j] = (arr[0]==j);
-    }
+    if(arr[0]<=k) prev[arr[0]] = true;
     for(int i=1; i<n; ++i) {
         for(int j=1; j<=k; ++j) {
             bool pick = (arr[i] <= j) ? prev[j-arr[i]] : false;
