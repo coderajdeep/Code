@@ -42,3 +42,6 @@
 
 // 15
 // Partition equal subset sum -- leetcode 416
+
+// 16
+// Partition array into two subsets with minimum absolute sum difference -- coding ninja (leetcode 2035 need to try)
