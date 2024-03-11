@@ -45,3 +45,6 @@
 
 // 16
 // Partition array into two subsets with minimum absolute sum difference -- coding ninja (leetcode 2035 need to try)
+
+// 17
+// Count subset with sum K -- Coding Ninjas
