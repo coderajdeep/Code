@@ -51,3 +51,6 @@
 
 // 18
 // Count Partition with given difference -- coding ninjas
+
+// 19
+// 0 1 Knapsack -- coding ninjas
