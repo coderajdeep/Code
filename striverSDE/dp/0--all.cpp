@@ -48,3 +48,6 @@
 
 // 17
 // Count subset with sum K -- Coding Ninjas
+
+// 18
+// Count Partition with given difference -- coding ninjas
