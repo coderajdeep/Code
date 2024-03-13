@@ -66,3 +66,6 @@
 
 // 26
 // Print LCS -- Coding Ninjas
+
+// 27
+// Longest Common Substring length -- Coding Ninjas
