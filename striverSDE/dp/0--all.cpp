@@ -69,3 +69,6 @@
 
 // 27
 // Longest Common Substring length -- Coding Ninjas
+
+// 28
+// Longest Palindromic Subsequence -- leetcode 516
