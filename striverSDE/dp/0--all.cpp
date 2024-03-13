@@ -54,3 +54,9 @@
 
 // 19
 // 0 1 Knapsack -- coding ninjas
+
+// 20
+// Coin Change -- leetcode 322
+
+// 21
+// Target Sum -- leetcode 494
