@@ -78,3 +78,6 @@
 
 // 30
 // Minimum delete operation to convert one string to another -- leetcode 583
+
+// 31
+// Shortest common supersequence -- leetcode 1092
