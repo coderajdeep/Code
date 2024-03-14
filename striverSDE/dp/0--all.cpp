@@ -75,3 +75,6 @@
 
 // 29
 // Minimum Insertion required to make a string palindrom -- leetcode 1312
+
+// 30
+// Minimum delete operation to convert one string to another -- leetcode 583
