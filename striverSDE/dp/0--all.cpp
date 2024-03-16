@@ -81,3 +81,6 @@
 
 // 31
 // Shortest common supersequence -- leetcode 1092
+
+// 32
+// Distinct Subsequence -- leetcode 115
