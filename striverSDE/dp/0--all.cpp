@@ -102,3 +102,9 @@
 
 // 38   
 // Best time to buy and sell stocks IV -- leetcode 188
+
+// 41
+// Longest Increasing Subsequence -- leetcode 300
+
+// 42
+// Print Longest Increasing Subsequence -- Coding Ninjas
