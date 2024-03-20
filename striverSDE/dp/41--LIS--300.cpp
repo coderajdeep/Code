@@ -1,5 +1,22 @@
 // Longest Increasing Subsequence -- leetcode 300
 
+// Best solution
+// Time complexity O(nlogn)
+// Space complexity O(size of lis)
+int lengthOfLIS(vector<int>& nums) {
+    vector<int> temp;
+    for(int num : nums) {
+        if(temp.empty() || temp.back() < num) {
+            temp.push_back(num);
+        }
+        else {
+            int index = lower_bound(temp.begin(), temp.end(), num) - temp.begin();
+            temp[index] = num;
+        }
+    }
+    return temp.size();
+}
+
 // Time complexity O(n*n)
 // Space complexity O(n)
 int lengthOfLIS(vector<int>& nums) {
