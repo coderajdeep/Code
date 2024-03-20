@@ -17,6 +17,23 @@ int lengthOfLIS(vector<int>& nums) {
     return temp.size();
 }
 
+// Best
+int lengthOfLIS(vector<int>& nums) {
+    vector<int> temp;
+    int n = nums.size();
+    temp.push_back(nums[0]);
+    for(int i=1; i<n; ++i) {
+        if(temp.back() < nums[i]) {
+            temp.push_back(nums[i]);
+        }
+        else {
+            int index = lower_bound(temp.begin(), temp.end(), nums[i]) - temp.begin();
+            temp[index] = nums[i];
+        }
+    }
+    return temp.size();
+}
+
 // Time complexity O(n*n)
 // Space complexity O(n)
 int lengthOfLIS(vector<int>& nums) {
