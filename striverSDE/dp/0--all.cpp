@@ -111,3 +111,6 @@
 
 // 43
 // Largest Divisible subset -- leetcode 368
+
+// 44
+// Longest String Chain -- leetcode 1048
