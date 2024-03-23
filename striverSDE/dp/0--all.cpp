@@ -120,3 +120,6 @@
 
 // 46
 // Find Number of LIS -- leetcode 673
+
+// 47
+// Matrix Chain Multiplications -- Coding Ninjas
