@@ -123,3 +123,9 @@
 
 // 47
 // Matrix Chain Multiplications -- Coding Ninjas
+
+// 48
+// Minimum Cost to Cut a stick -- leetcode 1547
+
+// 49
+// Max Coins for burst balloons -- leetcode 312
