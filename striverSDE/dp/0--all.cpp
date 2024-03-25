@@ -129,3 +129,6 @@
 
 // 49
 // Max Coins for burst balloons -- leetcode 312
+
+// 50
+// Evaluate boolean expression to true -- Coding Ninjas
