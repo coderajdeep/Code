@@ -12,3 +12,6 @@
 
 // 5
 // K'th largest element -- leetcode 215
+
+// 6
+// K'th smallest element -- geeks
