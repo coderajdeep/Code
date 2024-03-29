@@ -18,3 +18,6 @@
 
 // 7
 // Sort K sorted array -- geeks
+
+// 8
+// Rank Transform of an array -- leetcode 1331
