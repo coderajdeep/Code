@@ -15,3 +15,6 @@
 
 // 6
 // K'th smallest element -- geeks
+
+// 7
+// Sort K sorted array -- geeks
