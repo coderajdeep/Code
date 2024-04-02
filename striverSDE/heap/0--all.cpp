@@ -25,6 +25,9 @@
 // 9
 // Rank Transform of an array -- leetcode 1331
 
+// 10
+// Task Scheduler -- leetcode 621
+
 // 14
 // K-Largest element in integer stream -- leetcode 703
 
