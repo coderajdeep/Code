@@ -10,3 +10,6 @@
 // 6
 // Gererate all binary string without consecutive 1's -- Geeks
 // If we need to find the count then its a imp DP question
+
+// 7
+// Generate Parentheses -- leetcode 22

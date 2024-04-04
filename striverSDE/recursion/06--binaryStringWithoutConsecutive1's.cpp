@@ -1,7 +1,8 @@
 // Gererate all binary string without consecutive 1's -- Geeks
 // If we need to find the count then its a imp DP question
 // Time complexity O(2^n)
-// Space complexity O(2^n)
+// Space complexity O(2^n) [for storing max 2^n string] + O(n) [for storing the string which is used for backtracking] +
+// Recursive stack space O(n)
 void utils(int index, int N, string &s, vector<string> &ans) {
     if(index==N) {
         ans.push_back(s);
