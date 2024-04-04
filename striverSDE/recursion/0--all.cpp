@@ -13,3 +13,6 @@
 
 // 7
 // Generate Parentheses -- leetcode 22
+
+// 8
+// Generate all subsets/subsequence of an array -- leetcode 78
