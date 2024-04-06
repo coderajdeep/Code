@@ -15,3 +15,6 @@
 
 // 6
 // Recursive Insertion Sort
+
+// 7
+// Quick Sort
