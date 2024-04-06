@@ -16,11 +16,11 @@
 Node* constructLL(vector<int>& arr) {
     int n = arr.size();
     if(n==0) return nullptr;
-    Node *root = new Node(arr[0]);
-    Node *head = root;
+    Node* head = new Node(arr[0]);
+    Node* curr = head;
     for(int i=1; i<n; ++i) {
-        head->next = new Node(arr[i]);
-        head = head->next;
+        curr->next = new Node(arr[i]);
+        curr = curr->next;
     }
-    return root;
+    return head;
 }

@@ -12,11 +12,19 @@
  *     Node(int x, Node* next) : data(x), next(next) {}
  * };
  */
-
+ 
+// Both are valid solutions
 Node* insertAtFirst(Node* list, int newValue) {
     Node* root = new Node(newValue);
     if(list!=nullptr) {
         root->next = list;
     }
     return root;
+}
+
+Node* insertAtFirst(Node* list, int newValue) {
+    Node* node = new Node(newValue);
+    node->next = list;
+    list = node;
+    return list;
 }

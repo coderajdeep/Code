@@ -13,13 +13,13 @@
  */
 
 Node *deleteLast(Node *list){
-    if(!list) return list;
-    if(list && !list->next) return nullptr;
-    Node *prev = nullptr, *root = list;
-    while(list && list->next) {
-        prev = list;
-        list = list->next;
+    if(!list || !list->next) return nullptr;
+    Node* curr = list;
+    Node* prevNode = nullptr;
+    while(curr && curr->next) {
+        prevNode = curr;
+        curr = curr->next;
     }
-    prev->next = nullptr;
-    return root;
+    prevNode->next = nullptr;
+    return list;
 }
