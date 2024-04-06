@@ -15,17 +15,12 @@
  *************************************************************************/
 
 Node * deleteLastNode(Node *head) {
-    if(!head) return head;
-    Node *root = head;
-    while(head && head->next) {
-        head = head->next;
+    if(!head || !head->next) return nullptr;
+    Node *prevNode = head, *curr = head;
+    while(curr && curr->next) {
+        prevNode = curr;
+        curr = curr->next;
     }
-    Node *prev = head->prev;
-    if(prev) {
-        prev->next = nullptr;
-    }
-    else {
-        root = nullptr;
-    }
-    return root;
+    prevNode->next = nullptr;
+    return head;
 }

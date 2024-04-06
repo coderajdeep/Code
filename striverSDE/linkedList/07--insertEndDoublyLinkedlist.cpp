@@ -13,15 +13,15 @@
  *************************************************************************/
 
 Node * insertAtTail(Node *head, int k) {
-    Node *node = new Node(k);
-    if(!head) {
-        return node;
+    Node* node = new Node(k);
+    if(!head || !head->next) return node;
+    Node* prevNode = head;
+    Node* curr = head;
+    while(curr && curr->next) {
+        prevNode = curr;
+        curr = curr->next;
     }
-    Node *root = head;
-    while(head && head->next) {
-        head = head->next;
-    }
-    node->prev = head;
-    head->next = node;
-    return root;
+    curr->next = node;
+    node->prev = curr;
+    return head;
 }

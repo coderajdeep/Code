@@ -13,6 +13,10 @@
  * };
  */
 
+
+// Need to solve this recursively
+// Time complexity O(n)
+// Space complexity O(n)
 Node* constructDLL(vector<int>& arr) {
     int n = arr.size();
     if(n==0) return nullptr;
@@ -25,5 +29,20 @@ Node* constructDLL(vector<int>& arr) {
         head = node;
     }
     root->prev = nullptr;
+    return root;
+}
+
+// Time complexity O(n)
+// Space complexity O(n)
+Node* constructDLL(vector<int>& arr) {
+    int n = arr.size();
+    if(n==0) return nullptr;
+    Node* root = new Node(arr[0]);
+    Node* curr = root;
+    for(int i=1; i<n; ++i) {
+        curr->next = new Node(arr[i]);
+        curr->next->prev = curr;
+        curr = curr->next;
+    }
     return root;
 }

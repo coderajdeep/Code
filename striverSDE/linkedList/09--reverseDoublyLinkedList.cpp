@@ -30,6 +30,8 @@ public:
 
 */
 
+// Time complexity O(n)
+// Space complexity O(1)
 Node* reverseDLL(Node* head)
 {   
     Node *prev = nullptr;

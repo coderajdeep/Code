@@ -1,4 +1,5 @@
 // 1
+// Need to solve this recursively
 // Create a singly linkedlist from vector -- coding ninja
 
 // 2
@@ -14,6 +15,7 @@
 // Search a element in singly linkedlist -- coding ninjas
 
 // 6
+// Need to solve this recursively
 // Create a doubly linkedlist -- coding ninjas
 
 // 7
@@ -23,6 +25,7 @@
 // Delete last from last element in doubly linked list -- coding ninjas
 
 // 9
+// Need to solve this recursively
 // Reverse doubly linkedlist -- coding ninjas
 
 // 10
