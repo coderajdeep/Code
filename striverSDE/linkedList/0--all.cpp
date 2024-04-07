@@ -25,17 +25,18 @@
 // Delete last from last element in doubly linked list -- coding ninjas
 
 // 9
-// Need to solve this recursively
+// Need to solve this recursively ***
 // Reverse doubly linkedlist -- coding ninjas
 
-// 10
+// 10 ***
 // Middle of linkedlist -- leetcode 876
+
+// 11 ***
+// Iterative and recursive
+// Reverse a linkedlist -- leetcode 206
 
 // 11
 // Delete middle of linkedlist -- leetcode 2095
-
-// 12
-// Reverse a linkedlist -- leetcode 206
 
 // 13
 // Detect cycle in linkedlist -- leetcode 141

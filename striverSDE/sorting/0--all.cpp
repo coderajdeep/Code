@@ -8,13 +8,13 @@
 // Insertion Sort
 
 // 4
-// Merge Sort
+// Merge Sort ***
 
 // 5
-// Recursive Bubble Sort
+// Recursive Bubble Sort ***
 
 // 6
-// Recursive Insertion Sort
+// Recursive Insertion Sort ***
 
 // 7
-// Quick Sort
+// Quick Sort ***
