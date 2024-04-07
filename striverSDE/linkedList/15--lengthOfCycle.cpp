@@ -1,5 +1,43 @@
 // Length of cycle in linkedlist -- coding ninjas
 
+
+// Time complexity O(n)
+// Space complexity O(n)
+int lengthOfLoop(Node *head) {
+    if(!head || !head->next) return 0;
+    unordered_map<Node*, int> umap;
+    int time = 0;
+    while(head) {
+        auto itr = umap.find(head);
+        if(itr != umap.end()) {
+            return (time - itr->second);
+        }
+        umap[head] = time++;
+        head = head->next;
+    }
+    return 0;
+}
+
+// Time complexity O(n)
+// Space complexity O(1)
+int lengthOfLoop(Node *head) {
+    if(!head || !head->next) return 0;
+    Node *slow = head, *fast = head;
+    while(fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow == fast) {
+            int count = 1;
+            while(fast->next != slow) {
+                fast = fast->next;
+                ++count;
+            }
+            return count;
+        }
+    }
+    return 0;
+}
+
 // Using Extra space
 // Time complexity O(n)
 // Space complexity O(n)

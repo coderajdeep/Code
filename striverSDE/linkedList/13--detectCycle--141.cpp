@@ -19,6 +19,10 @@ bool hasCycle(ListNode *head) {
 // Time complexity O(n)
 // Space complexity O(1)
 // Using tortoise hare or slow fast pointer algorithm
+// Intuition : Why slow and fast will definitely meet if there is a loop
+// Lets say initially the distance between fast to slow is d
+// As fast moves 2 node and slow moves 1 node, each step d will reduce by 1
+// Eventually d will become 0 and then slow and fast will meet
 bool hasCycle(ListNode *head) {
     if(!head || !head->next) {
         return false;
@@ -37,7 +41,7 @@ bool hasCycle(ListNode *head) {
 }
 
 
-// In this process we are altering the linked list node
+// In this process we are altering the linked list
 // Time complexity O(n)
 // Space complexity O(1)
 bool hasCycle(ListNode *head) {

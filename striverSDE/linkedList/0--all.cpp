@@ -35,17 +35,17 @@
 // Iterative and recursive
 // Reverse a linkedlist -- leetcode 206
 
-// 13 **
+// 13 ***
 // Detect cycle in linkedlist -- leetcode 141
+
+// 14 ***
+// Find where the loop begin in linkedlist -- leetcode 142
+
+// 15 ***
+// Length of cycle in linkedlist -- coding ninjas
 
 // 11
 // Delete middle of linkedlist -- leetcode 2095
-
-// 14
-// Find where the loop begin in linkedlist -- leetcode 142
-
-// 15
-// Length of cycle in linkedlist -- coding ninjas
 
 // 16
 // Check if a linkedlist is palindrom or not -- leetcode 234 -- todo using recursion
