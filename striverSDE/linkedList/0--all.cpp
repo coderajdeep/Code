@@ -35,11 +35,11 @@
 // Iterative and recursive
 // Reverse a linkedlist -- leetcode 206
 
+// 13 **
+// Detect cycle in linkedlist -- leetcode 141
+
 // 11
 // Delete middle of linkedlist -- leetcode 2095
-
-// 13
-// Detect cycle in linkedlist -- leetcode 141
 
 // 14
 // Find where the loop begin in linkedlist -- leetcode 142

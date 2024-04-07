@@ -35,3 +35,19 @@ bool hasCycle(ListNode *head) {
     }
     return false;
 }
+
+
+// In this process we are altering the linked list node
+// Time complexity O(n)
+// Space complexity O(1)
+bool hasCycle(ListNode *head) {
+    if(!head || !head->next) return false;
+    ListNode *dummyNode = new ListNode(0), *prev = nullptr;
+    while(head) {
+        if(head->next == dummyNode) return true;
+        prev = head;
+        head = head->next;
+        prev->next = dummyNode;
+    }
+    return false;
+}
