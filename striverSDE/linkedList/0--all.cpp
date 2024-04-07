@@ -1,5 +1,4 @@
 // 1
-// Need to solve this recursively
 // Create a singly linkedlist from vector -- coding ninja
 
 // 2
@@ -15,7 +14,6 @@
 // Search a element in singly linkedlist -- coding ninjas
 
 // 6
-// Need to solve this recursively
 // Create a doubly linkedlist -- coding ninjas
 
 // 7
@@ -35,13 +33,15 @@
 // Iterative and recursive
 // Reverse a linkedlist -- leetcode 206
 
-// 13 ***
+// 13 
+// Intuition is important ***
 // Detect cycle in linkedlist -- leetcode 141
 
-// 14 ***
+// 14 
+// Intuition is important ***
 // Find where the loop begin in linkedlist -- leetcode 142
 
-// 15 ***
+// 15 *
 // Length of cycle in linkedlist -- coding ninjas
 
 // 16
@@ -54,7 +54,7 @@
 // 18
 // Remove N-th node from end of the linkedlist -- leetcode 19
 
-// 19 ***
+// 19 *
 // Delete middle of linkedlist -- leetcode 2095
 
 // 19
