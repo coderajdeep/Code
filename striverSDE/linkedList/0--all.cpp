@@ -57,23 +57,24 @@
 // 19 *
 // Delete middle of linkedlist -- leetcode 2095
 
-// 19
+// 20
 // Merge Sort ***
 // Sort singly linkedlist -- leetcode 148
 
-// 20 ***
+// 21 ***
 // Count sort
 // Single pass ***
 // Sort array having element 0, 1, 2 -- coding ninjas
 
-// 21
+// 22
 // Using length difference of two LinkedList ***
 // Intersection of two linkedlist -- leetcode 160
 
-// 22
+// 23
+// Recursive approach is tricky *****
 // Add one to a number -- coding ninjas
 
-// 23
+// 24
 // Add Two Numbers -- leetcode 2
 
 // 24
