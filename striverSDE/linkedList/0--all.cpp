@@ -44,11 +44,14 @@
 // 15 ***
 // Length of cycle in linkedlist -- coding ninjas
 
+// 16
+// *** recursive is tricky
+// Check if a linkedlist is palindrom or not -- leetcode 234 -- todo using recursion
+
 // 11
 // Delete middle of linkedlist -- leetcode 2095
 
-// 16
-// Check if a linkedlist is palindrom or not -- leetcode 234 -- todo using recursion
+
 
 // 17
 // Segrregate odd and even indexed node in singly linked list -- leetcode 328

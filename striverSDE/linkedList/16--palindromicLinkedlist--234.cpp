@@ -1,5 +1,41 @@
 // Check if a linkedlist is palindrom or not -- leetcode 234
-// Will do it by using recursion
+
+// Recursive approch
+// very tricky
+// Time complexity O(n)
+// Recursive Space complexity O(n)
+class Solution {
+public:
+    ListNode* left;
+    bool isPalindromUtils(ListNode* right) {
+        if(!right) return true;
+        bool subListCheck = isPalindromUtils(right->next);
+        if(!subListCheck) return false;
+        bool valueCheck = (left->val == right->val);
+        left = left->next;
+        return valueCheck;
+    }
+    bool isPalindrome(ListNode* head) {
+        left = head;
+        return isPalindromUtils(head);
+    }
+};
+
+// Same as previous
+class Solution {
+public:
+    bool isPalindromUtils(ListNode** left, ListNode* right) {
+        if(!right) return true;
+        bool subListCheck = isPalindromUtils(left, right->next);
+        if(!subListCheck) return false;
+        bool valueCheck = ((*left)->val == right->val);
+        (*left) = (*left)->next;
+        return valueCheck;
+    }
+    bool isPalindrome(ListNode* head) {
+        return isPalindromUtils(&head, head);
+    }
+};
 
 // Fast and slow pointer approach
 // Time complexity O(n)
