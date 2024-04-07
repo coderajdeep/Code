@@ -46,3 +46,29 @@ ListNode* oddEvenList(ListNode* head) {
     odd->next = evenHead;
     return head;
 }
+
+
+// Same as above
+// But the above one is better for this perticular problem
+// But this can be extended to other problem solution
+ListNode* oddEvenList(ListNode* head) {
+    ListNode *oddDummy = new ListNode(0), *evenDummy = new ListNode(0);
+    ListNode *odd = oddDummy, *even = evenDummy;
+    bool isOdd = true;
+    while(head) {
+        if(isOdd) {
+            oddDummy->next = head;
+            oddDummy = oddDummy->next;
+        }
+        else {
+            evenDummy->next = head;
+            evenDummy = evenDummy->next;
+        }
+        isOdd = !isOdd;
+        head = head->next;
+    }
+    oddDummy->next = nullptr; // Terminate odd list
+    evenDummy->next = nullptr; // Terminate even list
+    oddDummy->next = even->next; // Connect odd list's tail to even list's head
+    return odd->next;
+}
