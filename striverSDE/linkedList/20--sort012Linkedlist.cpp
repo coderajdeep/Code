@@ -2,6 +2,34 @@
 
 // Time complexity O(n)
 // Space complexity O(1)
+// single traversal
+Node* sortList(Node *head){
+    if(!head || !head->next) return head;
+    Node *zeroDummy = new Node(0), *oneDummy = new Node(0), *twoDummy = new Node(0);
+    Node *zero = zeroDummy, *one = oneDummy, *two = twoDummy;
+    while(head) {
+        if(head->data==0) {
+            zeroDummy->next = head;
+            zeroDummy = zeroDummy->next;
+        }
+        else if(head->data==1) {
+            oneDummy->next = head;
+            oneDummy = oneDummy->next;
+        }
+        else if(head->data==2) {
+            twoDummy->next = head;
+            twoDummy = twoDummy->next;
+        }
+        head = head->next;
+    }
+    twoDummy->next = nullptr;
+    oneDummy->next = two->next;
+    zeroDummy->next = one->next;
+    return zero->next;
+}
+
+// Time complexity O(n)
+// Space complexity O(1)
 // 2 times traversal
 Node* sortList(Node *head){
     if(!head || !head->next) {

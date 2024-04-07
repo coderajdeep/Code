@@ -24,6 +24,7 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
 
 // Time complexity O(n)
 // Space complexity O(1)
+// Similar to finding the length but in better way
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
     if(!headA || !headB) {
         return nullptr;
@@ -33,7 +34,8 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
         ptrA = ptrA->next;
         ptrB = ptrB->next;
     }
-    // Either this one or next while loop
+    // if ptrA or ptrB zero then there is length difference
+    // otherwise both are same length
     while(ptrA && headA) {
         ptrA = ptrA->next;
         headA = headA->next;
@@ -76,53 +78,19 @@ int getLength(ListNode *head) {
     }
     return 2*count;
 }
-
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-    if(!headA or !headB) {
-        return nullptr;
-    }
-    
     int n1 = getLength(headA);
     int n2 = getLength(headB);
-    
-    int d;
-    bool first = true;
-    
-    if(n1<n2) {
-        d = n2-n1;
-        first = false;
+    int diff = abs(n1-n2);
+    ListNode *small = (n1<=n2) ? headA : headB;
+    ListNode *large = (n1>n2) ? headA : headB;
+    while(diff--) {
+        large = large->next;
     }
-    else {
-        d = n1-n2;
-    }
-    
-    int count = 0;
-    
-    if(first) {
-        while(headA) {
-            if(count==d) {
-                break;
-            }
-            ++count;
-            headA = headA->next;
-        }
-    }
-    else {
-        while(headB) {
-            if(count==d) {
-                break;
-            }
-            ++count;
-            headB = headB->next;
-        }
-    }
-    
-    while(headA and headB) {
-        if(headA == headB) {
-            return headA;
-        }
-        headA = headA->next;
-        headB = headB->next;
+    while(large && small) {
+        if(large == small) return large;
+        large = large->next;
+        small = small->next;
     }
     return nullptr;
 }

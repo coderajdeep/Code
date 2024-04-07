@@ -45,27 +45,29 @@
 // Length of cycle in linkedlist -- coding ninjas
 
 // 16
-// *** recursive is tricky
+// ***** recursive is tricky
 // Check if a linkedlist is palindrom or not -- leetcode 234 -- todo using recursion
 
-// 11
-// Delete middle of linkedlist -- leetcode 2095
-
-
-
-// 17
+// 17 ***
 // Segrregate odd and even indexed node in singly linked list -- leetcode 328
 
 // 18
 // Remove N-th node from end of the linkedlist -- leetcode 19
 
+// 19 ***
+// Delete middle of linkedlist -- leetcode 2095
+
 // 19
+// Merge Sort ***
 // Sort singly linkedlist -- leetcode 148
 
-// 20
+// 20 ***
+// Count sort
+// Single pass ***
 // Sort array having element 0, 1, 2 -- coding ninjas
 
 // 21
+// Using length difference of two LinkedList ***
 // Intersection of two linkedlist -- leetcode 160
 
 // 22
