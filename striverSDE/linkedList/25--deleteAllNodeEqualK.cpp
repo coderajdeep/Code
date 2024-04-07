@@ -1,30 +1,32 @@
-// Delete all the nodes equal to K -- coding ninja
+// Delete all the nodes equal to K in doubly linkedlist -- coding ninja
 
 // Separately handling when when equals to k
 // Time complexity O(n)
 // Space complexity O(1)
-Node* deleteAllOccurrences(Node* head, int k) {
-    // head value is equal to k
+Node * deleteAllOccurrences(Node* head, int k) {
+    // if k is head
     while(head && head->data == k) {
         head = head->next;
     }
-    if(!head) {
-        return head;
-    }
-    Node *root = head;
-    while(head) {
-        if(head->data == k) {
-            // head can't be equal to k
-            // that's why head->prev always not null
-            head->prev->next = head->next;
-            // if head is not the last last element
-            if(head->next) {
-                head->next->prev = head->prev;
+    if(!head) return nullptr;
+    // without this should not work
+    // test case is not proper
+    // value wise there is no issue but head->prev should point to nullptr
+    head->prev = nullptr;
+    Node *curr = head;
+    while(curr) {
+        
+        if(curr->data == k) {
+            // curr can't be head so curr->prev always exist
+            curr->prev->next = curr->next;
+            // if curr is not the last node then only curr->next->prev exist
+            if(curr->next) {
+                curr->next->prev = curr->prev;
             }
         }
-        head = head->next;
+        curr = curr->next;
     }
-    return root;
+    return head;
 }
 
 // Time complexity O(n)

@@ -77,11 +77,11 @@
 // 24
 // Add Two Numbers -- leetcode 2
 
-// 24
-// Delete all the nodes equal to K -- coding ninja
-
 // 25
-// Remove duplicate nodes from sorted doubly linkedlist -- coding ninjas
+// Delete all the nodes equal to K in doubly linkedlist -- coding ninja
 
 // 26
 // Find Pair in doubly linkedlist for a given sum -- coding ninjas
+
+// 27
+// Remove duplicate nodes from sorted doubly linkedlist -- coding ninjas
