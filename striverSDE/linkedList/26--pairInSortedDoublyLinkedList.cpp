@@ -28,6 +28,42 @@ vector<pair<int, int>> findPairs(Node* head, int k)
 }
 
 // Time complexity O(n)
+// Space complexity O(1)
+// Use Two pointer method
+// This will work when we have duplicates
+// but pair will not bu unique
+vector<pair<int, int>> findPairs(Node* head, int k)
+{
+    if(!head || !head->next) return vector<pair<int, int>> {};
+    Node *right = head, *left = head;
+    int leftIndex = 0, rightIndex = 0;
+    vector<pair<int, int>> ans;
+    while(right && right->next) {
+        right = right->next;
+        ++rightIndex;
+    }
+    while(left && right && (leftIndex<rightIndex)) {
+        int sum = left->data + right->data;
+        if(sum == k) {
+            ans.push_back(make_pair(left->data, right->data));
+            left = left->next;
+            right = right->prev;
+            ++leftIndex;
+            --rightIndex;
+        }
+        else if(sum > k) {
+            right = right->prev;
+            --rightIndex;
+        }
+        else {
+            left = left->next;
+            ++leftIndex;
+        }
+    }
+    return ans;
+}
+
+// Time complexity O(n)
 // Space complexity O(n)
 // using hasing method
 vector<pair<int, int>> findPairs(Node* head, int k)
