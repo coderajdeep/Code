@@ -89,5 +89,8 @@
 // 29
 // Rotate a linkedlist -- leetcode 61
 
+// 30
+// Flattening of linkedlist -- Coding Ninjas
+
 // 31
 // Copy a linkedlist which have a next and random pointer -- leetcode 138
