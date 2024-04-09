@@ -85,3 +85,6 @@
 
 // 27
 // Remove duplicate nodes from sorted doubly linkedlist -- coding ninjas
+
+// 31
+// Copy a linkedlist which have a next and random pointer -- leetcode 138
