@@ -43,36 +43,30 @@ ListNode* removeNthFromEnd(ListNode* head, int n) {
 // Time complexity O(n)
 // Space complexity O(1)
 // Single traversal
+// Same as previous solution
 ListNode* removeNthFromEnd(ListNode* head, int n) {
-    // this is for when n==1 and head==nullptr
-    if(!head) {
-        return head;
-    }
-    ListNode *ptr = head, *curr = head;
-    for(int i=1; i<n; ++i) {
-        // when n is greater than the length of linkedlist
-        if(!ptr) {
-            return nullptr;
-        }
-        ptr = ptr->next;
-    }
-    ListNode *prev = head;
-    while(ptr && ptr->next) {
-        prev = curr;
+    if(!head) return head;
+    int N = n;
+    ListNode *curr = head;
+    while (curr && (--N)) {
         curr = curr->next;
-        ptr = ptr->next;
     }
-    ListNode *temp = nullptr;
-    // when n == length of linkedlist
-    if(prev == curr) {
-        ListNode *temp = head;
+    // n > length
+    if(!curr) return nullptr;
+
+    // when n == length
+    // so we need to delete the head
+    if(!curr->next) {
         head = head->next;
-        delete temp;
     }
     else {
-        temp = prev->next;
-        prev->next = temp->next;
-        delete temp;
+        ListNode *ptr = head, *prev = nullptr;
+        while(curr && curr->next) {
+            prev = ptr;
+            ptr = ptr->next;
+            curr = curr->next;
+        }
+        prev->next = prev->next->next;
     }
     return head;
 }
