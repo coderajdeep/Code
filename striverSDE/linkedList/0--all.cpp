@@ -86,6 +86,11 @@
 // 27
 // Remove duplicate nodes from sorted doubly linkedlist -- coding ninjas
 
+// 28 ***
+// Good understanding of pointer is required ***
+// Reverse a linkedlist in group of size k -- leetcode 25
+// Geeks have same question with small modification
+
 // 29
 // Rotate a linkedlist -- leetcode 61
 
