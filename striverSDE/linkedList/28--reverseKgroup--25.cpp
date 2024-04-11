@@ -116,3 +116,23 @@ struct node *reverseIt (struct node *head, int k) {
     }
     return dummy->next;
 }
+
+// Recursive method
+// Time complexity O(n)
+// Recursion stack space complexity O(n/k)
+struct node *reverseIt (struct node *head, int k) { 
+    if(!head || !head->next || k==1) return head;
+    node *curr = head, *prev = nullptr, *nxt = nullptr;
+    int count = 0;
+    while(curr && count < k) {
+        nxt = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = nxt;
+        ++count;
+    }
+    if(nxt) {
+        head->next = reverseIt(nxt, k);
+    }
+    return prev;
+}
