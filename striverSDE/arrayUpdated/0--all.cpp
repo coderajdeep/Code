@@ -6,6 +6,7 @@
 
 // 3
 // Check if and array is sorted or not - coding ninjas (We can't check if an array is sorted or not in logN complexity)
+// Check if and array is sorted and rotated
 
 // 4
 // ***Remove duplicate from sorted array -- leetcode 26

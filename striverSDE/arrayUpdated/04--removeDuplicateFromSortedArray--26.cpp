@@ -1,8 +1,10 @@
 // Time complexity O(n)
 // Space complexity O(1)
+// best approach
 int removeDuplicates(vector<int>& nums) {
     int n = nums.size();
-    int index = 1;
+    int index = 1; // index is the updated array size
+    // updated array should have at least one element
     for(int i=1; i<n; ++i) {
         if(nums[i-1]!=nums[i]) {
             nums[index++] = nums[i];
