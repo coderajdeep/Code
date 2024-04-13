@@ -1,4 +1,18 @@
 // Move All Zero to the end of the array -- leetcode 283
+// Best Approach
+// Time complexity O(n)
+// Space complexity O(1)
+void moveZeroes(vector<int>& nums) {
+    int n = nums.size();
+    int nonZeroIndex = 0; 
+    // when we find a nin-zero element, it will be placed in nonZeroIndex
+    for(int i=0; i<n; ++i) {
+        if(nums[i] != 0) {
+            swap(nums[i], nums[nonZeroIndex++]);
+        }
+    }
+}
+
 // Time complexity O(2*n)
 // Space complexity O(n)
 void moveZeroes(vector<int>& nums) {
@@ -34,18 +48,3 @@ void moveZeroes(vector<int>& nums) {
     }
     
 }
-
-// Best Approach
-// Time complexity O(n)
-// Space complexity O(1)
-class Solution {
-public:
-    void moveZeroes(vector<int>& nums) {
-        int n = nums.size();
-        int index = 0;
-        for(int i=0; i<n; ++i) {
-            if(nums[i] != 0)
-                swap(nums[i], nums[index++]);
-        }
-    }
-};
