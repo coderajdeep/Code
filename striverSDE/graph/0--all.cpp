@@ -12,3 +12,6 @@
 
 // 5
 // DFS
+
+// 6
+// Number of provinces -- leetcode 547
