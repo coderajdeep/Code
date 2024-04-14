@@ -3,3 +3,12 @@
 
 // 2
 // Print Adjacency List
+
+// 3
+// Number of Provinces
+
+// 4
+// BFS
+
+// 5
+// DFS
