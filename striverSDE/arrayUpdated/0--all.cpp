@@ -18,7 +18,8 @@
 // Right Rotation or Clockwise Rotation by K -- leetcode 189
 
 // 7
-// ***Move All Zeroes to the end of the array -- leetcode 283
+// Move All Zeroes to the end of the array -- leetcode 283
+// ***One traversal solution is important
 
 // 8
 // Linear Search -- Coding Ninjas
