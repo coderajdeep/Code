@@ -38,3 +38,9 @@
 
 // 12
 // *** Number of enclaves -- leetcode 1020
+
+// 13
+// Word Ladder 1 -- leetcode 127
+
+// 14
+// Distinct Island -- Coding Ninjas
