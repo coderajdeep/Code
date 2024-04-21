@@ -53,3 +53,9 @@
 
 // 17
 // Topological Sorting -- Coding Ninjas
+
+// 18
+// Course schedule I -- leetcode 207
+
+// 19
+// Course schedule II -- leetcode 210
