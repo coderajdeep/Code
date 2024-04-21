@@ -44,3 +44,9 @@
 
 // 14
 // Distinct Island -- Coding Ninjas
+
+// 15
+// Is Bipartite -- leetcode 785
+
+// 16
+// Detect cycle in Directed Graph -- Coding Ninjas
