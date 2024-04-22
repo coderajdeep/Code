@@ -59,3 +59,6 @@
 
 // 19
 // Course schedule II -- leetcode 210
+
+// 20
+// Find Eventual Safe States -- leetcode 802
