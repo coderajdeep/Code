@@ -62,3 +62,6 @@
 
 // 20
 // Find Eventual Safe States -- leetcode 802
+
+// 21
+// Alien Dictionary -- leetcode 269
