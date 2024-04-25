@@ -68,3 +68,7 @@
 
 // 22
 // Sortest path in Undirected and Unweighted graph 
+
+// 23
+// Why we need to do topo sort, this is important (To understand clearly, we need to dry run)
+// Shortest path in directed acyclic graph -- Coding Ninjas ***
