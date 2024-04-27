@@ -72,3 +72,6 @@
 // 23
 // Why we need to do topo sort, this is important (To understand clearly, we need to dry run)
 // Shortest path in directed acyclic graph -- Coding Ninjas ***
+
+// 24
+// Dijkstra's algorithm
