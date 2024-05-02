@@ -81,3 +81,6 @@
 
 // 26
 // Shortest path in binary matrix -- leetcode 1091
+
+// 27
+// Path with minimum effort -- leetcode 1631
