@@ -1,6 +1,8 @@
 // Time complexity O(E*logN) 
 // E : flights.size()
 // Space complexity O(E+V) + O(V)
+// Edge case : [[0,1,1],[0,2,5],[1,2,1],[2,3,1]]
+// n = 4, src = 0, dst = 3
 int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
     vector<pair<int, int>> adj[n];
     for(vector<int> flight : flights) {
