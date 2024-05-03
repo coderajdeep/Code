@@ -90,3 +90,6 @@
 
 // 29
 // Network delay time -- leetcode 743
+
+// 30 ***
+// Number of ways to reach a destination -- leetcode 1976
