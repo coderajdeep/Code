@@ -2,6 +2,8 @@
 // Time complexity O(E * log(n))
 // E : roads.size()
 // Space complexity O(E + N) + O(N)
+// [[0,1,1],[1,2,4],[0,4,3],[3,2,5],[3,4,1],[3,0,5],[1,3,1]]
+// Very good test case
 int countPaths(int n, vector<vector<int>>& roads) {
     vector<pair<int, int>> adj[n];
     for(vector<int> road : roads) {
@@ -28,6 +30,11 @@ int countPaths(int n, vector<vector<int>>& roads) {
                 ways[v] = ways[u];
                 pq.push({times[v], v});
             }
+            // as we are checking total == times[v]
+            // We need to always find total as (time + cost) not (times[u] + cost)
+            // Because times[u] will be updated
+            // In the above test case this was happening
+            // In normal Dijkstra, we can do that because we don't consider the equal case
             else if(total == times[v]) {
                 ways[v] = (ways[v] + ways[u]) % mod;
             }
