@@ -93,3 +93,6 @@
 
 // 30 ***
 // Number of ways to reach a destination -- leetcode 1976
+
+// 31
+// Minimum multiplication operations to reach from start to end -- Coding Ninjas
