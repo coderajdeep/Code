@@ -96,3 +96,6 @@
 
 // 31
 // Minimum multiplication operations to reach from start to end -- Coding Ninjas
+
+// 31
+// Bellman Ford Algorithm -- Works on graph having negative cycle
