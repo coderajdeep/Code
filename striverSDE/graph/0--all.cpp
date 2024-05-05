@@ -99,3 +99,8 @@
 
 // 31
 // Bellman Ford Algorithm -- Works on graph having negative cycle
+
+// 32
+// Floyd Warshall Algorithm 
+// As the given question, only negative edge exist and negative cycle does not exist
+// And it was single source shortest path, we can solve this using Dijkstra
