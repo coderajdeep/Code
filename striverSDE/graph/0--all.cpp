@@ -107,3 +107,6 @@
 
 // 33
 // Find city with smaller number of Neighbors -- leetcode 1334
+
+// 34
+// Minimum Spanning Tree (Prime's algorithm) -- Coding Ninja -- Geeks
