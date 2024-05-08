@@ -110,3 +110,6 @@
 
 // 34
 // Minimum Spanning Tree (Prime's algorithm) -- Coding Ninja -- Geeks
+
+// 35
+// Minimum Spanning Tree (Kruskal's algorithm) -- Coding Ninja -- Geeks
