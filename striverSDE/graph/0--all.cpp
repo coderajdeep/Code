@@ -113,3 +113,6 @@
 
 // 35
 // Minimum Spanning Tree (Kruskal's algorithm) -- Coding Ninja -- Geeks
+
+// 36
+// Number of operations to make network connected -- leetcode 1319
