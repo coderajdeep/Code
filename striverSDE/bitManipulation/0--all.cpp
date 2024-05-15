@@ -1,4 +1,4 @@
-// 1
+// 1 ***
 // Check i-th bit, set i-th bit and unset i-th bit of a number
 
 // 2
@@ -10,7 +10,8 @@
 // 4
 // Check if a number is power of 2 or not -- leetcode 231
 
-// 5
+// 5 ***
+// Leetcode 338
 // Count total set bits from first N natural number -- Coding ninjas (IMP)
 
 // 6
