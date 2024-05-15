@@ -84,6 +84,9 @@
 // 28
 // Pascal Triangle 1 -- leetcode 118
 
+// 39
+// Subarray with maximum product -- leetcode 152
+
 // Q1
 // Determine Whether Matrix Can Be Obtained By Rotation -- 1886
 
