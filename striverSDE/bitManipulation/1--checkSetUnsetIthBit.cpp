@@ -8,3 +8,6 @@ vector<int> bitManipulation(int num, int i){
     int unset_i_th_bit = num & (~(1 << (i-1)));
     return {i_bit, set_i_th_bit, unset_i_th_bit};
 }
+
+// How to get the rightmost set bit
+// (n & (~(n - 1)))
