@@ -15,25 +15,27 @@ int findXOR(int L, int R){
 
 // Time complexity O(1)
 // Space complexity O(1)
-int findXOR(int L, int R){
-    if(L==R) return R;
-
-    int reminderR = (R%4), valR;
-    if(reminderR==0) valR = R;
-    else if(reminderR==1) valR = 1;
-    else if(reminderR==2) valR = (R+1);
-    else if(reminderR==3) valR = 0;
-    if(L==1) return valR;
-    
-    int reminderL = ((L-1)%4), valL;
-    if(reminderL==0) valL = (L-1);
-    else if(reminderL==1) valL = 1;
-    else if(reminderL==2) valL = L;
-    else if(reminderL==3) valL = 0;
-    return (valL^valR);
+// Needs to find xor from 1 to R --> xorR
+// And xor from 1 to L-1 --> xorL
+// Then we need to calculate xorR ^ xorL
+// XOR of first n natural number
+int getXOR(int n) {
+    int rem = (n%4);
+    if(rem==0) return n;
+    else if(rem==1) return 1;
+    else if(rem==2) return n+1;
+    else return 0;
+}
+int findXOR(int l, int r) {
+    if(l == r) return r;
+    int xorR = getXOR(r);
+    if(l == 1) return xorR;
+    int xorL = getXOR(l-1);
+    return xorR ^ xorL;
 }
 /*
-1- Find the remainder of n by moduling it with 4. 
+*** First n natural number xor
+1- Find n % 4. Lets say rem = n % 4
 2- If rem = 0, then XOR will be same as n. 
 3- If rem = 1, then XOR will be 1. 
 4- If rem = 2, then XOR will be n+1. 

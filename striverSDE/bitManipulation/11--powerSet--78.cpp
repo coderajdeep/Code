@@ -1,5 +1,6 @@
 // Power set -- leetcode 78
 
+// Simple approach
 // Time complexity O(n * 2^n)
 // Space complexity O(n * 2^n)
 vector<vector<int>> subsets(vector<int>& nums) {
