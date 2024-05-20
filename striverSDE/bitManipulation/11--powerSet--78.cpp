@@ -5,16 +5,19 @@
 vector<vector<int>> subsets(vector<int>& nums) {
     int n = nums.size();
     int totalSubset = (1<<n);
+    // total 2^n or (1<<n) number of subset possible
+    // from 0 to 2^n-1
+    // if the bit position is set
+    // then we can pick the number for the subsequence
     vector<vector<int>> ans;
-    vector<int> temp;
     for(int i=0; i<totalSubset; ++i) {
+        vector<int> temp;
         for(int j=0; j<n; ++j) {
             if(i & (1<<j)) {
                 temp.push_back(nums[j]);
             }
         }
         ans.push_back(temp);
-        temp.clear();
     }
     return ans;
 }
