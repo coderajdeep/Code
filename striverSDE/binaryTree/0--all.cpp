@@ -42,7 +42,7 @@
 // Boundary Traversal of a Binary Tree -- Coding Ninjas
 
 // 15
-// Vertical Order Traversal of a binary Tree -- Coding Ninjas
+// Vertical Order Traversal of a binary Tree -- 987
 
 // 16
 // Top View of binary Tree -- Coding Ninjas

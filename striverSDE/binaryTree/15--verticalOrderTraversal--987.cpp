@@ -1,6 +1,10 @@
+// Vertical Order Traversal of a binary Tree -- 987
+// In leetcode, we need to sort the same vertical and horizontal level elements
+// In geeks, we need to just store them in level order of the same vertical and horizontal level elements
+
 // Time Complexity O(nlogn)
 // Space Complexity O(2*n)
-
+// leetcode 987
 vector<vector<int>> verticalTraversal(TreeNode* root) {
     if(!root) return vector<vector<int>> {};
 
@@ -41,6 +45,99 @@ vector<vector<int>> verticalTraversal(TreeNode* root) {
             vLevelList[index++] = p.second;
         }
         ans[ansIndex++] = vLevelList;
+    }
+    return ans;
+}
+
+// Time complexity O(nlogn)
+// Space Complexity O(2*n)
+// cleaner than previous method
+// leetcode 987
+vector<vector<int>> verticalTraversal(TreeNode* root) {
+    if(!root) return vector<vector<int>> {};
+    map<int, map<int, multiset<int>>> mp;
+    // treeNode, virticalOrder
+    queue<pair<TreeNode*, int>> q;
+    pair<TreeNode*, int> pr;
+    q.push({root, 0});
+    int hOrder = 1, vOrder;
+    TreeNode *curr;
+
+    while(!q.empty()) {
+        int size = q.size();
+        for(int i=0; i<size; ++i) {
+            pr = q.front();
+            q.pop();
+            curr = pr.first;
+            vOrder = pr.second;
+            mp[vOrder][hOrder].insert(curr->val);
+            if(curr->left) {
+                q.push({curr->left, vOrder-1});
+            }
+            if(curr->right) {
+                q.push({curr->right, vOrder+1});
+            }
+        }
+        ++hOrder;
+    }
+
+    vector<vector<int>> ans;
+    for(pair<int, map<int, multiset<int>>> pr1 : mp) {
+        vector<int> temp;
+        map<int, multiset<int>> &mp2 = pr1.second;
+        for(pair<int, multiset<int>> pr2 : mp2) {
+            multiset<int> &st = pr2.second;
+            for(int value : st) {
+                temp.push_back(value);
+            }
+        }
+        ans.push_back(temp);
+    }
+    return ans;
+}
+
+// Geeks solution
+// Time complexity O(nlogn)
+// Space Complexity O(2*n)
+vector<int> verticalOrder(Node *root) {
+    if(!root) return vector<int> {};
+    map<int, map<int, vector<int>>> mp;
+    // Node, virticalOrder
+    queue<pair<Node*, int>> q;
+    pair<Node*, int> pr;
+    q.push({root, 0});
+    int hOrder = 1, vOrder;
+    Node *curr;
+    int totalSize = 0;
+    while(!q.empty()) {
+        int size = q.size();
+        for(int i=0; i<size; ++i) {
+            pr = q.front();
+            q.pop();
+            ++totalSize;
+            curr = pr.first;
+            vOrder = pr.second;
+            mp[vOrder][hOrder].push_back(curr->data);
+            if(curr->left) {
+                q.push({curr->left, vOrder-1});
+            }
+            if(curr->right) {
+                q.push({curr->right, vOrder+1});
+            }
+        }
+        ++hOrder;
+    }
+    
+    vector<int> ans(totalSize);
+    int index = 0;
+    for(pair<int, map<int, vector<int>>> pr : mp) {
+        map<int, vector<int>> &mp2 = pr.second;
+        for(pair<int, vector<int>> pr2 : mp2) {
+            vector<int> &v = pr2.second;
+            for(int value : v) {
+                ans[index++] = value;
+            }
+        }
     }
     return ans;
 }

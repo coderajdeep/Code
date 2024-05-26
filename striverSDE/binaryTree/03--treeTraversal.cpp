@@ -29,6 +29,8 @@ vector<vector<int>> getTreeTraversal(TreeNode *root){
 }
 
 // Three traversal in a single go
+// Time complexity O(3*N)
+// Space complexity O(4*N)
 vector<vector<int>> getTreeTraversal(TreeNode *root){
     if(!root) return vector<vector<int>> {{}, {}, {}};
     vector<int> preOrder, inOrder, postOrder;
