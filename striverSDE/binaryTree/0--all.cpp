@@ -23,13 +23,13 @@
 // 8
 // Height of binary tree - leetcode 104
 
-// 9
+// 9 *
 // height Balanced binary tree - leetcode 110
 
-// 10
+// 10 *
 // Diameter of Binary Tree - leetcode 543
 
-// 11
+// 11 ***
 // Max Path Sum -- leetcode 124
 
 // 12
@@ -38,22 +38,24 @@
 // 13
 // Binary Tree - Zigzag level order traversal
 
-// 14
+// 14 **
 // Boundary Traversal of a Binary Tree -- Coding Ninjas
 
-// 15
+// 15 ***
 // Vertical Order Traversal of a binary Tree -- 987
 
-// 16
+// 16 *
 // Top View of binary Tree -- Coding Ninjas
 
-// 17
+// 17 *
 // Bottom View of binary Tree -- Geeks
 
-// 18
+// 18 ***
+// Boundary traversal solution will not work
 // Right View of binary tree -- leetcode 199
 
-// 19
+// 19 **
+// Better condition handling in striver solution for isMirror(t1, t2)
 // Is Symmetric Tree or Mirror Tree -- leetcode 101
 
 // 20
@@ -88,3 +90,6 @@
 
 // 30
 // Serialize and Deserialize binary tree -- leetcode 297
+
+// Q1
+// Invert Binary Tree -- leetcode 226s

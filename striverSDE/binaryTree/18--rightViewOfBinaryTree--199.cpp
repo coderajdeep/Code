@@ -81,3 +81,16 @@ vector<int> leftView(Node *root) {
    leftViewUtils(root, ans, 1, maxLevel);
    return ans;
 }
+
+// This will not work
+// Which is used in boundary order traversal
+vector<int> rightSideView(TreeNode* root) {
+    if(!root) return vector<int> {};
+    vector<int> ans;
+    while(root) {
+        ans.push_back(root->val);
+        if(root->left) root = root->left;
+        else root = root->left;
+    }
+    return ans;
+}
