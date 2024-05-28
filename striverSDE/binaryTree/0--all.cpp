@@ -62,9 +62,6 @@
 // leetcode question is trees + string manipulation
 // Root to Leaf all paths  -- leetcode 257
 
-// 21
-// Path to given Node -- InterviewBit
-
 // 22
 // LCA of a binary tree -- leetcode 236
 
@@ -94,3 +91,6 @@
 
 // Q1
 // Invert Binary Tree -- leetcode 226s
+
+// Q2 ***
+// Path to given Node -- InterviewBit
