@@ -58,7 +58,8 @@
 // Better condition handling in striver solution for isMirror(t1, t2)
 // Is Symmetric Tree or Mirror Tree -- leetcode 101
 
-// 20
+// 20 ***
+// leetcode question is trees + string manipulation
 // Root to Leaf all paths  -- leetcode 257
 
 // 21

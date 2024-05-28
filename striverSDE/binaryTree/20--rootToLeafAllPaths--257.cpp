@@ -31,6 +31,26 @@ vector<string> binaryTreePaths(TreeNode* root) {
     return ans;
 }
 
+// Geeks
+// Root to all leaves
+void solve(Node *root, vector<vector<int>> &ans, vector<int> &temp) {
+    if(!root) return;
+    temp.push_back(root->data);
+    if(!root->left && !root->right) {
+        ans.push_back(temp);
+    }
+    solve(root->left, ans, temp);
+    solve(root->right, ans, temp);
+    temp.pop_back();
+}
+vector<vector<int>> Paths(Node* root) {
+    if(!root) return vector<vector<int>> {};
+    vector<int> temp;
+    vector<vector<int>> ans;
+    solve(root, ans, temp);
+    return ans;
+}
+
 
 // For Debugging Code
 #include <iostream>

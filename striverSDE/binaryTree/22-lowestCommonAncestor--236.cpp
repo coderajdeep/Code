@@ -2,6 +2,16 @@
 // Space complexity O(h) : recursion stack space
 // Best approach
 // https://youtu.be/_-QHfMDde90?si=WTxWEKm6m5Qp4iV6
+// Clean solution
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+    if(!root || root==p || root==q) return root;
+    TreeNode *lnode = lowestCommonAncestor(root->left, p, q);
+    TreeNode *rnode = lowestCommonAncestor(root->right, p, q);
+    if(lnode && rnode) return root;
+    // below condition can be handled last line
+    //if(!lnode && !rnode) return nullptr;
+    return lnode ? lnode : rnode;
+}
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     if(!root || root==p || root==q) return root;
     TreeNode* lnode = lowestCommonAncestor(root->left, p, q);
