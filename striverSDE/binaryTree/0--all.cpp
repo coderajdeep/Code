@@ -62,7 +62,9 @@
 // leetcode question is trees + string manipulation
 // Root to Leaf all paths  -- leetcode 257
 
-// 22
+// 21 ***
+// Limitation of this method is, this will only work if both the nodes are present
+// If only one is present then also this method return this node as a LCA
 // LCA of a binary tree -- leetcode 236
 
 // 23
@@ -92,5 +94,5 @@
 // Q1
 // Invert Binary Tree -- leetcode 226s
 
-// Q2 ***
+// Q2 ***   
 // Path to given Node -- InterviewBit

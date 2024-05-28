@@ -3,6 +3,9 @@
 // Best approach
 // https://youtu.be/_-QHfMDde90?si=WTxWEKm6m5Qp4iV6
 // Clean solution
+
+// Limitation of this method is, this will only work if both the nodes are present
+// If only one is present then also this method return this node as a LCA
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     if(!root || root==p || root==q) return root;
     TreeNode *lnode = lowestCommonAncestor(root->left, p, q);
