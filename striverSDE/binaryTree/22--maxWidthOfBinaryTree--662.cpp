@@ -2,6 +2,16 @@
 // Space complexity O(maxWidth)
 // https://youtu.be/ZbybYvcVLks?si=ou4d4H7yS_2949t8
 
+// When we subtract the first width index from all same level value and push their childs into queues, still working fine
+// left --> x right --> y
+// if we dont subtract
+// then width will be
+// 2*y+2 - 2*x+1 --> 2*(y-x) + 1
+// if we do subtract
+// then width will be
+// 2*(y-x)+2 - 1 --> 2*(y-x) + 1
+// Both are same
+// So we need to subtract for integer overflow
 int widthOfBinaryTree(TreeNode* root) {
     if(!root) {
         return 0;

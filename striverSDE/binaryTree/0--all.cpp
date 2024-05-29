@@ -67,10 +67,20 @@
 // If only one is present then also this method return this node as a LCA
 // LCA of a binary tree -- leetcode 236
 
-// 23
+// 22 ***
+// When we subtract the first width index from all same level value and push their childs into queues, still working fine
+// left --> x right --> y
+// if we dont subtract
+// then width will be
+// 2*y+2 - 2*x+1 --> 2*(y-x) + 1
+// if we do subtract
+// then width will be
+// 2*(y-x)+2 - 1 --> 2*(y-x) + 1
+// Both are same
+// So we need to subtract for integer overflow
 // Max Width of binary tree -- leetcode 662
 
-// 24
+// 23 *
 // Children Sum Property -- Coding Ninjas
 
 // 25
