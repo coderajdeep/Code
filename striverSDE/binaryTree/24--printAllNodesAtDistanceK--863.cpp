@@ -1,12 +1,12 @@
 // Time Complexity O(2*n)
 // Space complexity O(2*w + n)
 
-void findParents(TreeNode* root, unordered_map<TreeNode*, TreeNode*> &um) {
-    queue<TreeNode*>q;
+void getParents(TreeNode* root, unordered_map<TreeNode*, TreeNode*> &um) {
+    if(!root) return;
+    queue<TreeNode*> q;
     q.push(root);
-    TreeNode* curr;
     while(!q.empty()) {
-        curr = q.front();
+        TreeNode* curr = q.front();
         q.pop();
         if(curr->left) {
             q.push(curr->left);
@@ -21,42 +21,42 @@ void findParents(TreeNode* root, unordered_map<TreeNode*, TreeNode*> &um) {
 vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
     if(!root || !target) return vector<int> {};
     unordered_map<TreeNode*, TreeNode*> um;
-    findParents(root, um);
+    unordered_set<TreeNode*> us;
     queue<TreeNode*> q;
     q.push(target);
-    unordered_set<TreeNode*>us;
     us.insert(target);
-    int level = 0;
-    TreeNode* curr;
-    TreeNode* par;
     vector<int> ans;
+    getParents(root, um);
+    int level = 0;
+
     while(!q.empty()) {
         int size = q.size();
         for(int i=0; i<size; ++i) {
-            curr = q.front();
+            TreeNode *curr = q.front();
             q.pop();
-            if(level==k) {
+            if(k == level) {
                 ans.push_back(curr->val);
             }
             if(curr->left && us.find(curr->left)==us.end()) {
-                q.push(curr->left);
                 us.insert(curr->left);
+                q.push(curr->left);
             }
             if(curr->right && us.find(curr->right)==us.end()) {
-                q.push(curr->right);
                 us.insert(curr->right);
+                q.push(curr->right);
             }
-            par = nullptr;
-            if(curr!=root) {
-                par = um[curr];
-                if(us.find(par)==us.end()) {
-                    q.push(par);
+            if(curr != root) {
+                TreeNode *par = um[curr];
+                if(par && us.find(par)==us.end()) {
                     us.insert(par);
+                    q.push(par);
                 }
             }
         }
-        if(level==k) break;
+        if(k == level) return ans;
         ++level;
     }
+    // ***
+    // this will occure when k > diameter of the binary tree
     return ans;
 }

@@ -80,14 +80,19 @@
 // So we need to subtract for integer overflow
 // Max Width of binary tree -- leetcode 662
 
-// 23 *
-// Children Sum Property -- Coding Ninjas
+// 23 **
+// Children Sum Property -- Coding Ninjas / Geeks
 
-// 25
-// Print all nodes at distance K from a given node -- leetcode 863
+// 24 ***
+// Very Very important
+// Need to store the parent node all of the nodes
+// Then need to do level order traversal and also maintain a hash of all of the visited nodes
+// If the target is given as an integer, but not a treenode, then all of nodes should be distinct
+// Print all nodes at distance k from a given node
 
-// 26
-// Time to completely burn a binary tree -- coding ninjas
+// 25 ***
+// Similar to question 24
+// Time to completely burn a binary tree from a given node -- coding ninjas / geeks
 
 // 27
 // Count Total nodes in complete binary tree -- leetcode 222
