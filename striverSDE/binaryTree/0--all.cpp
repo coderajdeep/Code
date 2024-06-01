@@ -94,13 +94,21 @@
 // Similar to question 24
 // Time to completely burn a binary tree from a given node -- coding ninjas / geeks
 
-// 27
+// 26 ***
+// Find leftHeight and rightHeight, if they are equal then answer is 2^(h+1) - 1
+// Otherwise recursively find leftTreeCount and rightTreeCount 
 // Count Total nodes in complete binary tree -- leetcode 222
 
-// 28
+// 27
+// Is Unique Binary Tree Possible
+
+// 28 ***
+// We can do optimization by hashing the inorder traversal
 // Construct Binary Tree from inorder and preorder traversal
 
 // 29
+// Similar to above question, but here we have to use from last to first in postorder traversal
+// and need to first right sub-tree first then left subtree
 // Construct Binary Tree from inorder and postorder traversal
 
 // 30
@@ -111,3 +119,6 @@
 
 // Q2 ***   
 // Path to given Node -- InterviewBit
+
+// Q3
+// Convert a binary such that the tree will follow the children sum property

@@ -26,6 +26,7 @@ TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
 
 
 // Optimized approach
+// Uisng hash table to find the inorder root index in constant timeF
 // Time complexity O(n)
 // Space complexity  O(n)
 TreeNode* getTree(vector<int>& preorder, vector<int>& inorder, unordered_map<int, int> &inorderHash, int inStart, int inEnd, int &preStart) {
@@ -33,7 +34,7 @@ TreeNode* getTree(vector<int>& preorder, vector<int>& inorder, unordered_map<int
         return nullptr;
     }
     TreeNode* root = new TreeNode(preorder[preStart++]);
-    // this is for finding the root index in inorder vector
+    // this is for finding the root index in inorder vector in constant time
     int inIndex = inorderHash[root->val];
     root->left = getTree(preorder, inorder, inorderHash, inStart, inIndex-1, preStart);
     root->right = getTree(preorder, inorder, inorderHash, inIndex+1, inEnd, preStart);
