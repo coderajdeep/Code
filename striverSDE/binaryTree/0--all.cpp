@@ -106,12 +106,14 @@
 // We can do optimization by hashing the inorder traversal
 // Construct Binary Tree from inorder and preorder traversal
 
-// 29
+// 29 ***ß
 // Similar to above question, but here we have to use from last to first in postorder traversal
 // and need to first right sub-tree first then left subtree
 // Construct Binary Tree from inorder and postorder traversal
 
-// 30
+// 30 ***
+// In case of Serialize, we will use level order traversal (we can use other traversal)
+// In case of Deserialize, we will use stringstream for tokenizing (Tokenizing a string denotes splitting a string with respect to some delimiter(s))
 // Serialize and Deserialize binary tree -- leetcode 297
 
 // Q1
