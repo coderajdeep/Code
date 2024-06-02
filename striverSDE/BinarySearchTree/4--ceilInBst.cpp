@@ -1,28 +1,19 @@
 // Time complexity O(h)
-// Space complexity O(h)
-void dfs(BinaryTreeNode<int> *node, int &cl, int x) {
-    if(!node) {
-        return;
+// Space complexity O(1)
+int findCeil(Node* root, int input) {
+    if (root == NULL) return -1;
+    int ans = -1;
+    while(root) {
+        if(root->data == input) {
+            return root->data;
+        }
+        else if(input < root->data) {
+            ans = root->data;
+            root = root->left;
+        }
+        else {
+            root = root->right;
+        }
     }
-    else if(node->data==x) {
-        cl = x;
-        return;
-    }
-    else if(node->data > x) {
-        cl = node->data;
-        dfs(node->left, cl, x);
-    }
-    else {
-        dfs(node->right, cl, x);
-    }
-}
-
-int findCeil(BinaryTreeNode<int> *node, int x){
-    // Write your code here.
-    if(!node) {
-        return -1;
-    }
-    int cl = -1;
-    dfs(node, cl, x);
-    return cl;
+    return ans;
 }

@@ -1,23 +1,18 @@
 // Time complexity O(h)
-// Space complexity O(h)
+// Space complexity O(1)
 
-void dfs(BinaryTreeNode<int> *node, int input, int& floor) {
-	if(!node) return;
-	if(node->data==input) {
-		floor = input;
-		return;
+int floor(Node* root, int x) {
+	if(!root) return -1;
+	int ans = -1;
+	while(root) {
+		if(root->data == x) return x;
+		else if(root->data > x) {
+			root = root->left;
+		}
+		else {
+			ans = root->data;
+			root = root->right;
+		}
 	}
-	else if(node->data > input) {
-		dfs(node->left, input, floor);
-	}
-	else {
-		floor = node->data;
-		dfs(node->right, input, floor);
-	}
-}
-
-int Floor(BinaryTreeNode<int> *node, int input) {
-	int floor = -1;
-	dfs(node, input, floor);
-	return floor;
+	return ans;
 }
