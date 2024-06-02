@@ -1,26 +1,17 @@
 // Time complexity O(h)
 
-int minVal(Node* root){
-	if(!root) return -1;
-    Node* node = root;
-    Node* prev = nullptr;
-    while(node) {
-        prev = node;
-        node = node->left;
+int minValue(Node* root) {
+    int val = INT_MAX;
+    while(root) {
+        val = min(root->data, val);
+        root = root->left;
     }
-    return prev->data;
+    return val;
 }
 
 // Recursive solution
-bool findMin(Node* root, int &min) {
-    if(!root) return false;
-    if(findMin(root->left, min)) return true;
-    min = root->data;
-    return true;
-}
-int minVal(Node* root){
-    int min;
-	bool val = findMin(root, min);
-    if(val) return min;
-    return -1;
+int minValue(Node* root) {
+    if(!root) return INT_MAX;
+    if(!root->left) return root->data;
+    return minValue(root->left);
 }
