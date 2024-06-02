@@ -1,3 +1,5 @@
+// [1-6] just need to see, don't need to code again
+
 // 1
 // Is Binary Search Tree Valid -- coding ninjas / Geeks
 
@@ -13,5 +15,6 @@
 // 5
 // Finding floor in binary tree -- coding ninjas
 
-// 6
+// 6 ***
+// Recursive solution is beautiful
 // Insert into BST -- leetcode 701
