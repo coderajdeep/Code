@@ -130,6 +130,14 @@
 // In case of Deserialize, we will use stringstream for tokenizing (Tokenizing a string denotes splitting a string with respect to some delimiter(s))
 // Serialize and Deserialize binary tree -- leetcode 297
 
+// 31 ***
+// Threaded binary tree
+// Morris traversal for inorder traversal -- leetcode 94
+
+// 32 ***
+// Threaded binary tree
+// Morris traversal for preorder traversal -- leetcode 144
+
 // Q1
 // Invert Binary Tree -- leetcode 226s
 
