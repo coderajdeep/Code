@@ -1,3 +1,6 @@
+// [1-6] Basic implementation problem
+// [3-4] need to know, otherwise hard to come up with solution
+
 // TODO
 // Need to implement circular queue
 
@@ -9,19 +12,27 @@
 // 2
 // Implement queue class -- coding ninjas
 
-// 3
-// Implement stack class using Linkedlist -- coding ninjas
-
-// 4
-// Implement queue using linkedlist -- coding ninjas
-
-// 5
+// 3 **
+// Approach 1 push(X) : insert X into Q2, insert all elements from Q1 to Q2 one by one (initially single entered element will be on top), 
+// Then swap Q1 and Q2
+// Approach 2 push(x) : Insert into Q, then insert size - 1 element pop and push to the queue
 // Implement stack using queue -- leetcode 225
 
-// 6
+// 4 **
+// Approach 1 push(x) : Insert from S1 to S2 one by one, then insert X into S1, then again insert from S2 to S1 one by one
+// Approach 2 is very easy and optimize also
 // Implement queue using stack -- leetcode 232
 
+// 5
+// Implement stack class using Linkedlist -- coding ninjas
+
+// 6
+// Implement queue using linkedlist -- coding ninjas
+
 // 7
+// Stack based solution 
+// https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
+// Constant space solution, but the string will be modified
 // Checked for balanced paranthesis -- leetcode 20
 
 // 8
