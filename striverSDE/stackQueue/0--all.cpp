@@ -24,18 +24,22 @@
 // Implement queue using stack -- leetcode 232
 
 // 5
+// Need to maintain top as head of linkedlist
 // Implement stack class using Linkedlist -- coding ninjas
 
 // 6
+// Need to maintain front as head and rear as tail of linked list
 // Implement queue using linkedlist -- coding ninjas
 
-// 7
+// 7 **
 // Stack based solution 
 // https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
 // Constant space solution, but the string will be modified
 // Checked for balanced paranthesis -- leetcode 20
 
-// 8
+// 8 ***
+// Very very important problem
+// O(n) solution is tricky
 // Implement Minimum stack -- leetcode 155
 
 // 9
