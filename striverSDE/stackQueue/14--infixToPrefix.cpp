@@ -1,4 +1,7 @@
-// Infix to Prefix -- coding ninjas
+// Infix to Prefix 
+// Time complexity O(n)
+// Space complexity O(n)
+// https://ide.geeksforgeeks.org/online-cpp14-compiler/803544dc-4fea-4ab7-92c3-900bc37876eb
 
 int prec(char& ch) {
 	if(ch=='+' || ch=='-') {
@@ -14,9 +17,10 @@ int prec(char& ch) {
 		return 0;
 	}
 }
+
 string infixToPostfix(string& exp){
 	stack<char> stk;
-	string postfix;
+	string postfix = "";
 	for(char ch : exp) {
 		if((ch>='0' && ch<='9') || (ch>='a' && ch<='z')) {
 			postfix.push_back(ch);
@@ -32,7 +36,10 @@ string infixToPostfix(string& exp){
 			stk.pop();
 		}
 		else {
-			while(!stk.empty() && (prec(ch)<=prec(stk.top()))) {
+			// there is one simple edge case
+			// if ch --> '^' then only prec(ch)<=prec(stk.top())
+			// otherwise prec(ch)<prec(stk.top())
+			while(!stk.empty() && ((prec(ch) < prec(stk.top())) || (ch == '^' && prec(ch)<=prec(stk.top())))) {
 				postfix.push_back(stk.top());
 				stk.pop();
 			}
@@ -46,7 +53,7 @@ string infixToPostfix(string& exp){
 	return postfix;
 }
 
-string infixToPrefix(string& exp) {
+void reverse(string &exp) {
     int n = exp.size();
     int start = 0, end = n-1;
     while(start<end) {
@@ -69,16 +76,15 @@ string infixToPrefix(string& exp) {
 	// if we don't want to do this then we need to reverse the expression first then need to interchange 'C' and ')'
 	// https://takeuforward.org/data-structure/infix-to-prefix/
 	if(n & 1) {
-		if(exp[start+(end-start)/2]=='(') exp[start+(end-start)/2] = ')';
-    	else if(exp[start+(end-start)/2]==')') exp[start+(end-start)/2] = '(';
+	    int mid = start+(end-start)/2;
+		if(exp[mid]=='(') exp[mid] = ')';
+    	else if(exp[mid]==')') exp[mid] = '(';
 	}
+}
 
+string infixToPrefix(string& exp) {
+    reverse(exp);
     string prefix = infixToPostfix(exp);
-
-    start = 0, end = n-1;
-    while(start<end) {
-        swap(prefix[start++], prefix[end--]);
-    }
-
+    reverse(exp);
     return prefix;
 }

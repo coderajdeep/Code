@@ -8,11 +8,11 @@ string prefixToInfixConversion(string &s){
 			stk.push(string(1, s[i]));
 		}
 		else {
-			string oprand1 = stk.top();
+			string operand1 = stk.top();
 			stk.pop();
-			string oprand2 = stk.top();
+			string operand2 = stk.top();
 			stk.pop();
-			string temp = '(' + oprand1 + s[i] + oprand2 + ')';
+			string temp = '(' + operand1 + s[i] + operand2 + ')';
 			stk.push(temp);
 		}
 	}
