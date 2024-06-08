@@ -6,10 +6,10 @@
 
 // 3
 // Check if and array is sorted or not - coding ninjas (We can't check if an array is sorted or not in logN complexity)
-// Check if and array is sorted and rotated *** -- leetcode 1752
+// *** Check if and array is sorted and rotated -- leetcode 1752
 
 // 4
-// ***Remove duplicate from sorted array -- leetcode 26
+// *** Remove duplicate from sorted array -- leetcode 26
 
 // 5
 // Left Rotation or Anti clockwise rotation of an array by one -- Coding Ninjas

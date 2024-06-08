@@ -12,7 +12,7 @@ int isSorted(int n, vector<int> a) {
 // leetcode 1752 ***
 // Time complexity O(n)
 // Space complexity O(1)
-
+// We can't do this in O(logn) beacuse we can't not eliminate one half in each step
 // [6 10 6]
 // edge case
 bool check(vector<int>& nums) {
