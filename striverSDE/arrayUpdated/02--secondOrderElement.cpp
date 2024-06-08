@@ -1,3 +1,5 @@
+// Time complexity O(n)
+// Space complexity O(n)
 vector<int> getSecondOrderElements(int n, vector<int> a) {
     int largest1 = INT_MIN, largest2 = INT_MIN, smallest1 = INT_MAX, smallest2 = INT_MAX;
     for(int i=0; i<n; ++i) {
@@ -10,7 +12,7 @@ vector<int> getSecondOrderElements(int n, vector<int> a) {
         else if(a[i]>largest2 && a[i]<largest1) {
             largest2 = a[i];
         }
-        if(smallest1>a[i]) {
+        if(smallest1>a[i]) {q
             smallest2 = smallest1;
             smallest1 = a[i];
         }
@@ -23,6 +25,8 @@ vector<int> getSecondOrderElements(int n, vector<int> a) {
     return vector<int> {largest2, smallest2};
 }
 
+// Time complexity O(n)
+// Space complexity O(n)
 // Third Maxmimum element
 int thirdLargest(int a[], int n){
     if(n<3) return -1;
