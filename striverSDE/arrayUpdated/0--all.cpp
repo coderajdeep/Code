@@ -4,11 +4,11 @@
 // 2
 // Find 2nd largest and 2nd smallest element
 
-// 3
+// 3 ***
 // Check if and array is sorted or not - coding ninjas (We can't check if an array is sorted or not in logN complexity)
 // *** Check if and array is sorted and rotated -- leetcode 1752
 
-// 4
+// 4 ***
 // size will track the total unique elements in array (initially size = 1)
 // need to traverse i=1 to i=n-1 and check if (arr[i-1]<arr[i]) then arr[size++] = arr[i]
 // *** Remove duplicate from sorted array -- leetcode 26
@@ -19,7 +19,7 @@
 // 6 
 // Right Rotation or Clockwise Rotation by K -- leetcode 189
 
-// 7
+// 7 ***
 // Move All Zeroes to the end of the array -- leetcode 283
 // Track non zero element index
 // If the element != 0 then swap(arr[i], arr[index++])
@@ -28,7 +28,7 @@
 // 8
 // Linear Search -- Coding Ninjas
 
-// 9
+// 9 ***
 // while inserting into ans array, just need to check ans.empty() || ans.back()!=arr[i]
 // *** Union of array -- Coding Ninjas / Geeks
 
@@ -36,7 +36,7 @@
 // Constant space solution is using XOR
 // Missing Number in an array -- leetcode 268
 
-// 11
+// 11 ***
 // Initially cnt = 0 , maxCnt = 0
 // if element == 1 then ++cnt and maxCnt = max(cnt, maxCnt)
 // else cnt = 0
@@ -47,7 +47,7 @@
 // Constant space solution is using XOR
 // Find only single element in array  -- leetcode 136
 
-// 13
+// 13 ***
 // Very very important
 // *** Find the largest subarray with given sum when array elements are non negative -- coding ninjas
 
@@ -58,7 +58,7 @@
 // 15
 // 2sum Problem -- leetcode 1
 
-// 16
+// 16 ***
 // [0 - (low-1)] : 0
 // [low - (mid-1)] : 1
 // [mid - (high-1)] : 0/1/2
@@ -68,7 +68,7 @@
 // Space complexity O(1)
 // *** Sort 0 1 2 - sort colors -- leetcode 75
 
-// 17
+// 17 ***
 // We can also solve this using unordered_map or unordered_multiset
 // If any element's frequency is greater than (n/2) then its a majorith element
 // Moore's voting algorithm
@@ -76,7 +76,8 @@
 // Then we need to check the count of the element we get from moore's voting algorithm 
 // *** Majority Element -- leetcode 169
 
-// 18
+// 18 ***
+// Question can be Max length / Min length subarray or starting or ending index (of max sum subarray)
 // Maximum subarray sum - Kadane's Algorithm -- leetcode 53
 
 // 19
