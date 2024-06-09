@@ -9,6 +9,8 @@
 // *** Check if and array is sorted and rotated -- leetcode 1752
 
 // 4
+// size will track the total unique elements in array (initially size = 1)
+// need to traverse i=1 to i=n-1 and check if (arr[i-1]<arr[i]) then arr[size++] = arr[i]
 // *** Remove duplicate from sorted array -- leetcode 26
 
 // 5
@@ -19,28 +21,37 @@
 
 // 7
 // Move All Zeroes to the end of the array -- leetcode 283
+// Track non zero element index
+// If the element != 0 then swap(arr[i], arr[index++])
 // ***One traversal solution is important
 
 // 8
 // Linear Search -- Coding Ninjas
 
 // 9
-// ***Union of array -- Coding Ninjas
+// while inserting into ans array, just need to check ans.empty() || ans.back()!=arr[i]
+// *** Union of array -- Coding Ninjas / Geeks
 
-// 10
+// 10 *
+// Constant space solution is using XOR
 // Missing Number in an array -- leetcode 268
 
 // 11
-// ***Maximum Consecutive one  -- leetcode 485
+// Initially cnt = 0 , maxCnt = 0
+// if element == 1 then ++cnt and maxCnt = max(cnt, maxCnt)
+// else cnt = 0
+// at the end maxCnt is the answer
+// *** Maximum Consecutive one  -- leetcode 485
 
-// 12
+// 12 *
+// Constant space solution is using XOR
 // Find only single element in array  -- leetcode 136
 
 // 13
-// ***Find the largest subarray with given sum when array elements are non negative -- coding ninjas
+// *** Find the largest subarray with given sum when array elements are non negative -- coding ninjas
 
 // 14
-// ***Find the largest subarray with given sum when array elements can be negative
+// *** Find the largest subarray with given sum when array elements can be negative
 
 // 15
 // 2sum Problem -- leetcode 1
