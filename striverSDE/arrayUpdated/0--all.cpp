@@ -59,10 +59,22 @@
 // 2sum Problem -- leetcode 1
 
 // 16
-// ***Sort 0 1 2 - sort colors -- leetcode 75
+// [0 - (low-1)] : 0
+// [low - (mid-1)] : 1
+// [mid - (high-1)] : 0/1/2
+// [high - (n-1)] : 2
+// Duch national flag algo
+// Time complexity O(n)
+// Space complexity O(1)
+// *** Sort 0 1 2 - sort colors -- leetcode 75
 
 // 17
-// ***Majority Element -- leetcode 169
+// We can also solve this using unordered_map or unordered_multiset
+// If any element's frequency is greater than (n/2) then its a majorith element
+// Moore's voting algorithm
+// If it's not guaranteed that majority element will exist
+// Then we need to check the count of the element we get from moore's voting algorithm 
+// *** Majority Element -- leetcode 169
 
 // 18
 // Maximum subarray sum - Kadane's Algorithm -- leetcode 53
