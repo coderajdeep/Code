@@ -80,19 +80,26 @@
 // Question can be Max length / Min length subarray or starting or ending index (of max sum subarray)
 // Maximum subarray sum - Kadane's Algorithm -- leetcode 53
 
-// 19
+// 19 **
+// We Need to also tell what is the buy and sell day
 // Best Time to buy and sell stock -- leetcode 121
 
 // 20
 // Rearrange array in alternative way -- leetcode 2149
 
-// 21
+// 21 ***
+// Need to traverse from right to left and check arr[i]<arr[i+1] : pivot = i
+// If pivot is -1 the reverse the array, modified array is the answer
+// Otherwise traverse again from n-1 to i>pivot and if arr[i]>arr[pivot] then swap arr[i] and arr[pivot]
+// Now reverse arr.begin() + pivot + 1 to arr.end()
 // Next Permutation -- leetcode 31
 
 // 22
 // Leaders in an array -- Coding Ninjas
 
-// 23
+// 23 ***
+// Need to insert all of the elements in unordered_set
+// if curr-1 is not exist in unordered_set then curr is the starting point for a new sequence
 // Longest Consecutive Sequence -- leetcode 128
 
 // 24
@@ -104,7 +111,11 @@
 //26
 // Print matrix in spiral order  -- leetcode 54
 
-// 27
+// 27 ***
+// Need to think about this test case 
+// Arr : [1]
+// K = 0
+// Answer should be 0
 // Count Subarray with given sum -- leetcode 560
 
 // 28

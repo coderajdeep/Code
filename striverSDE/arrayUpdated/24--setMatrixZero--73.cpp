@@ -1,5 +1,7 @@
 // Set Matrix Zero -- leetcode 73
 
+// Solution 1
+// Best approach
 // Time Complexity O(2*n*m)
 // Space Complexity O(1)
 void setZeroes(vector<vector<int>>& matrix) {
@@ -40,6 +42,8 @@ void setZeroes(vector<vector<int>>& matrix) {
     }
 }
 
+// Solution 2
+// Using some extra space
 // Time O(2*n*m) ~ O(n*m)
 // Space O(n+m)
 void setZeroes(vector<vector<int>>& matrix) {
@@ -65,6 +69,8 @@ void setZeroes(vector<vector<int>>& matrix) {
     }
 }
 
+// Solution 3
+// Brute fource
 // time O(n^3) ~ )(n*n*(n+m))
 // space O(1)
 // this process is not always correct
