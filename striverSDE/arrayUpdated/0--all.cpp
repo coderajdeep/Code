@@ -79,8 +79,10 @@
 // Then we need to check the count of the element we get from moore's voting algorithm 
 // *** Majority Element -- leetcode 169
 
+// TODO geeks question
 // 18 ***
 // Question can be Max length / Min length subarray or starting or ending index (of max sum subarray)
+// https://www.geeksforgeeks.org/problems/max-sum-in-sub-arrays0824/0
 // Maximum subarray sum - Kadane's Algorithm -- leetcode 53
 
 // 19 **
@@ -128,8 +130,34 @@
 // Answer should be 0
 // Count Subarray with given sum -- leetcode 560
 
-// 28
+// 28 **
 // Pascal Triangle 1 -- leetcode 118
+
+// 29 *** 
+// Uisng constant space is tricky
+// Initially e1 = e2 = INT_MIN and c1 = c2 = 0
+// if e1==e or e2==e then increase counter of that element
+// if above condition not true then assign e to e1/e2 if the counter is zero and make counter 1
+// otherwise decrease both counter
+// After the iteration, need to do majority check. This is mandatory
+// Majority Element II  -- leetcode 229
+
+// 30 ***
+// 3sum problem
+// Hashing approach will give TLE
+// Need to use Two pointer approach
+
+// 37 ***
+// In merge sort need to do start<end, if we put equal sign then this will goes to infinite loop
+// Need to get count while merging two sorted array
+// Inversion count -- leetcode 
+
+// 38 ***
+// Reverse Pairs -- leetcode 493
+// Difference between this with Inversion count is in merge two sorted array case
+// Because for this question, we need to check arr[i] > 2*arr[j]
+// So in else part, we can't say arr[i] < arr[j], so we can merge this
+// So we need to getCount and merge two sorted array in seperate function
 
 // 39
 // Subarray with maximum product -- leetcode 152
