@@ -1,5 +1,6 @@
 // Determine Whether Matrix Can Be Obtained By Rotation
-
+// Time complexity O(n*n)
+// Space complexity O(1)
 class Solution {
 public:
     // matrix (n, m)
@@ -30,7 +31,7 @@ public:
                 }
                 if (!degree90 && !degree180 && !degree270 && !degree360) {
                     return false;
-            }
+                }
             }
         }
         

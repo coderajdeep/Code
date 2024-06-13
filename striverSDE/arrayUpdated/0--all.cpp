@@ -1,3 +1,6 @@
+// TODO
+// Determine Whether Matrix Can Be Obtained By Rotation
+
 // 1
 // Largest element in an array
 
@@ -102,10 +105,17 @@
 // if curr-1 is not exist in unordered_set then curr is the starting point for a new sequence
 // Longest Consecutive Sequence -- leetcode 128
 
-// 24
+// 24 ***
+// In place solution is tricky while filling the zero
+// for first col, we need to track another variable because for matrix[0][0], row and column will be overlap
 // Set Matrix Zero -- leetcode 73
 
-// 25
+// 25 ***
+// if the matrix is a rectangular matrix, then in place rotation is tough
+// 90 degree : (i, j) --> (j, n-1-i)
+// 180 degree : (i, j) --> (n-1-i, n-1-j)
+// 270 degree : (i, j) --> (n-1-j, i)
+// 360 degree : (i, j) --> (j, j)
 // Rotate a matrix by clockwise 90 degree -- leetcode 48
 
 //26

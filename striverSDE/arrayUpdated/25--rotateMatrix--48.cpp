@@ -2,6 +2,8 @@
 
 // Time complexity O(2*n*n)
 // Space complexity O(1)
+// We can do this in place if the matrix is a square matrix
+// if the matrix is a rectangular matrix, then in place rotation is tough
 void rotate(vector<vector<int>>& matrix) {
     int n = matrix.size();
     // transpose matrix
