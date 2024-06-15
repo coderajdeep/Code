@@ -162,6 +162,13 @@
 // Count number of subarray with given xor target
 // Same as question 27 and 33
 
+// 34 ***
+// Need to sort the intervals
+// So starting point will be in the sorted order
+// endValue < intervals[i].start => distinct intervals
+// otherwise overlap interval endValue = max(endValue, intervals[i][1])
+// Merge Intervals
+
 // 37 ***
 // In merge sort need to do start<end, if we put equal sign then this will goes to infinite loop
 // Need to get count while merging two sorted array
@@ -185,3 +192,7 @@
 
 // Q3
 // Pascal Triangle II -- leetcode 119
+
+// Q4 ***
+// Similar to Overlap intervals
+// Days without meeting -- leetcode 3169 (weekly 400)
