@@ -153,6 +153,15 @@
 // Two pointer approach
 // Addition to 3sum, here we need to use another extra loop
 
+// 32 ***
+// Count number of subarray with given sum target
+// This is same as question 27
+
+// 33 ***
+// CodingNinjas & InterviewBit
+// Count number of subarray with given xor target
+// Same as question 27 and 33
+
 // 37 ***
 // In merge sort need to do start<end, if we put equal sign then this will goes to infinite loop
 // Need to get count while merging two sorted array
