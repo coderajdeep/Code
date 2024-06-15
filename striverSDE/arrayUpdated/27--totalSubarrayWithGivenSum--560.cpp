@@ -5,6 +5,7 @@
 int subarraySum(vector<int>& nums, int k) {
     int prefixSum = 0, count = 0, n = nums.size();
     unordered_map<int, int> umap;
+    // this is for handling index 0 to i sum
     umap[0] = 1;
     for(int i=0; i<n; ++i) {
         prefixSum += nums[i];
