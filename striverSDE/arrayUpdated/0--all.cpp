@@ -1,5 +1,5 @@
 // TODO
-// Determine Whether Matrix Can Be Obtained By Rotation
+// 36 Will do bit manipulation way 
 
 // 1
 // Largest element in an array
@@ -174,6 +174,12 @@
 // We need to swap element based on arr1[i--]>arr2[j++]
 // This will make sure all elements in arr1 is less than arr2
 // The sort arr1 and arr2 seperately
+
+// 36 ***
+// Missing and repeating number -- Geeks
+// Hasing approach and mathematical approach are simple
+// In mathematical approach, we need to use static_cast<type> ***
+// Bit manipulation approach is difficult
 
 // 37 ***
 // In merge sort need to do start<end, if we put equal sign then this will goes to infinite loop
