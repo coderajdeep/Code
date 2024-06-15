@@ -169,6 +169,12 @@
 // otherwise overlap interval endValue = max(endValue, intervals[i][1])
 // Merge Intervals
 
+// 35 ***
+// Merge two sorted array without extra space -- leetcode 88
+// We need to swap element based on arr1[i--]>arr2[j++]
+// This will make sure all elements in arr1 is less than arr2
+// The sort arr1 and arr2 seperately
+
 // 37 ***
 // In merge sort need to do start<end, if we put equal sign then this will goes to infinite loop
 // Need to get count while merging two sorted array
