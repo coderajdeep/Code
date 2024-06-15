@@ -147,6 +147,12 @@
 // Hashing approach will give TLE
 // Need to use Two pointer approach
 
+// 31 ***
+// 4sum problem
+// Similar to 3sum
+// Two pointer approach
+// Addition to 3sum, here we need to use another extra loop
+
 // 37 ***
 // In merge sort need to do start<end, if we put equal sign then this will goes to infinite loop
 // Need to get count while merging two sorted array
