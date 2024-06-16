@@ -27,6 +27,7 @@ int rob(vector<int>& nums) {
 // Bottom Up
 // Time complexity O(n)
 // Space complexity O(n)
+// This is index specific
 int getMaxAmount(int start, int end, vector<int> &nums) {
     vector<int> dp(end+1);
     dp[start] = nums[start];

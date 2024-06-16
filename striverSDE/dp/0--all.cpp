@@ -1,19 +1,27 @@
 // 1
 // N-th Fibonacci number -- geeks
 
-// 2
-// Climbing Stairs -- leetcode 70
+// 2 **
+// Same as n-th fibonacci number
+// Climbing Stairs (distinct way to reach n-th stair) -- leetcode 70
 
-// 3
+// 3 **
+// Similar to Climbing Stairs -- Here we just need the min Value not the total distinct way
+// Geek Jump -- Geeks
 // Frog Jump -- Coding Ninjas
 
-// 4
+// 4 ***
+// Minimum cost -- geeks
+// Here constant space solution is not possible
 // Frog Jump with k distance -- Coding Ninjas
 
-// 5
+// 5 **
+// Maximum sum of non-adjacent elements
 // House Robber -- leetcode 198
 
 // 6
+// Same as previous question, here just the given array is cyclic
+// So we need to find max between o to n-2 and 1 to n-1 index
 // House Robber II -- leetcode 213
 
 // 7
