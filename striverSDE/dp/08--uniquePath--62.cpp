@@ -1,9 +1,43 @@
 // Unique path - leetcode 62
 
+// Best approach
+// Space optimized 
+// Time complexity O(n*m)
+// Space complexity O(n)
+// Using only one array
+int uniquePaths(int m, int n) {
+    vector<int> dp(n, 1);
+    for(int i=1; i<m; ++i) {
+        for(int j=1; j<n; ++j) {
+            // left : dp[j-1]
+            // up : dp[j]
+            dp[j] += dp[j-1];
+        }
+    }
+    return dp[n-1];
+}
+
+// Updated base condition
+// Top down
+// Memoization
+// Time complexity O(n * m)
+// Space complexity O(n * m) + Recursion Stack Space O(n + m)
+int solve(int i, int j, vector<vector<int>> &dp) {
+    if(i==0 || j==0) {
+        return 1;
+    }
+    if(dp[i][j]!=-1) return dp[i][j];
+    return dp[i][j] = solve(i, j-1, dp) + solve(i-1, j, dp);
+}
+int uniquePaths(int m, int n) {
+    vector<vector<int>> dp(m, vector<int>(n, -1));
+    return solve(m-1, n-1, dp);
+}
+
 // Top down
 // Memoization
 // Time complexity O(n*m)
-// Space complexity O(n*m) + Recursion Stack Space O(n*m)
+// Space complexity O(n*m) + Recursion Stack Space O(n+m)
 int uniquePathUtils(int r, int c, vector<vector<int>> &dp) {
     if(r==0 && c==0) return 1;
     if(r<0 || c<0) return 0;

@@ -30,6 +30,9 @@
 // Ninja's training ***
 
 // 8
+// Base condition can be (i==0 || j==0) return 1
+// Another base condition can be (i==0 && j==0) return 1 && (i<0 || j<0) return 0
+// In memoization approach, recursive stack space time complexity is O(n + m)
 // Unique path -- leetcode 62
 
 // 9
