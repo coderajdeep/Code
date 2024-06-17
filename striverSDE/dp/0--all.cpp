@@ -19,12 +19,14 @@
 // Maximum sum of non-adjacent elements
 // House Robber -- leetcode 198
 
-// 6
+// 6 ***
 // Same as previous question, here just the given array is cyclic
 // So we need to find max between o to n-2 and 1 to n-1 index
 // House Robber II -- leetcode 213
 
-// 7
+// 7 ***
+// We can use index == 0 and index < 0 as a base case
+// This question can be asked as K task
 // Ninja's training ***
 
 // 8
