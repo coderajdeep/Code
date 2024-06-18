@@ -50,8 +50,12 @@
 // Even we can start from the last row and end to the fixed starting point, but here we need to handle out of bound sell cases
 // Minimum path sum in triangle -- leetcode 120
 
-// 12
-// Minimum falling path in rectangle -- leetcode 931 (Variable starting and ending point)
+// 12 ***
+// Variable starting and ending point
+// Here we can start the recursion (a) from the start row and finish to the end row 
+// Or (b) from the last row and finish to the first row
+// Second one is more easy to implement
+// Minimum falling path in rectangle -- leetcode 931 
 
 // 13
 // Cherry Pickup II -- leetcode 1463
