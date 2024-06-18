@@ -1,9 +1,35 @@
 // Unique Path II -- leetcode 63
 
+// Best approach
+// Space optimized approach
+// Time complexity O(n*m)
+// Space complexity O(m) : Only single array used
+int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+    int n = obstacleGrid.size();
+    int m = obstacleGrid[0].size();
+    vector<int> dp(m);
+    for(int i=0; i<n; ++i) {
+        for(int j=0; j<m; ++j) {
+            if(obstacleGrid[i][j]==1) {
+                dp[j] = 0;
+            }
+            else if(i==0 && j==0) {
+                dp[0] = 1;
+            }
+            else {
+                int left = j>0 ? dp[j-1] : 0;
+                int right = i>0 ? dp[j] : 0;
+                dp[j] = left + right;
+            }
+        }
+    }
+    return dp[m-1];
+}
+
 // Memoization
 // Top down
 // Time complexity O(n*m)
-// Space complexity O(n*m) + recursion stack space O(n*m)
+// Space complexity O(n * m) + recursion stack space O(n + m)
 int uniquePathUtils(int r, int c, vector<vector<int>>& obstacleGrid, vector<vector<int>>& dp) {
     if(r<0 || c<0) return 0;
     if(obstacleGrid[r][c]==1) return 0;

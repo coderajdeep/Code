@@ -29,16 +29,19 @@
 // This question can be asked as K task
 // Ninja's training ***
 
-// 8
+// 8 **
 // Base condition can be (i==0 || j==0) return 1
 // Another base condition can be (i==0 && j==0) return 1 && (i<0 || j<0) return 0
 // In memoization approach, recursive stack space time complexity is O(n + m)
 // Unique path -- leetcode 62
 
-// 9
+// 9 **
+// In question 8, second base condition can be used in here and aditionally we need to check if the current pont has obstacles or not
+// If yes then we need to return 0
+// if(r<0 || c<0) return 0; if(obstacleGrid[r][c]==1) return 0; if(r==0 && c==0) return 1;
 // Unique Path II -- leetcode 63
 
-// 10
+// 10 **
 // Minimum Path Sum -- leetcode 64
 
 // 11
