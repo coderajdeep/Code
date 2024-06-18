@@ -45,6 +45,9 @@
 // Minimum Path Sum -- leetcode 64
 
 // 11 ***
+// Fixed starting point
+// Here we will start from fixed starting point and base case will be when we will touch the last row
+// Even we can start from the last row and end to the fixed starting point, but here we need to handle out of bound sell cases
 // Minimum path sum in triangle -- leetcode 120
 
 // 12
