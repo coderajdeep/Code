@@ -63,17 +63,27 @@
 // Solved tabulation as well as space optimize tabulation
 // Cherry Pickup II -- leetcode 1463
 
-// 14
+// 14 **
+// Need to try if the sum is negative
+// In that case we need to use unordered_map
 // Subset sum equal to K -- coding ninjas
 
-// 15
+// 15 **
+// Simlar to subset sub equal to target (previous question)
+// lets say each partion sum = n
+// 2 * eachSum = sum
+// eachSum = n / 2
+// eachSum is an integer
+// if not then partition is not possible 
 // Partition equal subset sum -- leetcode 416
 
-// 16
+// 16 ***
+// Little modification on subset sum with given k problem
+// But if we need to consider two subset equal, then it will be very different ***
 // Partition array into two subsets with minimum absolute sum difference -- coding ninja (leetcode 2035 need to try)
 
 // 17
-// Count subset with sum K -- Coding Ninjas
+// Count subset with sum K -- Geeks / Coding Ninjas
 
 // 18
 // Count Partition with given difference -- coding ninjas
