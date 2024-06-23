@@ -57,7 +57,10 @@
 // Second one is more easy to implement
 // Minimum falling path in rectangle -- leetcode 931 
 
-// 13
+// 13 ***
+// Need to solve cherry pick up
+// https://leetcode.com/problems/cherry-pickup/solutions/290654/Java-brute-force-with-explanation-and-how-to-approach-this-problem-in-real-life/
+// Solved tabulation as well as space optimize tabulation
 // Cherry Pickup II -- leetcode 1463
 
 // 14
