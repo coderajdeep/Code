@@ -82,10 +82,23 @@
 // But if we need to consider two subset equal, then it will be very different ***
 // Partition array into two subsets with minimum absolute sum difference -- coding ninja (leetcode 2035 need to try)
 
-// 17
+// 17 ***
+// Base case 
+// if(k<0) return 0;
+// if(index==0) {
+// if(k==0 && nums[0]==0) return 2;
+// else if(k==0 || nums[0]==k) return 1;
+// else return 0;
+// }
+// Edge case [0 0 0] k = 0
 // Count subset with sum K -- Geeks / Coding Ninjas
 
-// 18
+// 18 ***
+// s1 + s2 = sum
+// s1 - s2 = d
+// s2 = sum - d
+// if s2 is odd or less than zero then ans is zero
+// Otherwise find number of subset of sum s2
 // Count Partition with given difference -- coding ninjas
 
 // 19
