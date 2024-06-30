@@ -2,9 +2,9 @@
 // [3-4] need to know, otherwise hard to come up with solution
 
 // TODO
-// Need to implement circular queue
-
-// Validate a prefix, infix or postfix expression
+// Need to implement circular queue ***
+// Validate a prefix, infix or postfix expression ***
+// Implement calculator
 
 // 1
 // Initially topIndex = -1
@@ -66,7 +66,11 @@
 // 13
 // Postfix to Infix -- coding ninjas
 
-// 14
+// 14 ***
+// Tricky 
+// reverse and exhange ( with ) and vice versa
+// convert infixToPostfix
+// again reverse and exhange ( with ) and vice versa
 // Infix to Prefix -- coding ninjas
 
 // 15
@@ -74,12 +78,15 @@
 
 // 16
 // Have better method
-// Next greater element -- leetcode 503
+// Next greater element II -- leetcode 503
 
 // 17
 // Next smalletr element  -- InterviewBit
 
-// 18
+// 18 ***
+// Tricky 
+// Need to use merge sort concept
+// Similar to inversion count
 // Number of NGE -- Coding Ninjas
 
 // 19
