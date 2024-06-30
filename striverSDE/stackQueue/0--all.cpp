@@ -7,12 +7,16 @@
 // Validate a prefix, infix or postfix expression
 
 // 1
+// Initially topIndex = -1
 // Implement stack class -- coding ninjas
 
 // 2
+// Initially frontIndex = rearIndex = 0
+// We enqueue in rearIndex and dequeue from frontIndex
 // Implement queue class -- coding ninjas
 
 // 3 **
+// Approach 2 is easy to remember and intutive
 // Approach 1 push(X) : insert X into Q2, insert all elements from Q1 to Q2 one by one (initially single entered element will be on top), 
 // Then swap Q1 and Q2
 // Approach 2 push(x) : Insert into Q, then insert size - 1 element pop and push to the queue
@@ -20,7 +24,7 @@
 
 // 4 **
 // Approach 1 push(x) : Insert from S1 to S2 one by one, then insert X into S1, then again insert from S2 to S1 one by one
-// Approach 2 is very easy and optimize also
+// Approach 2 is very easy and optimize also **
 // Implement queue using stack -- leetcode 232
 
 // 5
@@ -39,12 +43,15 @@
 
 // 8 ***
 // Very very important problem
-// O(n) solution is tricky
+// O(n) solution is tricky ***
+// In Push(val) : if val is less than minElement then (2*val-minElement) need to insert
+// In getTop() : if top is less than minElement then need to return the minElement as a top element 
+// In pop() : if top value is less than minElement then minElement = 2*minElement-topElement
 // Implement Minimum stack -- leetcode 155
 
 // Very Very important
 // https://leetcode.com/problems/basic-calculator/solutions/414898/infix-to-postfix-a-general-approach-to-similar-questions/
-// 9 **
+// 9
 // Infix to postfix expression  -- coding ninjas
 
 // 10
@@ -59,8 +66,7 @@
 // 13
 // Postfix to Infix -- coding ninjas
 
-// 14 **
-// This is tricky
+// 14
 // Infix to Prefix -- coding ninjas
 
 // 15
