@@ -32,6 +32,7 @@ string infixToPostfix(string& exp){
 			stk.pop();
 		}
 		else {
+			// If the character is operator
 			while(!stk.empty() && (prec(ch)<=prec(stk.top()))) {
 				postfix.push_back(stk.top());
 				stk.pop();
