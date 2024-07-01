@@ -89,10 +89,25 @@
 // Similar to inversion count
 // Number of NGE -- Coding Ninjas
 
-// 19
+// 19 ***
+// Constant space solution is tricky ***
 // Tapping Rainwater -- leetcode 42
 
-// 20
+// 20 ******
+// Very very important
+// *** 
+// If an array has x+1+y element and x index (o based indexing) is val
+// then there will be (x+1) * (y+1) subarray which will contain val
+// subarray starting index [0 x] and ending index [x x+y]
+// ***
+// For handling duplicate case
+// We are calculating what is the next smaller element in the left side
+// And what is the next smaller or equal element in right side
+// If we don't do this then for duplicate element, we will count double 
+// [5 3 1 4 1 2] : for index 2 prev smaller index and next smaller index -1
+// for index 4 prev smaller index and next smaller index -1
+// So we are calculation 2 times when there is duplicate in array
+
 // Sum of subarray minimum -- leetcode 907
 
 // 21

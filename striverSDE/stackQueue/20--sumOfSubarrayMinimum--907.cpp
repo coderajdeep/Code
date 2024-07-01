@@ -20,6 +20,9 @@ int sumSubarrayMins(vector<int>& arr) {
     // We are calculating what is the next smaller element in the left side
     // And what is the next smaller or equal element in right side
     // If we don't do this then for duplicate element, we will count double 
+    // [5 3 1 4 1 2] : for index 2 prev smaller index and next smaller index -1
+    // for index 4 prev smaller index and next smaller index -1
+    // So we are calculation 2 times when there is duplicate in array
     while(right >=0) {
         while(!rightStk.empty() && arr[rightStk.top()] > arr[right]) {
             rightStk.pop();
@@ -31,6 +34,9 @@ int sumSubarrayMins(vector<int>& arr) {
         --right;
     }
 
+    // If an array has x+1+y element and x index (o based indexing) is val
+    // then there will be (x+1) * (y+1) subarray which will contain val
+    // subarray starting index [0 x] and ending index [x x+y]
     long totalSubarray = 0;
     int MOD = 1e9 + 7;
     unordered_set<int> uset;
