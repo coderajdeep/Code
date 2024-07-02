@@ -107,7 +107,6 @@
 // [5 3 1 4 1 2] : for index 2 prev smaller index and next smaller index -1
 // for index 4 prev smaller index and next smaller index -1
 // So we are calculation 2 times when there is duplicate in array
-
 // Sum of subarray minimum -- leetcode 907
 
 // 21

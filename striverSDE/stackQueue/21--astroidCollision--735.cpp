@@ -10,6 +10,7 @@ vector<int> asteroidCollision(vector<int>& asteroids) {
             stk.push(asteroids[i]);
         }
         else {
+            // asteroids[i] is negative
             while(!stk.empty() && stk.top()>0 && stk.top() < abs(asteroids[i])) {
                 stk.pop();
             }
