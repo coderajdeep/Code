@@ -1,7 +1,32 @@
 // Longest substring without repeating character -- leetcode 3
 
+// Solution 1
+// https://youtu.be/-zSxTJkcdAo?t=594
+// Best solution -- single traversal for any input
+// Time complexity O(n)
+// Space complexity O(256) : constant
+int lengthOfLongestSubstring(string s) {
+    unordered_map<char, int> umap;
+    int n = s.size(), maxLen = 0, low = 0, high = 0;
+    while(high<n) {
+        auto it = umap.find(s[high]);
+        if(it == umap.end() || it->second < low) {
+            maxLen = max(maxLen, high-low+1);
+        }
+        // We can use both
+        // else if(it->second >= low) {
+        else {
+            low = it->second + 1;
+        }
+        umap[s[high]] = high;
+        ++high;
+    }
+    return maxLen;
+}
+
+// Solution 2
 // Time complexity O(2*n)
-// Space complexity O(n)
+// Space complexity O(256) : constant
 // abcdefghii
 // For this input, we need to traverse the entire string twice
 int lengthOfLongestSubstring(string s) {
@@ -21,28 +46,8 @@ int lengthOfLongestSubstring(string s) {
     return maxLen;
 }
 
-// Best solution -- single traversal for any input
-// Time complexity O(n)
-// Space complexity O(n)
-int lengthOfLongestSubstring(string s) {
-    int low = 0, high = 0, length = s.size(), maxLength = 0;
-    unordered_map<char, int> umap;
-    while(high < length) {
-        auto it = umap.find(s[high]);
-        if(it == umap.end() || it->second < low) {
-            maxLength = max(maxLength, high - low + 1);
-            umap[s[high]] = high;
-            ++high;
-        }
-        else {
-            low = it->second + 1;
-        }
-    }
-    return maxLength;
-}
-
 // Time complexity O(n*n)
-// Space complexity O(n)
+// Space complexity O(256) : constant
 int lengthOfLongestSubstring(string s) {
     int n = s.size(), len = 0;
     for(int i=0; i<n; ++i) {
