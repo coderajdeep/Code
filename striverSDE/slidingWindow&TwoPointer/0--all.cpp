@@ -1,16 +1,28 @@
-// 1
+// 1 ***
+// If curr is not in hash or hash[curr] < low : then maxlen = max(maxLen, high-low+1)
+// Else update low : low = hash[curr] + 1
+// At the end update curr in hash and increase high
 // Longest substring without repeating character -- leetcode 3
 
-// 2
+// 2 •••
+// If curr == 0 || count<k then find maxLen and increase high
+// Else : arr[low] == 0 then decrease count after that increase low
+// For consecutive one II has k = 1
 // Max consecutive one III -- leetcode 1004
 
-// 4
+// 4 ***
+// WindowLength - maxFrequency <= K then the window is valid
 // Longest Repeating character replacement -- leetcode 424
 
-// 5
+// 5 ***
+// Constant space solution is tricky
+// This constant space solution will not work if arr[i]<0
+// Similar with number of subarray with given sum
 // Binary subarray with given sum -- leetcode 930
 
-// 6
+// 6 ***
+// Just assume odd numbers are 1 and even numbers are zero
+// Similar with number of subarray with given sum
 // Count number of nice subarray -- leetcode 1248
 
 // 7
