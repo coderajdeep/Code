@@ -1,3 +1,5 @@
+// Generally Sliding window problem does not work with negative numbers
+
 // 1 ***
 // If curr is not in hash or hash[curr] < low : then maxlen = max(maxLen, high-low+1)
 // Else update low : low = hash[curr] + 1
@@ -42,3 +44,11 @@
 
 // 12
 // Minimum window subsequence -- leetcode 727
+
+// Q1
+// Similar binary subarray with given sum -- leetcode 930
+// Count subarray with score less than K
+
+// Q2
+// Similar binary subarray with given sum -- leetcode 930
+// Count subarray with product less than K
