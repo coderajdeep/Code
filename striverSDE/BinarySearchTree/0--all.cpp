@@ -18,3 +18,8 @@
 // 6 ***
 // Recursive solution is beautiful
 // Insert into BST -- leetcode 701
+
+// 9 **
+// Check if a BT is BST
+// Need to check rootValue is between (low, high)
+// Initiall root->val -> (INT_MIN, INT_MAX)
