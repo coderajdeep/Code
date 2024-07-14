@@ -32,7 +32,9 @@
 // If all character exist, then count += (min(a, b, c) + 1)
 // Number of substring containing all three characters -- leetcode 1358
 
-// 8
+// 8 **
+// First calculate lsum
+// then remove (k-1-i) indexed value from lsum and add (n-1-i) indexed value in rsum
 // Max point you can obtain from cards -- leetcode 1423
 
 // 9
