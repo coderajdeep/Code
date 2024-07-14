@@ -27,7 +27,9 @@
 // Similar with number of subarray with given sum
 // Count number of nice subarray -- leetcode 1248
 
-// 7
+// 7 ***
+// Need to store the recent occerance of character
+// If all character exist, then count += (min(a, b, c) + 1)
 // Number of substring containing all three characters -- leetcode 1358
 
 // 8
