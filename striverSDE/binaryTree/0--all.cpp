@@ -1,6 +1,6 @@
 // Full binary tree
-// A full binary tree is a binary tree in which all of the nodes have either 0 or 2 offspring. In other terms, 
-// a full binary tree is a binary tree in which all nodes, except the leaf nodes, have two offspring.
+// A full binary tree is a binary tree in which all of the nodes have either 0 or 2 child nodes. In other terms, 
+// a full binary tree is a binary tree in which all nodes, except the leaf nodes, have two child nodes.
 
 // Perfect binary tree
 // A perfect binary tree is a special type of binary tree in which all the leaf nodes are at the same depth, 
@@ -15,12 +15,13 @@
 // 1
 // Number of nodes in N-th level
 
-// 2
+// 2 ***
 // Construct tree from a array [Array length is seven and elements are in level order]
 // What if array length is variable? ***
 
-// 3
-// Binary Tree traversal
+// 3 **
+// InOrder, PreOrder and PostOrder traversal using one stack
+// Binary Tree traversal (DFS)
 
 // 4
 // Preorder Traversal - recursive and iterative - leetcode 144
@@ -153,3 +154,6 @@
 
 // Q4
 // Connect next node in each level -- leetcode 116
+
+// Q5
+// Level order traversal from leaf to root -- leetcode 107
