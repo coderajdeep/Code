@@ -1,6 +1,44 @@
 // Invert Binary Tree -- leetcode 226s
 // Time complexity O(n)
 // Space complexity O(h) : recursive space complexity h --> height of the tree
+
+// Solution 1
+// Solution 1 & 2 are same
+// Using PreOrder Traversal
+// PostOrder traversal will also work
+TreeNode* invertTree(TreeNode* root) {
+    if(!root) return root;
+    swap(root->left, root->right);
+    invertTree(root->left);
+    invertTree(root->right);
+    return root;
+}
+
+// Solution 2
+TreeNode* invertTree(TreeNode* root) {
+    if(!root) return root;
+    swap(root->left, root->right);
+    root->left = invertTree(root->left);
+    root->right = invertTree(root->right);
+    return root;
+}
+
+// Iterative solution using level order traversal
+TreeNode* invertTree(TreeNode* root) {
+    if(!root) return nullptr;
+    queue<TreeNode*> q;
+    q.push(root);
+    while(!q.empty()) {
+        TreeNode *curr = q.front();
+        q.pop();
+        swap(curr->left, curr->right);
+        if(curr->left) q.push(curr->left);
+        if(curr->right) q.push(curr->right);
+    }
+    return root;
+}
+
+
 TreeNode* invertTree(TreeNode* root) {
     if(!root) return nullptr;
     
