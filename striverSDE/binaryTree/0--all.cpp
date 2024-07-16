@@ -46,15 +46,20 @@
 // Diameter of Binary Tree - leetcode 543
 
 // 11 ***
+// We need to write a function which can return the maxPathSum starting from that current node
+// And we need to calculate left path sum and right path sum. If any of this is negative, then path sum will be zero
+// For getting the max path sum, we need to calculate (root->val + lsum + rsum) for all nodes
+// Among them, max value will be the answer
 // Max Path Sum -- leetcode 124
 
-// 12
+// 12 **
 // Is Identical/Same Tree -- leetcode 100
 
-// 13
+// 13 *
 // Binary Tree - Zigzag level order traversal
 
-// 14 **
+// 14 ***
+// Here left side or right side is not equivalent to left/right view
 // Boundary Traversal of a Binary Tree -- Coding Ninjas
 
 // 15 ***
