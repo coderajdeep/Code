@@ -1,6 +1,7 @@
 // Time complexity O(n)
 // Space complexity O(h*2^(h-1))
 
+// Solution 1
 bool isLeaf(TreeNode* root) {
     return (!root->left && !root->right);
 }
@@ -31,8 +32,40 @@ vector<string> binaryTreePaths(TreeNode* root) {
     return ans;
 }
 
+// Solution 2
+// Initially generate all root to leaf paths
+// then convert each path into string
+void solve(TreeNode *root, vector<vector<int>> &paths, vector<int> &path) {
+    if(!root) return;
+    path.push_back(root->val);
+    if(!root->left && !root->right) {
+        paths.push_back(path);
+    }
+    solve(root->left, paths, path);
+    solve(root->right, paths, path);
+    path.pop_back();
+}
+vector<string> binaryTreePaths(TreeNode* root) {
+    if(!root) return vector<string> {};
+    vector<vector<int>> paths;
+    vector<int> path;
+    solve(root, paths, path);
+    vector<string> ans;
+    for(vector<int> path : paths) {
+        int n = path.size();
+        string s = to_string(path[0]);
+        for(int i=1; i<n; ++i) {
+            s += "->";
+            s += to_string(path[i]);
+        }
+        ans.push_back(s);
+    }
+    return ans;
+}
+
+// Solution 3
 // Geeks
-// Root to all leaves
+// Generate all root to leaf paths
 void solve(Node *root, vector<vector<int>> &ans, vector<int> &temp) {
     if(!root) return;
     temp.push_back(root->data);
@@ -53,6 +86,7 @@ vector<vector<int>> Paths(Node* root) {
 
 
 // For Debugging Code
+// Here from level order traversal, tree will be generated
 #include <iostream>
 #include <vector>
 #include <sstream>
