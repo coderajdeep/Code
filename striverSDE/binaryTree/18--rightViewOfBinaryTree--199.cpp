@@ -1,6 +1,7 @@
 // Time Complexity O(n)
 // Space complexity O(h) : h --> height of binary tree (Recursion stack space)
 
+// Solution 1
 void rightView(TreeNode* root, vector<int>& ans, int level, int& maxLevel) {
     if(!root) return;
     if(level==maxLevel) {
@@ -18,6 +19,8 @@ vector<int> rightSideView(TreeNode* root) {
     return ans;
 }
 
+// Solution 2
+// Similar to solution 1
 // Striver solution
 void rightView(TreeNode* root, vector<int>& ans, int level) {
     if(!root) return;
@@ -34,6 +37,7 @@ vector<int> rightSideView(TreeNode* root) {
     return ans;
 }
 
+// solution 3
 // Uisng Level order traversal
 vector<int> rightSideView(TreeNode* root) {
     if(!root) return vector<int> {};
