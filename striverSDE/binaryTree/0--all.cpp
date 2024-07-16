@@ -29,7 +29,8 @@
 // 5
 // Inorder Traversal - leetcode 94
 
-// 6
+// 6 **
+// Using one stack solution is tricky
 // Postorder Traversal - leetcode 145
 
 // 7
@@ -38,10 +39,10 @@
 // 8
 // Height of binary tree - leetcode 104
 
-// 9 *
+// 9 **
 // height Balanced binary tree - leetcode 110
 
-// 10 *
+// 10 **
 // Diameter of Binary Tree - leetcode 543
 
 // 11 ***
