@@ -60,6 +60,7 @@ int isSumProperty(Node *root) {
 
 // Geeks
 // Recursive method
+// Solution 1
 int isSumProperty(Node *root) {
     if(!root) return 1;
     if(!root->left && !root->right) return 1;
@@ -69,4 +70,15 @@ int isSumProperty(Node *root) {
     if(root->data != sum) return 0;
     if(isSumProperty(root->left)==0 || isSumProperty(root->right)==0) return 0;
     return 1;
+}
+
+// Solution 2 & solution 1 is same
+int isSumProperty(Node *root) {
+    if(!root) return 1;
+    if(!root->left && !root->right) return 1;
+    int sum = 0;
+    if(root->left) sum += root->left->data;
+    if(root->right) sum += root->right->data;
+    if(root->data != sum) return 0;
+    return isSumProperty(root->left) && isSumProperty(root->right);
 }
