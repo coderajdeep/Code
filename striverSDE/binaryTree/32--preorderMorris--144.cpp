@@ -1,3 +1,5 @@
+// https://youtu.be/80Zug6D1_r4?t=1239
+// very good explanation
 // Morris Preorder traversal
 // Time complexity O(2*n)
 // Space complexity O(1)
