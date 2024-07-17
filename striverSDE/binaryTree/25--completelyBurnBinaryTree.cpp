@@ -61,6 +61,8 @@ int minTime(Node* root, int target)
     return time - 1;
 }
 
+
+// Coding Ninjas
 void findParents(BinaryTreeNode<int>* root, BinaryTreeNode<int>* &startNode, unordered_map<BinaryTreeNode<int>*, BinaryTreeNode<int>*> &um, int start) {
     queue<BinaryTreeNode<int>*> q;
     q.push(root);
