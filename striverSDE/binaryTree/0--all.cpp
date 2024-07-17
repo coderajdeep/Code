@@ -84,8 +84,10 @@
 // Root to Leaf all paths  -- leetcode 257
 
 // 21 ***
-// Limitation of this method is, this will only work if both the nodes are present
+// Limitation of optimized method is, this not work if only one node is present
 // If only one is present then also this method return this node as a LCA
+// In that case, we need to check the existance of given two node
+// Only if two node exist, then only need to find the LCA, otherwise answer will be NULL
 // LCA of a binary tree -- leetcode 236
 
 // 22 ***

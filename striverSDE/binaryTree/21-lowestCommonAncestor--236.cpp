@@ -4,8 +4,9 @@
 // https://youtu.be/_-QHfMDde90?si=WTxWEKm6m5Qp4iV6
 // Clean solution
 
-// Limitation of this method is, this will only work if both the nodes are present
-// If only one is present then also this method return this node as a LCA
+// Solution 1
+// Limitation of this method is, this will not work if only one node is exist and another doesnot exist
+// In this case, LCA should be null, but this method will return the node as a LCA
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     if(!root || root==p || root==q) return root;
     TreeNode *lnode = lowestCommonAncestor(root->left, p, q);
@@ -15,6 +16,8 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     //if(!lnode && !rnode) return nullptr;
     return lnode ? lnode : rnode;
 }
+// Solution 2
+// Both are same
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     if(!root || root==p || root==q) return root;
     TreeNode* lnode = lowestCommonAncestor(root->left, p, q);
@@ -25,6 +28,7 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 }
 
 // Coding Ninjas
+// Where node value is given
 int lowestCommonAncestor(TreeNode<int> *root, int x, int y) {
 	if(!root) return -1;
     if(root->data==x || root->data==y) return root->data;
@@ -52,6 +56,8 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     vector<vector<TreeNode*>> paths;
     vector<TreeNode*> path;
     dfs(root, paths, path, p, q);
+    // needs to check paths size
+    // if its less than 2 then LCA not possible
     int n = paths[0].size();
     int m = paths[1].size();
     if(n==1 || m==1) return root;
@@ -60,6 +66,7 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         if(paths[0][i]!=paths[1][j]) {
             return paths[0][i-1];
         }
+        // else if path will execute when p or q is ancestor
         else if(paths[0][i]==q) {
             return q;
         }
