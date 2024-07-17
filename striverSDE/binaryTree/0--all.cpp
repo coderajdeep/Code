@@ -136,6 +136,7 @@
 
 // 30 ***
 // In case of Serialize, we will use level order traversal (we can use other traversal)
+// For tracking null, we need to insert null node also into the queue
 // In case of Deserialize, we will use stringstream for tokenizing (Tokenizing a string denotes splitting a string with respect to some delimiter(s))
 // Serialize and Deserialize binary tree -- leetcode 297
 
