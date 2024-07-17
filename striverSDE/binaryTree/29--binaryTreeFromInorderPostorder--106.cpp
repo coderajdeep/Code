@@ -1,6 +1,8 @@
-// Time complexity O(n2)
+// Time complexity O(n+n)
 // Space complexity O(n)
 
+// Solution 1
+// Solution 2 is better
 TreeNode* getTree(vector<int>& inorder, vector<int>& postorder, int inStart, int inEnd, int &postEnd) {
     if(inStart>inEnd) return nullptr;
     TreeNode* root = new TreeNode(postorder[postEnd--]);
@@ -23,6 +25,7 @@ TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
     return root;
 }
 
+// Solution 1
 // Optimized approach
 // Time complexity O(n)
 // Space complexity  O(n)
