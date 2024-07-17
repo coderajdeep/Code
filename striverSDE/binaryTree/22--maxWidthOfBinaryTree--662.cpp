@@ -12,54 +12,31 @@
 // 2*(y-x)+2 - 1 --> 2*(y-x) + 1
 // Both are same
 // So we need to subtract for integer overflow
+
 int widthOfBinaryTree(TreeNode* root) {
-    if(!root) {
-        return 0;
-    }
-    
-    queue<pair<TreeNode*, long long>>q;
+    if(!root) return 0;
+    queue<pair<TreeNode*, long>> q;
+    pair<TreeNode*, long> p;
+    TreeNode *curr;
+    long vIndex, maxWidth = 0, start;
     q.push({root, 0});
-    long long ans = 0;
-    
     while(!q.empty()) {
-        
-        int t = q.size();
-        long long hi;
-        // long long lo;
-        bool low = true;
-        long minIndex;
-        
-        while(t--) {
-            auto curr = q.front();
+        int size = q.size();
+        for(int i=0; i<size; ++i) {
+            p = q.front();
             q.pop();
-            TreeNode* currNode = curr.first;
-            long long index = curr.second;
-            
-            if(low) {
-                minIndex = index;
-                // lo = index-minIndex;
-                // lo will always be zero
-                low = false;
+            curr = p.first;
+            vIndex = p.second;
+            if(i==0) start = vIndex;
+            vIndex -= start;
+            if(i==size-1) maxWidth = max(maxWidth, vIndex+1);
+            if(curr->left) {
+                q.push({curr->left, 2*vIndex+1});
             }
-            
-            index = index - minIndex;
-            
-            if(t==0) {
-                hi = index;
-            }
-            
-            
-            if(currNode->left) {
-                q.push({currNode->left, (2*index + 1)});
-            }
-            
-            if(currNode->right) {
-                q.push({currNode->right, (2*index + 2)});
+            if(curr->right) {
+                q.push({curr->right, 2*vIndex+2});
             }
         }
-        
-        // ans = max(ans, (hi-lo+1));
-        ans = max(ans, (hi+1));
     }
-    return ans;
+    return maxWidth;
 }
