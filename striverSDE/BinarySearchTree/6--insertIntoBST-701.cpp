@@ -1,6 +1,6 @@
 // Time complexity O(h)
 // Space complexity O(h)
-
+// Recursive approach
 TreeNode* insertIntoBST(TreeNode* root, int val) {
     if(!root) {
         return new TreeNode(val);
@@ -18,74 +18,23 @@ TreeNode* insertIntoBST(TreeNode* root, int val) {
 // Time complexity O(h)
 // Space complexity O(1)
 TreeNode* insertIntoBST(TreeNode* root, int val) {
-    if(!root) return new TreeNode(val);
-    TreeNode *prev = nullptr, *node = root;
-    bool isLeft = false;
-    while(root && root->val!=val) {
-        prev = root;
-        if(root->val>val) {
-            root = root->left;
-            isLeft = true;
-        }
-        else {
-            root = root->right;
-            isLeft = false;
-        }
-    }
-    if(isLeft) {
-        prev->left = new TreeNode(val);
-    }
-    else {
-        prev->right = new TreeNode(val);
-    }
-    return node;
-}
-
-// Striver iterative
-TreeNode* insertIntoBST(TreeNode* root, int val) {
-    if(!root) return new TreeNode(val);
-    TreeNode* curr = root;
+    TreeNode *node = new TreeNode(val);
+    if(!root) return node;
+    TreeNode *curr = root;
     while(curr) {
         if(curr->val > val) {
-            if(curr->left) {
-                curr = curr->left;
-            }
-            else {
-                curr->left = new TreeNode(val);
+            if(!curr->left) {
+                curr->left = node;
                 break;
             }
-        }
-        else {
-            if(curr->right) {
-                curr = curr->right;
-            }
-            else {
-                curr->right = new TreeNode(val);
-                break;
-            }
-        }
-    }
-    return root;
-}
-
-// Same as above
-// TreeNode* insertIntoBST(TreeNode* root, int val) {
-TreeNode *temp = new TreeNode(val);
-    if(!root) return temp;
-    TreeNode *prev=nullptr, *curr = root;
-    while(curr) {
-        prev = curr;
-        if(curr->val > val) {
             curr = curr->left;
-            if(!curr) {
-                prev->left = temp;
-            }
         }
         else {
-            curr = curr->right;
-            if(!curr) {
-                prev->right = temp;
+            if(!curr->right) {
+                curr->right = node;
+                break;
             }
+            curr = curr->right;
         }
     }
     return root;

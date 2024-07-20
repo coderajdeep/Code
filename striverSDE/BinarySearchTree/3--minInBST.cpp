@@ -12,6 +12,5 @@ int minValue(Node* root) {
 // Recursive solution
 int minValue(Node* root) {
     if(!root) return INT_MAX;
-    if(!root->left) return root->data;
-    return minValue(root->left);
+    return min(root->data, minValue(root->left));
 }
