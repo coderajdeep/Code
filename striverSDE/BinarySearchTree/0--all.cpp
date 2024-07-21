@@ -19,6 +19,10 @@
 // Recursive solution is beautiful
 // Insert into BST -- leetcode 701
 
+// 8 ***
+// K-th smallest element in BST -- leetcode 230
+// We can do this using morish traversal using Time : O(n), Space O(1)
+
 // 9 **
 // Check if a BT is BST
 // Need to check rootValue is between (low, high)
