@@ -27,3 +27,7 @@
 // Check if a BT is BST
 // Need to check rootValue is between (low, high)
 // Initiall root->val -> (INT_MIN, INT_MAX)
+
+// 10 ***
+// LCA in binary search tree
+// Uisng Time complexity O(log(h))
