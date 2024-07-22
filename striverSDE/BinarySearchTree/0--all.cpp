@@ -38,3 +38,6 @@
 
 // 12 ***
 // Inorder predecessor and successor in BST
+
+// Q1 ***
+// Convert a normal BST to Balanced BST -- leetcode 1382
