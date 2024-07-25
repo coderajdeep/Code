@@ -47,7 +47,7 @@
 // 11 ***
 // Fixed starting point
 // Here we will start from fixed starting point and base case will be when we will touch the last row
-// Even we can start from the last row and end to the fixed starting point, but here we need to handle out of bound sell cases
+// Even we can start from the last row and end to the fixed starting point, but here we need to handle out of bound cell cases
 // Minimum path sum in triangle -- leetcode 120
 
 // 12 ***
@@ -82,7 +82,7 @@
 // But if we need to consider two subset equal, then it will be very different ***
 // Partition array into two subsets with minimum absolute sum difference -- coding ninja (leetcode 2035 need to try)
 
-// 17 ***
+// 17 VVIP ***
 // Base case 
 // if(k<0) return 0;
 // if(index==0) {

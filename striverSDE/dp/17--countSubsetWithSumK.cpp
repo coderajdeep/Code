@@ -1,5 +1,5 @@
 // Count subset with sum K -- Coding Ninjas
-
+// *** Best Solution
 // Space optimized Geeks
 // Time complexity O(n*sum)
 // Space complexity O(sum)
@@ -9,12 +9,15 @@ int perfectSum(int arr[], int n, int sum) {
     // If arr[0] == 0
     // then we can include or exclude arr[0] into our subset
     // that's why answer is 2
+    // ***
     prev[0] = (arr[0]==0) ? 2 : 1;
     for(int i=1; i<=sum; ++i) {
         prev[i] = (arr[0]==i) ? 1 : 0;
     }
     for(int i=1; i<n; ++i) {
+        // ***
         // we have to start from j=0
+        // otherwise we will miss count when sum = 0 and there are multiple zero present in array
         // [0 0 0] sum = 0
         // Dry run this 
         for(int j=0; j<=sum; ++j) {

@@ -4,6 +4,7 @@
 // Time complexity O(n*k)
 // Space complexity O(n)
 // Considering recursion stack space, then space complexity O(2*n)
+// Space complexity is verified by chat gpt
 int solve(int index, int k, vector<int> &height, vector<int> &dp) {
     if(index==0) {
         return 0;
