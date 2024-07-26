@@ -101,6 +101,10 @@
 // Otherwise find number of subset of sum s2
 // Count Partition with given difference -- coding ninjas
 
+// 19 **
+// Not a DP problem
+// Assign Cookies -- leetcode 455
+
 // 19
 // 0 1 Knapsack -- coding ninjas
 

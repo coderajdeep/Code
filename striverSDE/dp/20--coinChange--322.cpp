@@ -3,6 +3,7 @@
 // Time complexity O(n*amount)
 // Space complexity O(n*amount)
 long getMinCoin(int index, int amount, vector<int> &coins, vector<vector<int>> &dp) {
+    if(amount==0) return 0;
     if(index==0) {
         if(amount%coins[0] == 0) return (amount/coins[0]);
         else return INT_MAX;
@@ -45,19 +46,23 @@ int coinChange(vector<int>& coins, int amount) {
 // Space complexity O(amount)
 int coinChange(vector<int>& coins, int amount) {
     int n = coins.size();
-    long prev[amount+1];
-    long curr[amount+1];
-    for(int i=0; i<=amount; ++i) {
-        if(i % coins[0] == 0) prev[i] = (i / coins[0]);
-        else prev[i] = INT_MAX;
+    vector<long> curr(amount+1);
+    curr[0] = 0;
+    for(int i=1; i<=amount; ++i) {
+        if(i % coins[0] == 0) {
+            curr[i] = (i/coins[0]);
+        }
+        else {
+            curr[i] = INT_MAX;
+        }
     }
+    cout<<endl;
     for(int i=1; i<n; ++i) {
         for(int j=0; j<=amount; ++j) {
-            long pick = (coins[i]<=j) ? 1 + curr[j-coins[i]] : INT_MAX;
-            long notPick = prev[j];
-            curr[j] = min(pick, notPick);
+            long take = (coins[i]<=j) ? 1l + curr[j-coins[i]] : INT_MAX;
+            long notTake = curr[j];
+            curr[j] = min(take, notTake);
         }
-        for(int j=0; j<=amount; ++j) prev[j] = curr[j];
     }
-    return prev[amount] != INT_MAX ? prev[amount] : -1;
+    return curr[amount] == INT_MAX ? -1 : curr[amount];
 }
