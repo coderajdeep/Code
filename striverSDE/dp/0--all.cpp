@@ -105,14 +105,23 @@
 // Not a DP problem
 // Assign Cookies -- leetcode 455
 
-// 19
-// 0 1 Knapsack -- coding ninjas
-
-// 20
+// 20 ***
+// Need to check overflow cases
 // Coin Change -- leetcode 322
 
-// 21
+// 21 ***
+// Similar to number of subsequence having sum K
+// Count Partition with given difference
 // Target Sum -- leetcode 494
+
+// 22 ***
+// Can be solved single 1D array
+// Coin Changes II -- leetcode 518 
+
+// 23 ***
+// Space optimized using only one 1D array
+// Max Profit from trading stocks (premium question)
+// 0 1 Knapsack (Unbounder Knapsack) -- Geeks
 
 // 25
 // Longest Common Subsequence -- 1143
