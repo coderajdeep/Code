@@ -31,3 +31,60 @@ string findLCS(int n, int m, string &s1, string &s2){
 	}
 	return str;
 }
+
+
+// Geeks
+// Need to optimized later
+class Solution {
+  public:
+    void solve(int i, int j, string &s, string &t, string str, unordered_set<string> &hash, vector<vector<int>> &dp) {
+        if(i==0 || j==0) {
+            hash.insert(str);
+            return;
+        }
+        if(s[i-1]==t[j-1]) {
+            str.push_back(s[i-1]);
+            solve(i-1, j-1, s, t, str, hash, dp);
+        }
+        else if(dp[i-1][j] == dp[i][j-1]) {
+            solve(i, j-1, s, t, str, hash, dp);
+            solve(i-1, j, s, t, str, hash, dp);
+        }
+        else if(dp[i-1][j] < dp[i][j-1]) {
+            solve(i, j-1, s, t, str, hash, dp);
+        }
+        else {
+            solve(i-1, j, s, t, str, hash, dp);
+        }
+    }
+    vector<string> all_longest_common_subsequences(string s, string t) {
+        int n = s.size();
+        int m = t.size();
+        vector<vector<int>> dp(n+1, vector<int>(m+1));
+        for(int i=0; i<=n; ++i) {
+            for(int j=0; j<=m; ++j) {
+                if(i==0 || j==0) {
+                    dp[i][j] = 0;
+                }
+                else if(s[i-1]==t[j-1]) {
+                    dp[i][j] = 1 + dp[i-1][j-1];
+                }
+                else {
+                    int up = dp[i-1][j];
+                    int left = dp[i][j-1];
+                    dp[i][j] = max(up, left);
+                }
+            }
+        }
+        string str = "";
+        vector<string> ans;
+        unordered_set<string> hash;
+        solve(n, m, s, t, str, hash, dp);
+        for(string st : hash) {
+            reverse(st.begin(), st.end());
+            ans.push_back(st);
+        }
+        sort(ans.begin(), ans.end());
+        return ans;
+    }
+};

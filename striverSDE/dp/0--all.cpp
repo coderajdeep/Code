@@ -123,14 +123,16 @@
 // Max Profit from trading stocks (premium question)
 // 0 1 Knapsack (Unbounder Knapsack) -- Geeks
 
-// 24
+// 24 ***
 // Similar to 0 1 Knapsack (Only difference is here we need to complete the Knapsack)
 // Rod cutting - Geeks
 
-// 25
+// 25 ***
+// Base problem
 // Longest Common Subsequence -- 1143
 
-// 26
+// 26 ***
+// Print all lcs -- Geeks TLE (Not optimized)
 // Print LCS -- Coding Ninjas
 
 // 27
