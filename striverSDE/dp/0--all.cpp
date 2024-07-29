@@ -135,7 +135,11 @@
 // Print all lcs -- Geeks TLE (Not optimized)
 // Print LCS -- Coding Ninjas
 
-// 27
+// 27 ***
+// We can solve this using recursive + memoization
+// But result will not store in dp[n][m], so after memoization
+// We need to go through entire 2D array for getting the max value
+// Space optimized solution only required one 1D array 
 // Longest Common Substring length -- Coding Ninjas
 
 // 28
