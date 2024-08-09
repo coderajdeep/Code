@@ -24,23 +24,24 @@ int getMaxProfit(int dayIndex, int buyPossible, vector<int>& prices, vector<vect
 
     if(dp[dayIndex][buyPossible] != -1) return dp[dayIndex][buyPossible];
 
-    int buyMax = INT_MIN, sellMax = INT_MIN;
+    int profit = INT_MIN;
     if(buyPossible) {
         int buy = getMaxProfit(dayIndex+1, 0, prices, dp) - prices[dayIndex];
         int notBuy = getMaxProfit(dayIndex+1, 1, prices, dp);
-        buyMax = max(buy, notBuy);
+        profit = max(buy, notBuy);
     }
     else {
         int sell = getMaxProfit(dayIndex+1, 1, prices, dp) + prices[dayIndex];
         int notSell = getMaxProfit(dayIndex+1, 0, prices, dp);
-        sellMax = max(sell, notSell);
+        profit = max(sell, notSell);
     }
-    return dp[dayIndex][buyPossible] = max(buyMax, sellMax);
+    return dp[dayIndex][buyPossible] = profit;
 }
 int maxProfit(vector<int>& prices) {
     int n = prices.size();
     vector<vector<int>> dp(n+1, vector<int>(2, -1)); 
     return getMaxProfit(0, true, prices, dp);
+    // return dp[0][1]
 }
 
 // Tabulation

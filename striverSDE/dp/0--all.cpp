@@ -142,16 +142,22 @@
 // Space optimized solution only required one 1D array 
 // Longest Common Substring length -- Coding Ninjas
 
-// 28
+// 28 ***
+// Need to reverse the given string
+// Find the lcs of actual string and reversed string
 // Longest Palindromic Subsequence -- leetcode 516
 
-// 29
+// 29 ***
+// ans --> (n - lcs)
 // Minimum Insertion required to make a string palindrom -- leetcode 1312
 
-// 30
+// 30 ***
 // Minimum delete operation to convert one string to another -- leetcode 583
 
-// 31
+// 31 ***
+// Length of shortest common supersequence : (n + m - lcs)
+// To get the supersequence, we to take the common element as well as the uncommon element
+// When i or j will be zero then we need to completely take the other string
 // Shortest common supersequence -- leetcode 1092
 
 // 32
