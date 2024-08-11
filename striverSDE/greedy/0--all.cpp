@@ -9,3 +9,6 @@
 // Minimum coin -- Geeks
 // array is sorted
 // arr[i] + arr[j] < arr[k] (i, j < k && i != j)
+
+// 4 **
+// Lemonade change -- leetcode 860
