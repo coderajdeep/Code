@@ -19,3 +19,10 @@
 // 6 ***
 // N Meeting in one room
 // Interval merging related problem
+
+// 7 **
+// Jump Game -- leetcode 55
+
+// 9 ***
+// Max length of intersection finding
+// Minimum Platform Required  -- Geeks
