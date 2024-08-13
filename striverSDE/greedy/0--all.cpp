@@ -17,6 +17,8 @@
 // Balanced parenthesis -- leetcode 678
 
 // 6 ***
+// *** Max number of meeting in one single room 
+// *** total meeting room required
 // N Meeting in one room
 // Interval merging related problem
 
