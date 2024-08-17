@@ -9,3 +9,6 @@
 
 // Q1
 // Remove vowel from a string -- geeks
+
+// Q2
+// Valid palindrome -- leetcode 125

@@ -1,4 +1,29 @@
 // Rank Transform of an array -- leetcode 1331
+// Uisng Min heap
+// Best approach
+// Solution 1
+// Time complexity O(nlogn)
+// Space complexity O(n)
+vector<int> arrayRankTransform(vector<int>& arr) {
+    if(arr.empty()) return vector<int>{};
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    int n = arr.size();
+    for(int i=0; i<n; ++i) {
+        pq.push({arr[i], i});
+    }
+    vector<int> ans(n);
+    int rank = 1, last = pq.top().first;
+    while(!pq.empty()) {
+        pair<int, int> p = pq.top();
+        pq.pop();
+        if(last != p.first) ++rank;
+        ans[p.second] = rank;
+        last = p.first;
+    }
+    return ans;
+}
+
+// Solution 2
 // Time complexity O(nlogn)
 // Space complexity O(n)
 vector<int> arrayRankTransform(vector<int>& arr) {
