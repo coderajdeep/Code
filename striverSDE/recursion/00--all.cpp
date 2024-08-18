@@ -1,11 +1,21 @@
 // 1
 // atoi() implementation -- leetcode 8 (Need ti implement recursively)
 
-// 2
+// 2 ***
+// Time complexity O(logn)
 // pow(x, n) -- leetcode 50
 
-// 3
+// 3 ***
+// Uisng power function, we can solve this easily
 // Count Good numbers -- leetcode 1922
+
+// 4 ***
+// Need to memorize the code
+// Sort a stack
+
+// 5 ***
+// Need to remember
+// Reverse a stack
 
 // 6
 // Gererate all binary string without consecutive 1's -- Geeks
