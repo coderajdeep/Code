@@ -1,5 +1,6 @@
 // Count subset with sum K -- Coding Ninjas
-// *** Best Solution
+// *** Best Solution (Solution 2 -- using only one !D array)
+// Solution 1
 // Space optimized Geeks
 // Time complexity O(n*sum)
 // Space complexity O(sum)
@@ -30,6 +31,23 @@ int perfectSum(int arr[], int n, int sum) {
         }
     }
     return prev[sum];
+}
+
+// Solution 2
+// Just using one 1D array
+int perfectSum(int arr[], int n, int sum) {
+    int dp[sum+1] = {0};
+    if(arr[0]<=sum) dp[arr[0]] = 1;
+    dp[0] = (arr[0]==0) ? 2 : 1;
+    int mod = 1e9+7;
+    for(int i=1; i<n; ++i) {
+        for(int j=sum; j>=0; --j) {
+            int take = (arr[i]<=j) ? dp[j-arr[i]] : 0;
+            int notTake = dp[j];
+            dp[j] = (take + notTake) % mod;
+        }
+    }
+    return dp[sum];
 }
 
 
