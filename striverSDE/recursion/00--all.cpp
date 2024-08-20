@@ -33,3 +33,10 @@
 
 // 10 **
 // Generate all subsets having sum K
+// Count all subsets having sum K
+
+// 11 **
+// Check if there exist any subsequence which have sum K
+
+// 12 **
+// Combination sum (Given array elements are distinct) -- leetcode 39
