@@ -1,6 +1,6 @@
 // Generate all subsets/subsequence of an array -- leetcode 78
-// Time complexity O(2^n)
-// Space complexity O(2^n) [for storing subsets] + O(n) [for storing the array while backtracking] + O(n) [Recursive stack space]
+// Time complexity O(2^n * n)
+// Space complexity O(2^n * n) [for storing subsets] + O(n) [for storing the array while backtracking] + O(n) [Recursive stack space]
 void solve(int index, int n, vector<int> &nums, vector<int> &subset, vector<vector<int>> &subsets) {
     if(index==n) {
         subsets.push_back(subset);

@@ -17,12 +17,19 @@
 // Need to remember
 // Reverse a stack
 
-// 6
+// 6 ***
+// TODO : Need to count total such string
 // Gererate all binary string without consecutive 1's -- Geeks
 // If we need to find the count then its a imp DP question
 
 // 7
 // Generate Parentheses -- leetcode 22
 
-// 8
+// 8 ***
 // Generate all subsets/subsequence of an array -- leetcode 78
+
+// 9 ***
+// Find better string (which has more unique subsequence)
+
+// 10 **
+// Generate all subsets having sum K
