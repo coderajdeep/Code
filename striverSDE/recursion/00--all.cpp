@@ -40,3 +40,8 @@
 
 // 12 **
 // Combination sum (Given array elements are distinct) -- leetcode 39
+
+// 13 ***
+// Generate all unique subsets having sum target
+// Input array can have duplicate
+// Combination Sum -- leetcode 40
