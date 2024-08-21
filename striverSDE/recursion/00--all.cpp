@@ -46,6 +46,14 @@
 // Input array can have duplicate
 // Combination Sum -- leetcode 40
 
-// 14
+// 14 **
 // Generate all subset's sum
 // Subset I -- geeks
+
+// 15 ***
+// Generate all unique subset
+// Subset II -- leetcode 90
+
+// 16 **
+// All subset with given sum
+// Combination sum III -- leetcode 216
