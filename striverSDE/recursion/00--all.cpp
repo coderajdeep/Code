@@ -45,3 +45,7 @@
 // Generate all unique subsets having sum target
 // Input array can have duplicate
 // Combination Sum -- leetcode 40
+
+// 14
+// Generate all subset's sum
+// Subset I -- geeks
