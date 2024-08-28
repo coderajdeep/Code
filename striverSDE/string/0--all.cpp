@@ -1,3 +1,6 @@
+// TODO
+// Implement Roman to Integer **
+
 // 1 ***
 // Remove outer parentheses -- leetcode 1021
 
@@ -18,6 +21,15 @@
 
 // 6 ***
 // Check if a string is rotation of another -- leetcode 796
+
+// 7 ***
+// Sort by frequency -- leetcode 451
+
+// 8 **
+// Max Parentheses depth -- leetcode 1614
+
+// 10 **
+// ATOI implementation -- leetcode 8
 
 // Q1
 // Remove vowel from a string -- geeks
