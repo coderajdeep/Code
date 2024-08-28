@@ -1,5 +1,28 @@
 // Valid Anagram -- leetcode 242
 
+// Solution 1
+// Best solution
+// Time complexity O(n)
+// Space complexity O(26)
+// This will only handle lower case english latter
+bool isAnagram(string s, string t) {
+    int n = s.size();
+    int m = t.size();
+    if(n != m) return false;
+    int hash[26] = {0};
+    for(int i=0; i<n; ++i) {
+        hash[s[i]-'a']++;
+        hash[t[i]-'a']--;
+    }
+    for(int i=0; i<26; ++i) {
+        if(hash[i]!=0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Solution 2
 // Time complexity O(n)
 // Space complexity O(n)
 // This solution can be handled any type of valid char in cpp
@@ -20,33 +43,7 @@ bool isAnagram(string s, string t) {
     return ms.empty();
 }
 
-// Time complexity O(n)
-// Space complexity O(n)
-// This will only handle lower case english latter
-bool isAnagram(string& s, string& t) {
-    int freq[26] = {0};
-    int index;
-    for(char& ch: s) {
-        index = ch - 'a';
-        freq[index]++;
-    }
-    for(char& ch: t) {
-        index = ch - 'a';
-        if(freq[index]) {
-        --freq[index];
-        }
-        else {
-        return false;
-        }
-    }
-    for(int i=0; i<26; ++i) {
-        if(freq[i]) {
-        return false;
-        }
-    }
-    return true;
-}
-
+// Solution 3
 // Time complexity O(nlogn)
 // Space complexity O(1)
 bool isAnagram(string& s, string& t) {

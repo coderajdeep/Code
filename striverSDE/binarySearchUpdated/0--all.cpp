@@ -37,13 +37,13 @@
 // 13
 // Find Peak element in array -- leetcode 162
 
-// 14
+// 14 ***
 // Square root of a number -- coding ninjas ***
 
-// 15
+// 15 ***
 // N-th rooth of M -- coding ninjas ***
 
-// 16
+// 16 ***
 // Koko eating bananas -- leetcode 875
 
 // 17
