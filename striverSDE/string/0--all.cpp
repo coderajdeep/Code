@@ -4,11 +4,8 @@
 // 1 ***
 // Remove outer parentheses -- leetcode 1021
 
-// 1 **
-// Reverse Words in a string - leetcode 151
-
 // 2 **
-// Valid Anagram -- leetcode 242
+// Reverse Words in a string - leetcode 151
 
 // 3
 // Largest odd number in string -- leetcode 1903
@@ -22,14 +19,20 @@
 // 6 ***
 // Check if a string is rotation of another -- leetcode 796
 
-// 7 ***
+// 7 **
+// Valid Anagram -- leetcode 242
+
+// 8 ***
 // Sort by frequency -- leetcode 451
 
-// 8 **
+// 9 **
 // Max Parentheses depth -- leetcode 1614
 
 // 10 **
 // ATOI implementation -- leetcode 8
+
+// 16 ***
+// Minimum number of brackets needs to be inserted -- leetcode 921
 
 // Q1
 // Remove vowel from a string -- geeks
