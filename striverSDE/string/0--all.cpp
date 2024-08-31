@@ -31,6 +31,11 @@
 // 10 **
 // ATOI implementation -- leetcode 8
 
+// 11 ***
+// Very very important
+// This can be solved for array and string, but for string, solution is more optimized
+// Number of substring having exactly K distinct character
+
 // 16 ***
 // Minimum number of brackets needs to be inserted -- leetcode 921
 
