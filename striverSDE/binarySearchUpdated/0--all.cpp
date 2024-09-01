@@ -73,3 +73,10 @@
 // 30 ***
 // Similar to 28 (Row with maximum 1's)
 // Search in a sorted matrix II -- leetcode 240
+
+// 31 ***
+// Similar to pick element in 1D array
+// Here we have to find the largest element in a perticular column
+// And need to check if it is the peak or not
+// Else we need to eleminate one half
+// Find a peak element II -- leetcode 1901
