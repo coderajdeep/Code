@@ -80,3 +80,11 @@
 // And need to check if it is the peak or not
 // Else we need to eleminate one half
 // Find a peak element II -- leetcode 1901
+
+// 32 ***
+// Answer will be between lowest and largest element
+// Need to do binary search between this two element
+// Answer(Median) : mid will be the smallest possible number for which count > expectedCount
+// count : number of element in the matrix which is less than equal to mid
+// expectedCount + [1 or more] : atleast this amount of number should be less or equal than mid
+// Median of row wise sorted matrix
