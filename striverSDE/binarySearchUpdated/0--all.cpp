@@ -57,3 +57,12 @@
 
 // 26
 // Median of two sorted array -- leetcode 4
+
+// 28 ***
+// Row with maximum 1's
+// Can be solve with binary search
+// But best approach has time complexity O(n+m)
+// if r = 0, c = m-1
+// if arr[r][c] == 1 : move left else move down
+// at the end if c == m-1 then there is no 1 present and return -1
+// else return c
