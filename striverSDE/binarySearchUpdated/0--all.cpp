@@ -66,3 +66,10 @@
 // if arr[r][c] == 1 : move left else move down
 // at the end if c == m-1 then there is no 1 present and return -1
 // else return c
+
+// 29 **
+// Search in a sorted matrix -- leetcode 74
+
+// 30 ***
+// Similar to 28 (Row with maximum 1's)
+// Search in a sorted matrix II -- leetcode 240
