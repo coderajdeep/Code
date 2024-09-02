@@ -55,6 +55,9 @@
 // 19
 // Capacity to ship packages within D days -- leetcode 1011
 
+// 21
+// Aggressive Cow | Magnetic Force between two balls -- leetcode 1552
+
 // 26
 // Median of two sorted array -- leetcode 4
 
