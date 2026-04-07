@@ -12,7 +12,7 @@
 // k = 5
 // Here we need to traverse the whole array two time
 // Means Time complexity O(2*n)
-// This will work when 0<=arr[i]
+// This will work for non negative numbers only, if we have negative numbers then we need to use prefix sum and hashing approach
 int longestSubarrayWithSumK(vector<int>& a, long long k) {
     long long n = a.size(), startIndex = 0, index = 0, maxLen = 0, sum = 0;
     while(index<n) {
